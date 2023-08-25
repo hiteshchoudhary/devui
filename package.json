@@ -1,5 +1,6 @@
 {
   "name": "devui",
+  "description": "Common app templates in plain HTML and TailwindCSS",
   "version": "0.1.0",
   "private": true,
   "scripts": {
