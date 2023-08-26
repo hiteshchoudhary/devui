@@ -27,7 +27,7 @@ const MainNavbar = () => {
 
   return (
     <header className="sticky top-0 z-40 border-b-2 bg-white">
-      <div className="flex h-20 items-center justify-between py-6 px-6 lg:px-0 max-w-6xl mx-auto">
+      <div className="flex h-20 items-center justify-between lg:p-6 p-4 max-w-6xl mx-auto">
         <div className="flex gap-6 md:gap-10">
           <Link href="/" className="hidden items-center space-x-2 md:flex">
             <CodeBracketSquareIcon className="h-7 w-7 text-slate-900" />
