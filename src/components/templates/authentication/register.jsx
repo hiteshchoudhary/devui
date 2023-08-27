@@ -1,7 +1,3 @@
-import Button from "@/components/common/Button";
-import { LifebuoyIcon } from "@heroicons/react/20/solid";
-import React from "react";
-
 const Register = () => {
   return (
     <div>
