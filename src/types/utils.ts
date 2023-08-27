@@ -4,3 +4,8 @@ export type TailwindIconType = React.ForwardRefExoticComponent<
     titleId?: string | undefined;
   } & React.RefAttributes<SVGSVGElement>
 >;
+
+export type SelectOptionType = {
+  id: string;
+  name: string;
+};

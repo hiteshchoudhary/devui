@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import Button from "@/components/common/Button";
 import {
   CodeBracketSquareIcon,
   LifebuoyIcon,
@@ -20,7 +20,7 @@ export default function Home() {
           your productivity as a learner{" "}
         </p>
         <div className="mt-2 flex space-x-2">
-          <Link href="/#">
+          <Link href="/templates">
             <Button StartIcon={CodeBracketSquareIcon}>View templates</Button>
           </Link>
           <a
