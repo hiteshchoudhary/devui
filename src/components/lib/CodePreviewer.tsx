@@ -19,18 +19,9 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
 
   return (
     <div className="my-8 md:my-12 lg:my-14">
-      <div className="flex fle‚x-col justify-between md:flex-row md:items-center">
+      <div className="fle‚x-col flex justify-between md:flex-row md:items-center">
         <div className="mb-4 flex flex-row items-center space-x-4 md:mb-0">
           <h3 className=" font-sans font-semibold md:mb-0">{title}</h3>
-          <div>
-            <a href={"#"} target="_blank" rel="noreferrer">
-              <div className="flex max-w-max items-center rounded-md border px-3 py-2 md:space-x-3">
-                <p className="hidden text-sm font-semibold md:block">
-                  Open in Tailwind playground
-                </p>
-              </div>
-            </a>
-          </div>
         </div>
         <div className="flex items-center space-x-4">
           {/* Buttons */}
