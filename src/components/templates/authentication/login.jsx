@@ -36,16 +36,16 @@ const Login = () => {
               <div className="relative flex flex-shrink-0 items-center">
                 <div className="flex h-6 items-center">
                   <input
-                    id="notifications"
-                    aria-describedby="notifications-description"
-                    name="notifications"
+                    id="checkbox-1"
+                    aria-describedby="checkbox-1-description"
+                    name="checkbox-1"
                     type="checkbox"
                     className="h-5 w-5 rounded-none border-gray-300 text-[#ae7aff] focus:ring-[#ae7aff]"
                   />
                 </div>
                 <div className="ml-3 text-sm leading-6">
                   <label
-                    htmlFor="notifications"
+                    htmlFor="checkbox-1"
                     className="text-sm font-medium text-white"
                   >
                     Remember me
