@@ -2,7 +2,7 @@ import React from "react";
 
 const ForgotPassword = () => {
   return (
-    <div className="bg-[#121212]">
+    <div className="min-h-screen bg-[#121212]">
       <header className="fixed top-0 z-10 mx-auto w-full max-w-[85rem] bg-[#121212] p-6 text-white lg:px-10">
         <h1>DevUI</h1>
       </header>
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
             </p>
           </div>
         </div>
-        <div className="z-20 hidden w-1/2 md:block">
+        <div className="fixed right-0 z-20 hidden h-screen w-1/2 md:block">
           <img
             className="h-full w-full object-cover"
             src="https://images.pexels.com/photos/1144275/pexels-photo-1144275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

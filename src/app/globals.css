@@ -2,13 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.resizing,
+.resizing * {
+  @apply !cursor-ew-resize !select-none;
+}
+
+.resizing .iframe-overlay {
+  display: block !important;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .CodeMirror__Main__Editor {
-  @apply rounded-md overflow-hidden;
+  @apply overflow-hidden rounded-md;
 }
 .CodeMirror__Main__Editor .cm-scroller {
-  @apply px-4 py-2 pb-0 rounded-md;
+  @apply rounded-md px-4 py-2 pb-0;
 }

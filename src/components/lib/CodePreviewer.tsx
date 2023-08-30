@@ -19,7 +19,7 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
 
   return (
     <div className="my-8 md:my-12 lg:my-14">
-      <div className="fle‚x-col flex justify-between md:flex-row md:items-center">
+      <div className="flex flex-col justify-between md:flex-row md:items-center">
         <div className="mb-4 flex flex-row items-center space-x-4 md:mb-0">
           <h3 className=" font-sans font-semibold md:mb-0">{title}</h3>
         </div>
