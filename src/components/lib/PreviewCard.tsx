@@ -18,8 +18,6 @@ const PreviewCard = ({ children, className }: PreviewCardProps) => {
     setMaxWidth(editorRef.current?.clientWidth);
   }, [editorRef]);
 
-  console.log(maxWidth);
-
   return (
     <div
       ref={editorRef}

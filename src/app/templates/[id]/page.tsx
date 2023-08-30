@@ -12,7 +12,7 @@ const TemplateDetails = () => {
   const [loadingUi, setLoadingUi] = useState(true);
 
   const [selectedPageUI, setSelectedPageUI] = useState<SelectOptionType | null>(
-    null
+    null,
   );
   const [app, setApp] = useState<(typeof applications)[0] | null>(null);
 
