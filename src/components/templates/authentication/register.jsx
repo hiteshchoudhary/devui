@@ -100,7 +100,7 @@ const Register = () => {
                 </label>
               </div>
             </div>
-            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e]">
+            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-300 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
               Create Account
             </button>
             <p className="my-14 text-sm font-light text-white">

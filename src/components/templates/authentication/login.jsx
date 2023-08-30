@@ -57,7 +57,7 @@ const Login = () => {
               </p>
             </div>
 
-            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e]">
+            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-300 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
               Log in
             </button>
             <div className="mx-auto my-3 flex w-full max-w-md items-center justify-center gap-4 text-white">
