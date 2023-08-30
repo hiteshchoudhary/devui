@@ -59,16 +59,16 @@ const Register = () => {
             <div className="relative mt-4 flex items-center">
               <div className="flex h-6 items-center">
                 <input
-                  id="agree-to-receive-email"
-                  aria-describedby="agree-to-receive-email-description"
-                  name="agree-to-receive-email"
+                  id="checkbox-1"
+                  aria-describedby="checkbox-1-description"
+                  name="checkbox-1"
                   type="checkbox"
                   className="h-5 w-5 rounded-none border-gray-300 text-[#ae7aff] focus:ring-[#ae7aff]"
                 />
               </div>
               <div className="ml-3 text-sm leading-6">
                 <label
-                  htmlFor="agree-to-receive-email"
+                  htmlFor="checkbox-1"
                   className="text-sm font-medium text-white"
                 >
                   I agree to receive email updates
@@ -84,16 +84,16 @@ const Register = () => {
             <div className="relative mb-4 flex items-center">
               <div className="flex h-6 items-center">
                 <input
-                  id="agree-to-terms-and-condition"
-                  aria-describedby="agree-to-terms-and-condition-description"
-                  name="agree-to-terms-and-condition"
+                  id="checkbox-2"
+                  aria-describedby="checkbox-2-description"
+                  name="checkbox-2"
                   type="checkbox"
                   className="h-5 w-5 rounded-none border-gray-300 text-[#ae7aff] focus:ring-[#ae7aff]"
                 />
               </div>
               <div className="ml-3 text-sm leading-6">
                 <label
-                  htmlFor="agree-to-terms-and-condition"
+                  htmlFor="checkbox-2"
                   className="text-sm font-medium text-white"
                 >
                   I agree to the terms and conditions
