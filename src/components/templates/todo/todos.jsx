@@ -1,6 +1,5 @@
-import { PaperAirplaneIcon, PlusCircleIcon } from "@heroicons/react/20/solid";
+import { PlusCircleIcon } from "@heroicons/react/20/solid";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
-import React from "react";
 
 const TodosList = () => {
   return (
@@ -30,8 +29,8 @@ const TodosList = () => {
                 placeholder="Type to add a new todo..."
                 className="w-full bg-transparent p-4 text-white placeholder:text-gray-500 md:p-6"
               />
-              <button className="bg-green-500 p-[18px] text-center text-black hover:bg-green-400 active:bg-green-600 md:p-[26px]">
-                <PaperAirplaneIcon className="h-5 w-5" />
+              <button className="bg-green-500 p-4 text-center text-black hover:bg-green-400 active:bg-green-600 md:p-6">
+                <PlusCircleIcon className="h-8 w-8" />
               </button>
             </li>
             {[
@@ -81,7 +80,7 @@ const TodosList = () => {
                     type="checkbox"
                     id={`checkbox-${i + 1}`}
                     name={`checkbox-${i + 1}`}
-                    className={`absolute h-5 w-5 opacity-0 md:h-6 md:w-6 [&:checked+div+p]:text-[#898989] [&:checked+div+p]:line-through [&:checked+div]:bg-green-500 [&:checked+div_svg]:block`}
+                    className={`absolute h-5 w-5 cursor-pointer opacity-0 md:h-6 md:w-6 [&:checked+div+p]:text-[#898989] [&:checked+div+p]:line-through [&:checked+div]:bg-green-500 [&:checked+div_svg]:block`}
                   />
                   <div className="mr-2 flex h-5 w-5 flex-shrink-0 items-center justify-center border-[1px] border-white bg-transparent focus-within:border-white md:mr-4 md:h-6 md:w-6">
                     <svg

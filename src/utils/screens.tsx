@@ -2,7 +2,6 @@ import Register from "@/components/templates/authentication/register";
 import Login from "@/components/templates/authentication/login";
 import ForgotPassword from "@/components/templates/authentication/forgot-password";
 import TodosList from "@/components/templates/todo/todos";
-import TodoForm from "@/components/templates/todo/todo-form";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
 
 export const applications = [
@@ -44,11 +43,6 @@ export const applications = [
         id: "todos",
         name: "Todos page",
         component: <TodosList />,
-      },
-      {
-        id: "todo-form",
-        name: "Todo form",
-        component: <TodoForm />,
       },
     ],
   },

@@ -60,9 +60,9 @@ const Register = () => {
             <div className="mr-4 flex items-center">
               <input
                 type="checkbox"
-                id="checkbox-2"
-                name="checkbox-2"
-                className="absolute h-6 w-6 opacity-0 [&:checked+div]:bg-green-500 [&:checked+div_svg]:block"
+                id="checkbox-1"
+                name="checkbox-1"
+                className="absolute h-6 w-6 cursor-pointer opacity-0 [&:checked+div]:bg-green-500 [&:checked+div_svg]:block"
               />
               <div className="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center border-[1px] border-white bg-transparent focus-within:border-white">
                 <svg
@@ -84,7 +84,7 @@ const Register = () => {
               </div>
               <div className="ml-3 text-sm leading-6">
                 <label
-                  htmlFor="checkbox-2"
+                  htmlFor="checkbox-1"
                   className="text-sm font-medium text-white"
                 >
                   You will get emails on new features and releases
@@ -97,7 +97,7 @@ const Register = () => {
                 type="checkbox"
                 id="checkbox-2"
                 name="checkbox-2"
-                className="absolute h-6 w-6 opacity-0 [&:checked+div]:bg-green-500 [&:checked+div_svg]:block"
+                className="absolute h-6 w-6 cursor-pointer opacity-0 [&:checked+div]:bg-green-500 [&:checked+div_svg]:block"
               />
               <div className="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center border-[1px] border-white bg-transparent focus-within:border-white">
                 <svg
@@ -126,7 +126,7 @@ const Register = () => {
                 </label>
               </div>
             </div>
-            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-300 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
+            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
               Create Account
             </button>
             <p className="my-14 text-sm font-light text-white">

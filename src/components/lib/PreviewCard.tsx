@@ -1,7 +1,6 @@
-import { classNames } from "@/utils";
-import { renderToStaticMarkup } from "react-dom/server";
-import WidthHandler from "./WidthHandler";
+import { classNames, renderHTMLFromJSX } from "@/utils";
 import { useEffect, useRef, useState } from "react";
+import WidthHandler from "./WidthHandler";
 
 interface PreviewCardProps {
   className?: string;
@@ -49,7 +48,7 @@ const PreviewCard = ({ children, className }: PreviewCardProps) => {
         )}
         srcDoc={`
       <script src="https://cdn.tailwindcss.com"></script>
-      ${renderToStaticMarkup(children)}`}
+      ${renderHTMLFromJSX(children)}`}
       ></iframe>
     </div>
   );
