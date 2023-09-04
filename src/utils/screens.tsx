@@ -4,6 +4,7 @@ import ForgotPassword from "@/components/templates/authentication/forgot-passwor
 import TodosList from "@/components/templates/todo/todos";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
 import EmptyChats from "@/components/templates/chat/empty-chats";
+import ChatScreen from "@/components/templates/chat/chat-screen";
 
 export const applications = [
   {
@@ -43,7 +44,7 @@ export const applications = [
       {
         id: "todos",
         name: "Todos page",
-        component: <TodosList />,
+        component: <ChatScreen />,
       },
     ],
   },
@@ -57,6 +58,11 @@ export const applications = [
         id: "empty-chats",
         name: "Empty chats",
         component: <EmptyChats />,
+      },
+      {
+        id: "chat-screen",
+        name: "Chat screen",
+        component: <ChatScreen />,
       },
     ],
   },

@@ -1,6 +1,6 @@
 import React from "react";
 import { PlusCircleIcon } from "@heroicons/react/20/solid";
-import { InboxIcon } from "@heroicons/react/24/outline";
+import { BellIcon, InboxIcon } from "@heroicons/react/24/outline";
 
 const EmptyChats = () => {
   return (
@@ -8,6 +8,13 @@ const EmptyChats = () => {
       <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
         <h1 className="text-xl font-extrabold md:text-3xl">Inbox</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
+          <span className="relative">
+            <BellIcon className="h-8 w-8 text-white" />
+            <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 p-1 text-white">
+              4
+            </span>
+          </span>
+
           <div className="h-11 w-11 rounded-full border-2 border-white">
             <img
               src="https://images.pexels.com/photos/313155/pexels-photo-313155.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
