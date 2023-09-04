@@ -1,11 +1,11 @@
+import { renderHTMLFromJSX } from "@/utils";
+import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import {
-  CheckIcon,
   CodeBracketIcon,
   DocumentDuplicateIcon,
   EyeIcon,
 } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
-import { renderToStaticMarkup } from "react-dom/server";
 import CodeSnippetRenderer from "./CodeSnippetRenderer";
 import PreviewCard from "./PreviewCard";
 
@@ -16,10 +16,20 @@ interface CodePreviewerProps {
 
 const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
   const [previewMode, setPreviewMode] = useState(true);
+  const [codeCopied, setCodeCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    const codeToCopy = renderHTMLFromJSX(children);
+    navigator.clipboard.writeText(codeToCopy);
+    setCodeCopied(true);
+    setTimeout(() => {
+      setCodeCopied(false);
+    }, 4000);
+  };
 
   return (
     <div className="my-8 md:my-12 lg:my-14">
-      <div className="fle‚x-col flex justify-between md:flex-row md:items-center">
+      <div className="flex flex-col justify-between md:flex-row md:items-center">
         <div className="mb-4 flex flex-row items-center space-x-4 md:mb-0">
           <h3 className=" font-sans font-semibold md:mb-0">{title}</h3>
         </div>
@@ -32,7 +42,7 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
                 type="button"
                 className="relative inline-flex items-center rounded-l-md bg-white px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
               >
-                <span className="sr-only">Previous</span>
+                <span className="sr-only">UI preview</span>
                 <span className="flex items-center space-x-2 text-sm font-semibold text-black">
                   <EyeIcon className="h-4 w-4" />
                   <span>Preview</span>
@@ -43,7 +53,7 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
                 type="button"
                 className="relative -ml-px inline-flex items-center rounded-r-md bg-white px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
               >
-                <span className="sr-only">Next</span>
+                <span className="sr-only">Code snippet</span>
                 <span className="flex items-center space-x-2 text-sm font-semibold text-black">
                   <CodeBracketIcon className="h-4 w-4" />
                   <span>Code</span>
@@ -52,20 +62,26 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
             </span>
           </div>
 
-          <div className="rounded-md p-2 hover:bg-gray-200">
-            {false ? (
-              <CheckIcon className="h-4 w-4" />
+          <button
+            onClick={() => {
+              if (codeCopied) return;
+              copyToClipboard();
+            }}
+            className="cursor-pointer rounded-md p-2 hover:bg-gray-100 active:bg-gray-200"
+          >
+            {codeCopied ? (
+              <CheckCircleIcon className="h-5 w-5 text-green-600" />
             ) : (
-              <DocumentDuplicateIcon className="h-4 w-4" />
+              <DocumentDuplicateIcon className="h-5 w-5" />
             )}
-          </div>
+          </button>
         </div>
       </div>
       <div className="w-full">
         {previewMode ? (
           <PreviewCard>{children}</PreviewCard>
         ) : (
-          <CodeSnippetRenderer codeSnippet={renderToStaticMarkup(children)} />
+          <CodeSnippetRenderer codeSnippet={renderHTMLFromJSX(children)} />
         )}
       </div>
     </div>

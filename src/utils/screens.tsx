@@ -1,6 +1,8 @@
 import Register from "@/components/templates/authentication/register";
 import Login from "@/components/templates/authentication/login";
 import ForgotPassword from "@/components/templates/authentication/forgot-password";
+import TodosList from "@/components/templates/todo/todos";
+import EmptyTodos from "@/components/templates/todo/empty-todos";
 
 export const applications = [
   {
@@ -23,6 +25,24 @@ export const applications = [
         id: "forgot-password",
         name: "Forgot Password page",
         component: <ForgotPassword />,
+      },
+    ],
+  },
+  {
+    name: "Todo app",
+    id: "todo",
+    subtitle: "UIs for Todo app",
+    description: "UI of Todo listing and Todo form screens",
+    pages: [
+      {
+        id: "empty-todos",
+        name: "Empty todos page",
+        component: <EmptyTodos />,
+      },
+      {
+        id: "todos",
+        name: "Todos page",
+        component: <TodosList />,
       },
     ],
   },

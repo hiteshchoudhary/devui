@@ -2,7 +2,7 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className="bg-[#121212]">
+    <div className="min-h-screen bg-[#121212]">
       <header className="fixed top-0 z-10 mx-auto w-full max-w-[85rem] bg-[#121212] p-6 text-white lg:px-10">
         <h1>DevUI</h1>
       </header>
@@ -33,31 +33,47 @@ const Login = () => {
               />
             </div>
             <div className="inline-flex w-full items-center justify-between">
-              <div className="relative flex flex-shrink-0 items-center">
-                <div className="flex h-6 items-center">
-                  <input
-                    id="notifications"
-                    aria-describedby="notifications-description"
-                    name="notifications"
-                    type="checkbox"
-                    className="h-5 w-5 rounded-none border-gray-300 text-[#ae7aff] focus:ring-[#ae7aff]"
-                  />
+              <div className="mr-4 flex items-center">
+                <input
+                  type="checkbox"
+                  id="checkbox-1"
+                  name="checkbox-1"
+                  className="absolute h-6 w-6 cursor-pointer opacity-0 [&:checked+div]:bg-green-500 [&:checked+div_svg]:block"
+                />
+                <div className="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center border-[1px] border-white bg-transparent focus-within:border-white">
+                  <svg
+                    className="pointer-events-none hidden h-3 w-3 fill-current text-white"
+                    version="1.1"
+                    viewBox="0 0 17 12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <g
+                        transform="translate(-9 -11)"
+                        fill="#000000"
+                        fill-rule="nonzero"
+                      >
+                        <path d="m25.576 11.414c0.56558 0.55188 0.56558 1.4439 0 1.9961l-9.404 9.176c-0.28213 0.27529-0.65247 0.41385-1.0228 0.41385-0.37034 0-0.74068-0.13855-1.0228-0.41385l-4.7019-4.588c-0.56584-0.55188-0.56584-1.4442 0-1.9961 0.56558-0.55214 1.4798-0.55214 2.0456 0l3.679 3.5899 8.3812-8.1779c0.56558-0.55214 1.4798-0.55214 2.0456 0z" />
+                      </g>
+                    </g>
+                  </svg>
                 </div>
                 <div className="ml-3 text-sm leading-6">
                   <label
-                    htmlFor="notifications"
+                    htmlFor="checkbox-1"
                     className="text-sm font-medium text-white"
                   >
                     Remember me
                   </label>
                 </div>
               </div>
+
               <p className="cursor-pointer text-sm text-white hover:underline">
                 Forgot password?
               </p>
             </div>
 
-            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e]">
+            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
               Log in
             </button>
             <div className="mx-auto my-3 flex w-full max-w-md items-center justify-center gap-4 text-white">
@@ -112,7 +128,7 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <div className="z-20 hidden w-1/2 md:block">
+        <div className="fixed right-0 z-20 hidden h-screen w-1/2 md:block">
           <img
             className="h-full w-full object-cover"
             src="https://images.pexels.com/photos/1144275/pexels-photo-1144275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
