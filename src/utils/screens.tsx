@@ -3,13 +3,14 @@ import Login from "@/components/templates/authentication/login";
 import ForgotPassword from "@/components/templates/authentication/forgot-password";
 import TodosList from "@/components/templates/todo/todos";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
+import EmptyChats from "@/components/templates/chat/empty-chats";
 
 export const applications = [
   {
     name: "Authentication app",
     id: "authentication",
-    subtitle: "UIs for Authentication app",
-    description: "Ui of Register, Login and Forgot password screens",
+    subtitle: "User Authentication",
+    description: "Screens for user registration, login, and password recovery",
     pages: [
       {
         id: "register",
@@ -31,8 +32,8 @@ export const applications = [
   {
     name: "Todo app",
     id: "todo",
-    subtitle: "UIs for Todo app",
-    description: "UI of Todo listing and Todo form screens",
+    subtitle: "Task Management",
+    description: "Screens for managing your tasks and to-dos",
     pages: [
       {
         id: "empty-todos",
@@ -43,6 +44,19 @@ export const applications = [
         id: "todos",
         name: "Todos page",
         component: <TodosList />,
+      },
+    ],
+  },
+  {
+    name: "Chat app",
+    id: "chat",
+    subtitle: "Real-time Chat",
+    description: "Screens for real-time chat conversations",
+    pages: [
+      {
+        id: "empty-chats",
+        name: "Empty chats",
+        component: <EmptyChats />,
       },
     ],
   },
