@@ -1,6 +1,45 @@
 import { PlusCircleIcon } from "@heroicons/react/20/solid";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
 
+const todos = [
+  {
+    task: "Complete coding challenge",
+    date: "10 Aug 2023",
+  },
+  {
+    task: "Read programming article",
+    date: "15 Aug 2023",
+  },
+  {
+    task: "Debug the issue in the backend",
+    date: "20 Aug 2023",
+  },
+  {
+    task: "Review pull requests",
+    date: "25 Aug 2023",
+  },
+  {
+    task: "Prepare presentation on algorithms",
+    date: "05 Sept 2023",
+  },
+  {
+    task: "Attend programming meetup",
+    date: "18 Sept 2023",
+  },
+  {
+    task: "Optimize database queries",
+    date: "10 Oct 2023",
+  },
+  {
+    task: "Participate in hackathon",
+    date: "05 Nov 2023",
+  },
+  {
+    task: "Contribute to open source project",
+    date: "15 Nov 2023",
+  },
+];
+
 const TodosList = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
@@ -33,44 +72,7 @@ const TodosList = () => {
                 <PlusCircleIcon className="h-8 w-8" />
               </button>
             </li>
-            {[
-              {
-                task: "Complete coding challenge",
-                date: "10 Aug 2023",
-              },
-              {
-                task: "Read programming article",
-                date: "15 Aug 2023",
-              },
-              {
-                task: "Debug the issue in the backend",
-                date: "20 Aug 2023",
-              },
-              {
-                task: "Review pull requests",
-                date: "25 Aug 2023",
-              },
-              {
-                task: "Prepare presentation on algorithms",
-                date: "05 Sept 2023",
-              },
-              {
-                task: "Attend programming meetup",
-                date: "18 Sept 2023",
-              },
-              {
-                task: "Optimize database queries",
-                date: "10 Oct 2023",
-              },
-              {
-                task: "Participate in hackathon",
-                date: "05 Nov 2023",
-              },
-              {
-                task: "Contribute to open source project",
-                date: "15 Nov 2023",
-              },
-            ].map(({ task, date }, i) => {
+            {todos.map(({ task, date }, i) => {
               return (
                 <li
                   key={i}

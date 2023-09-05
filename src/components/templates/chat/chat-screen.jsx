@@ -515,8 +515,8 @@ const ChatScreen = () => {
         <h1 className="text-xl font-extrabold md:text-3xl">Inbox</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
-            <BellIcon className="h-8 w-8 text-white" />
-            <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 p-1 text-white">
+            <BellIcon className="h-6 w-6 text-white md:h-8 md:w-8" />
+            <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-1 text-sm text-white md:h-5 md:w-5 md:text-base">
               4
             </span>
           </span>
