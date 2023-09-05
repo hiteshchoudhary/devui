@@ -1,6 +1,7 @@
 import React from "react";
 import { PaperAirplaneIcon, PlusCircleIcon } from "@heroicons/react/20/solid";
 import {
+  Bars3BottomLeftIcon,
   BellIcon,
   EllipsisVerticalIcon,
   FaceSmileIcon,
@@ -512,7 +513,9 @@ const ChatScreen = () => {
   return (
     <div className="bg-[#121212]">
       <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
-        <h1 className="text-xl font-extrabold md:text-3xl">Inbox</h1>
+        <h1 className="text-xl font-extrabold peer-focus:text-red-500 md:text-3xl">
+          Inbox
+        </h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
             <BellIcon className="h-6 w-6 text-white md:h-8 md:w-8" />
@@ -532,39 +535,41 @@ const ChatScreen = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[83px] flex h-[calc(100vh-83px)] w-full items-center justify-center overflow-hidden p-0">
-        <div className="h-full w-[30%] border-r-[1px] border-white">
+      <div className="mt-[77px] flex h-[calc(100vh-77px)] w-full items-center justify-center overflow-hidden p-0 md:mt-[83px] md:h-[calc(100vh-83px)]">
+        <div className="fixed left-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-150 ease-in-out peer-focus:left-0 md:static md:block md:w-[30%] md:translate-x-0 md:border-r-[1px]">
           <div className="flex w-full items-center justify-start gap-2 border-b-[1px] border-white p-4">
             <input
               placeholder="Search chat..."
               className="w-full bg-transparent px-2 text-white !outline-none placeholder:text-gray-500 md:px-4"
             />
-            <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+            <button className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:h-10 md:w-10">
               <MagnifyingGlassIcon className="h-5 w-5 text-white" />
             </button>
-            <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+            <button className="hidden h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:inline-flex">
               <FunnelIcon className="h-5 w-5 text-white" />
             </button>
           </div>
-          <ul className="flex h-[calc(100%-73px)] w-full flex-col items-start justify-start divide-y-[1px] divide-white overflow-y-auto">
+          <ul className="flex h-[calc(100%-140px)] w-full flex-col items-start justify-start divide-y-[1px] divide-white overflow-y-auto md:h-[calc(100%-73px)]">
             {chatListDummyData.map((item, i) => {
               return (
                 <li
-                  className="w-full cursor-pointer p-6 hover:bg-[#232323]"
+                  className="w-full cursor-pointer p-4 hover:bg-[#232323] md:p-6"
                   key={i}
                 >
-                  <div className="flex w-full items-start justify-start gap-4">
+                  <div className="flex w-full items-start justify-start gap-3 md:gap-4">
                     <img
                       className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
                       src={item.avatar}
                       alt="avatar"
                     />
                     <div className="flex w-full flex-col items-start justify-start gap-1 truncate text-ellipsis">
-                      <div className="flex w-full items-center justify-between text-xs">
+                      <div className="flex w-full items-center justify-between text-[10px] md:text-xs">
                         <p className="text-gray-400">{item.fullName}</p>
                         <p className="text-gray-400">{item.dateTime}</p>
                       </div>
-                      <p className="text-sm text-white">{item.lastMessage}</p>
+                      <p className="text-xs text-white md:text-sm">
+                        {item.lastMessage}
+                      </p>
                     </div>
                   </div>
                 </li>
@@ -572,9 +577,12 @@ const ChatScreen = () => {
             })}
           </ul>
         </div>
-        <div className="h-full w-[70%]">
+        <div className="h-full w-full md:w-[70%]">
           <div className="flex w-full items-center justify-between gap-2 border-b-[1px] border-white p-4">
             <div className="flex w-full items-center justify-start gap-3">
+              <button className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:hidden md:h-10 md:w-10">
+                <Bars3BottomLeftIcon className="h-5 w-5 text-white" />
+              </button>
               <img
                 className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
                 src="https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -583,23 +591,23 @@ const ChatScreen = () => {
               <p className="font-semibold text-white">Jane smith</p>
             </div>
             <div className="flex items-center justify-end gap-4">
-              <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+              <button className="hidden h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:inline-flex">
                 <ShareIcon className="h-5 w-5 text-white" />
               </button>
-              <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+              <button className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:h-10 md:w-10">
                 <EllipsisVerticalIcon className="h-5 w-5 text-white" />
               </button>
             </div>
           </div>
-          <div className="relative h-[calc(100vh-158px)] w-full p-4">
-            <div className="flex h-[calc(100%-90px)] w-full flex-col-reverse gap-8 overflow-y-auto">
+          <div className="relative h-[calc(100vh-158px)] w-full p-0 md:p-4">
+            <div className="flex h-[calc(100%-53px)] w-full flex-col-reverse gap-8 overflow-y-auto p-2 md:h-[calc(100%-90px)] md:p-0">
               <div
                 className={
-                  "flex min-w-[150px] max-w-[70%] items-start justify-start gap-2 text-white"
+                  "flex min-w-[150px] max-w-[80%] items-start justify-start gap-2 text-white md:max-w-[70%]"
                 }
               >
                 <img
-                  className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+                  className="flex aspect-square h-7 w-7 flex-shrink-0 rounded-full object-cover md:h-10 md:w-10"
                   src={
                     "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   }
@@ -624,7 +632,7 @@ const ChatScreen = () => {
                 return (
                   <div
                     className={classNames(
-                      "flex min-w-[150px] max-w-[70%] items-start justify-start gap-2 text-white",
+                      "flex min-w-[150px] max-w-[80%] items-start justify-start gap-2 text-white md:max-w-[70%]",
                       message.isOwnMessage
                         ? "ml-auto flex-row-reverse"
                         : "mr-0",
@@ -632,17 +640,17 @@ const ChatScreen = () => {
                     key={i}
                   >
                     <img
-                      className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+                      className="flex aspect-square h-7 w-7 flex-shrink-0 rounded-full object-cover md:h-10 md:w-10"
                       src={message.avatar}
                       alt="avatar"
                     />
                     <div
                       className={classNames(
-                        "flex w-full flex-col gap-2",
+                        "flex w-full flex-col gap-1 md:gap-2",
                         message.isOwnMessage ? "items-end justify-end" : "",
                       )}
                     >
-                      <p className="text-xs">
+                      <p className="text-[10px] md:text-xs">
                         {message.fullName}
                         <span className="ml-2 text-gray-400">
                           {message.time}
@@ -650,7 +658,7 @@ const ChatScreen = () => {
                       </p>
                       <div
                         className={classNames(
-                          "relative w-fit p-3 text-sm after:absolute after:top-0 after:border-t-[15px] after:border-t-[#121212]",
+                          "relative w-fit p-2 text-xs after:absolute after:top-0 after:border-t-[15px] after:border-t-[#121212] md:p-3 md:text-sm",
                           message.isOwnMessage
                             ? "bg-[#ae7aff] after:right-0 after:border-l-[15px] after:border-l-transparent"
                             : "bg-[#343434] after:left-0 after:border-r-[15px] after:border-r-transparent",
@@ -661,7 +669,7 @@ const ChatScreen = () => {
                       {message?.hasAttachments ? (
                         <div
                           className={classNames(
-                            "flex items-center justify-start gap-2",
+                            "flex items-center justify-start gap-1 md:gap-2",
                             message.isOwnMessage ? "ml-auto" : "",
                           )}
                         >
@@ -669,7 +677,7 @@ const ChatScreen = () => {
                             return (
                               <img
                                 key={i}
-                                className="flex aspect-video w-44 flex-shrink-0 object-cover"
+                                className="flex aspect-video w-28 flex-shrink-0 object-cover md:w-44"
                                 src={img}
                                 alt="avatar"
                               />
@@ -682,23 +690,23 @@ const ChatScreen = () => {
                 );
               })}
             </div>
-            <div className="sticky top-full flex w-full items-center justify-start gap-4 border-[1px] border-white px-4 py-2 shadow-[5px_5px_0px_0px_#4f4e4e]">
+            <div className="sticky top-full flex w-full items-center justify-start gap-1 border-t-[1px] border-white px-4 py-2 md:gap-4 md:border-[1px] md:shadow-[5px_5px_0px_0px_#4f4e4e]">
               <img
-                className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+                className="hidden aspect-square h-5 w-5 flex-shrink-0 rounded-full object-cover md:flex md:h-10 md:w-10"
                 src="https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="avatar"
               />
               <input
                 placeholder="Message..."
-                className="w-full bg-transparent p-2 text-white !outline-none placeholder:text-gray-500 md:p-4"
+                className="w-full bg-transparent p-2 text-sm text-white !outline-none placeholder:text-gray-500 md:p-4 md:text-base"
               />
-              <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
+              <button className="hidden h-5 w-5 flex-shrink-0 items-center justify-center p-1 md:flex md:h-10 md:w-10">
                 <FaceSmileIcon className="h-6 w-6 text-white" />
               </button>
-              <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
+              <button className="flex h-7 w-7 flex-shrink-0 items-center  justify-center p-1 md:h-10 md:w-10">
                 <PaperClipIcon className="h-6 w-6 text-white" />
               </button>
-              <button className="flex h-10 w-10 flex-shrink-0  items-center justify-center bg-[#ae7aff] p-1">
+              <button className="flex h-7 w-7 flex-shrink-0 items-center justify-center  bg-[#ae7aff] p-1 md:h-10 md:w-10">
                 <PaperAirplaneIcon className="h-6 w-6 text-black" />
               </button>
             </div>

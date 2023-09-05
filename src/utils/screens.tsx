@@ -44,7 +44,7 @@ export const applications = [
       {
         id: "todos",
         name: "Todos page",
-        component: <ChatScreen />,
+        component: <TodosList />,
       },
     ],
   },

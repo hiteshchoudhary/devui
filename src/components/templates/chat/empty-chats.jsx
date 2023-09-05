@@ -9,15 +9,14 @@ const EmptyChats = () => {
         <h1 className="text-xl font-extrabold md:text-3xl">Inbox</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
-            <BellIcon className="h-8 w-8 text-white" />
-            <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 p-1 text-white">
+            <BellIcon className="h-6 w-6 text-white md:h-8 md:w-8" />
+            <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 p-1 text-sm text-white md:h-5 md:w-5 md:text-base">
               4
             </span>
           </span>
-
           <div className="h-11 w-11 rounded-full border-2 border-white">
             <img
-              src="https://images.pexels.com/photos/313155/pexels-photo-313155.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+              src="https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt="avatar"
               className="h-10 w-10 rounded-full object-cover"
             />
