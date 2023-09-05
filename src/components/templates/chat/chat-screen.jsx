@@ -122,24 +122,6 @@ const chatListDummyData = [
 const chatMessagesDummyData = [
   {
     fullName: "Dan Abramov",
-    message: "Hey there, how's it going? I hope you're having a great day!",
-    time: "Just now",
-    isOwnMessage: true,
-    hasAttachments: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message:
-      "Hi! I'm doing well, thanks. Just working on some coding projects. How about you?",
-    time: "2 minutes ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
     message:
       "I'm good too, just catching up on some reading and enjoying the weather outside.",
     time: "5 minutes ago",
@@ -181,31 +163,7 @@ const chatMessagesDummyData = [
     avatar:
       "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
-  {
-    fullName: "Jane Smith",
-    message:
-      "I'll have to add it to my reading list. By the way, have you seen the latest episode of that new TV series?",
-    time: "30 minutes ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Not yet, but I plan to watch it tonight. No spoilers, please!",
-    time: "35 minutes ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Haha, don't worry, no spoilers from me. Enjoy the show!",
-    time: "40 minutes ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
+
   {
     fullName: "Dan Abramov",
     message:
@@ -232,144 +190,6 @@ const chatMessagesDummyData = [
     isOwnMessage: true,
     avatar:
       "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Sure thing! Have a productive day!",
-    time: "1 hour ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Thanks! You too!",
-    time: "2 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Goodbye!",
-    time: "3 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Goodbye, take care!",
-    time: "4 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "See you!",
-    time: "5 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Hello again! How's your day been so far?",
-    time: "6 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "It's been pretty good, thanks for asking! How about yours?",
-    time: "7 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message:
-      "My day has been busy but productive. I'm looking forward to the evening.",
-    time: "8 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "That's great to hear! Any exciting plans for the evening?",
-    time: "9 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Not sure yet, but I might go out for dinner with some friends.",
-    time: "10 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "That sounds like a fun plan! Enjoy your evening!",
-    time: "11 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Thanks! I hope you have a wonderful evening too.",
-    time: "12 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Indeed, have a great one!",
-    time: "13 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "I'm counting down the hours until the weekend!",
-    time: "14 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Me too! Do you have any exciting weekend plans?",
-    time: "15 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Not yet, but I'm open to suggestions!",
-    time: "16 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message:
-      "Well, there's a new restaurant that just opened downtown. We could check it out!",
-    time: "17 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     fullName: "Dan Abramov",
@@ -419,47 +239,7 @@ const chatMessagesDummyData = [
     avatar:
       "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
-  {
-    fullName: "Dan Abramov",
-    message: "You too!",
-    time: "1 day ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Hello again! How's everything going?",
-    time: "2 days ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message:
-      "I'm doing well, thanks! Just staying busy with work and other projects.",
-    time: "3 days ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "That's great to hear! Staying productive is always a good thing.",
-    time: "4 days ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Absolutely! It helps keep me motivated.",
-    time: "5 days ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
+
   {
     fullName: "Jane Smith",
     message: "That's the spirit! Keep up the good work.",
@@ -467,38 +247,6 @@ const chatMessagesDummyData = [
     isOwnMessage: false,
     hasAttachments: true,
 
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Goodbye for now!",
-    time: "1 week ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "See you later!",
-    time: "2 weeks ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Hello again! How's everything going?",
-    time: "3 weeks ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Hey there! Things are going well on my end. How about you?",
-    time: "1 month ago",
-    isOwnMessage: false,
     avatar:
       "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
@@ -513,9 +261,7 @@ const ChatScreen = () => {
   return (
     <div className="bg-[#121212]">
       <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
-        <h1 className="text-xl font-extrabold peer-focus:text-red-500 md:text-3xl">
-          Inbox
-        </h1>
+        <h1 className="text-xl font-extrabold md:text-3xl">Inbox</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
             <BellIcon className="h-6 w-6 text-white md:h-8 md:w-8" />
@@ -536,7 +282,11 @@ const ChatScreen = () => {
         </div>
       </header>
       <div className="mt-[77px] flex h-[calc(100vh-77px)] w-full items-center justify-center overflow-hidden p-0 md:mt-[83px] md:h-[calc(100vh-83px)]">
-        <div className="fixed left-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-150 ease-in-out peer-focus:left-0 md:static md:block md:w-[30%] md:translate-x-0 md:border-r-[1px]">
+        <button
+          className="peer fixed h-full w-full md:hidden"
+          aria-label="mobile-chatlist-toggler"
+        ></button>
+        <div className="fixed right-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-300 ease-in-out peer-focus:right-0 md:static md:block md:w-[30%] md:translate-x-0 md:border-r-[1px]">
           <div className="flex w-full items-center justify-start gap-2 border-b-[1px] border-white p-4">
             <input
               placeholder="Search chat..."
@@ -599,8 +349,8 @@ const ChatScreen = () => {
               </button>
             </div>
           </div>
-          <div className="relative h-[calc(100vh-158px)] w-full p-0 md:p-4">
-            <div className="flex h-[calc(100%-53px)] w-full flex-col-reverse gap-8 overflow-y-auto p-2 md:h-[calc(100%-90px)] md:p-0">
+          <div className="relative h-[calc(100vh-150px)] w-full p-0 md:h-[calc(100vh-158px)] md:p-4">
+            <div className="flex h-[calc(100%-53px)] w-full flex-col-reverse gap-8 overflow-y-auto px-2 py-4 md:h-[calc(100%-90px)] md:p-0">
               <div
                 className={
                   "flex min-w-[150px] max-w-[80%] items-start justify-start gap-2 text-white md:max-w-[70%]"
