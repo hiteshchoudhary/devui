@@ -68,10 +68,10 @@ export const applications = [
     ],
   },
   {
-    name: "Social media app",
+    name: "Social Media App",
     id: "social-media",
     subtitle: "Social Media",
-    description: "Screens for social media posts and profile",
+    description: "All-in-one social media solution for posts and profiles.",
     pages: [
       {
         id: "post-listing",
