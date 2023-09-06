@@ -5,6 +5,7 @@ import TodosList from "@/components/templates/todo/todos";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
 import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
+import PostListing from "@/components/templates/social-media/post-listing";
 
 export const applications = [
   {
@@ -63,6 +64,19 @@ export const applications = [
         id: "chat-screen",
         name: "Chat screen",
         component: <ChatScreen />,
+      },
+    ],
+  },
+  {
+    name: "Social media app",
+    id: "social-media",
+    subtitle: "Social Media",
+    description: "Screens for social media posts and profile",
+    pages: [
+      {
+        id: "post-listing",
+        name: "Post Listing",
+        component: <PostListing />,
       },
     ],
   },
