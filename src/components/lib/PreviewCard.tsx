@@ -48,6 +48,11 @@ const PreviewCard = ({ children, className }: PreviewCardProps) => {
         )}
         srcDoc={`
       <script src="https://cdn.tailwindcss.com"></script>
+      ${
+        process.env.NODE_ENV && process.env.NODE_ENV === "development"
+          ? '<script>const host=window.parent.location.host;const socket=new WebSocket("ws://"+host+"/_next/webpack-hmr");socket.onmessage=(message)=>{const{action}=JSON.parse(message.data);if(action==="built")window.parent.location.reload()}</script>'
+          : ""
+      }
       ${renderHTMLFromJSX(children)}`}
       ></iframe>
     </div>
