@@ -1,11 +1,60 @@
 import React from "react";
 import {
   BellIcon,
+  EllipsisVerticalIcon,
   FaceSmileIcon,
+  HeartIcon,
   MagnifyingGlassIcon,
   PlusIcon,
 } from "@heroicons/react/24/outline";
-import { PaperAirplaneIcon, PlusCircleIcon } from "@heroicons/react/24/solid";
+import {
+  ChatBubbleOvalLeftEllipsisIcon,
+  PaperAirplaneIcon,
+  PlusCircleIcon,
+  ShareIcon,
+} from "@heroicons/react/24/solid";
+
+const posts = [
+  {
+    id: 1,
+    authorImage:
+      "https://images.pexels.com/photos/18264716/pexels-photo-18264716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    authorName: "Mystical Wanderer",
+    createdOn: "15 minutes ago",
+    text: "Uncovering ancient secrets and mystical wonders. The journey is the destination. 🔮🌟 #MythologyQuest",
+    images: [],
+    likeCountClasses: "after:content-['46'] focus:after:content-['47']",
+    commentCount: 13,
+  },
+  {
+    id: 2,
+    authorImage:
+      "https://images.pexels.com/photos/13847596/pexels-photo-13847596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    authorName: "Aqua Explorer",
+    createdOn: "1 hour ago",
+    text: "Swimming with the dolphins today, and it was magical! 🐬🌊 #OceanAdventure",
+    images: [
+      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    ],
+    likeCountClasses: "after:content-['102'] focus:after:content-['103']",
+    commentCount: 18,
+  },
+  {
+    id: 3,
+    authorImage:
+      "https://images.pexels.com/photos/7775637/pexels-photo-7775637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    authorName: "Solar Flare ",
+    createdOn: "59 minutes ago",
+    text: "Harnessing the power of the sun for a brighter future. ☀️🔋 #SolarEnergy",
+    images: [
+      "https://images.pexels.com/photos/18107025/pexels-photo-18107025/free-photo-of-man-reading-newspaper.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/18148933/pexels-photo-18148933/free-photo-of-city-road-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/18148937/pexels-photo-18148937/free-photo-of-city-road-traffic-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    ],
+    likeCountClasses: "after:content-['802'] focus:after:content-['803']",
+    commentCount: 99,
+  },
+];
 
 const PostListing = () => {
   return (
@@ -74,6 +123,68 @@ const PostListing = () => {
               <PaperAirplaneIcon className="h-6 w-6 text-black" />
             </button>
           </div>
+          {/* Post Lists */}
+          {posts.map((post) => (
+            <div key={post.id} className="relative mb-4 w-full last:mb-0">
+              <div className="flex border p-4 text-white">
+                {/* Author Profile */}
+                <div className="h-12 w-12 shrink-0">
+                  <img
+                    src={post.authorImage}
+                    alt={post.authorName}
+                    className="h-full w-full rounded-full object-cover"
+                  />
+                </div>
+                {/* Center-Right Content */}
+                <div className="pl-4 pt-1">
+                  {/* Post Metadata */}
+                  <div className="mb-2 flex items-center gap-x-2">
+                    <h2 className="font-bold">{post.authorName}</h2>
+                    <span className="inline-block text-sm text-gray-400">
+                      {post.createdOn}
+                    </span>
+                    <button className="ml-auto hover:text-[#ae7aff]">
+                      <EllipsisVerticalIcon className="h-5 w-5" />
+                    </button>
+                  </div>
+                  {/* Post Text */}
+                  <p className="mb-4">{post.text}</p>
+                  {/* Post Images */}
+                  {post.images.length > 0 && (
+                    <div className="mb-4 grid grid-cols-2 gap-4">
+                      {post.images.map((image, i) => (
+                        <img
+                          key={image}
+                          src={image}
+                          alt={`attachment-${i}`}
+                          className="rounded-md"
+                        />
+                      ))}
+                    </div>
+                  )}
+                  {/* Post Actions Buttons */}
+                  <div className="flex gap-x-4">
+                    {/* Like Button */}
+                    <button
+                      className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] focus:text-[#ae7aff] ${post.likeCountClasses}`}
+                    >
+                      <HeartIcon className="h-5 w-5 group-focus:fill-[#ae7aff]" />
+                      {/* <span>{post.likeCount}</span> */}
+                    </button>
+                    {/* Comment Button */}
+                    <button className="inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
+                      <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
+                      <span>{post.commentCount}</span>
+                    </button>
+                    {/* Like Button */}
+                    <button className="ml-auto inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
+                      <ShareIcon className="h-5 w-5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </section>
         {/* Trending Topics */}
         <aside className="hidden text-white lg:col-span-3 lg:block">
