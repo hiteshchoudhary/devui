@@ -24,7 +24,7 @@ const posts = [
     createdOn: "15 minutes ago",
     text: "Uncovering ancient secrets and mystical wonders. The journey is the destination. 🔮🌟 #MythologyQuest",
     images: [],
-    likeCountClasses: "after:content-['46'] focus:after:content-['47']",
+    likeCount: 46,
     commentCount: 13,
   },
   {
@@ -37,7 +37,7 @@ const posts = [
     images: [
       "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
-    likeCountClasses: "after:content-['102'] focus:after:content-['103']",
+    likeCount: 102,
     commentCount: 18,
   },
   {
@@ -52,7 +52,7 @@ const posts = [
       "https://images.pexels.com/photos/18148933/pexels-photo-18148933/free-photo-of-city-road-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/18148937/pexels-photo-18148937/free-photo-of-city-road-traffic-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     ],
-    likeCountClasses: "after:content-['802'] focus:after:content-['803']",
+    likeCount: 802,
     commentCount: 99,
   },
   {
@@ -63,7 +63,7 @@ const posts = [
     createdOn: "17 hours ago",
     text: "Embracing the lunar magic tonight. The full moon is my muse. 🌕🌌 #MoonlightDreams",
     images: [],
-    likeCountClasses: "after:content-['420'] focus:after:content-['421']",
+    likeCount: 420,
     commentCount: 20,
     link: {
       image:
@@ -81,7 +81,7 @@ const posts = [
     createdOn: "1 day ago",
     text: "💡 Tech Poll: Which emerging technology excites you the most?",
     images: [],
-    likeCountClasses: "after:content-['202'] focus:after:content-['203']",
+    likeCount: 207,
     commentCount: 63,
     poll: [
       {
@@ -106,7 +106,7 @@ const posts = [
     createdOn: "7 days ago",
     text: "🧘‍♂️ Mindfulness Poll: Which mindfulness practice resonates with you the most?",
     images: [],
-    likeCountClasses: "after:content-['97'] focus:after:content-['98']",
+    likeCount: 97,
     commentCount: 13,
     poll: [
       {
@@ -136,7 +136,7 @@ const posts = [
     createdOn: "1 months ago",
     text: "🎨 Art Poll: What's your preferred art medium for creating masterpieces?",
     images: [],
-    likeCountClasses: "after:content-['99'] focus:after:content-['100']",
+    likeCount: 99,
     commentCount: 13,
     poll: [
       {
@@ -322,7 +322,9 @@ const PostListing = () => {
                   <div className="flex gap-x-4">
                     {/* Like Button */}
                     <button
-                      className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] focus:text-[#ae7aff] ${post.likeCountClasses}`}
+                      className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-likeCount)] hover:text-[#ae7aff] focus:text-[#ae7aff] focus:after:content-[attr(data-likeCountInc)]`}
+                      data-likeCount={post.likeCount}
+                      data-likeCountInc={post.likeCount + 1}
                     >
                       <HeartIcon className="h-5 w-5 group-focus:fill-[#ae7aff]" />
                       {/* <span>{post.likeCount}</span> */}
