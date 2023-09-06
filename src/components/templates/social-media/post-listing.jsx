@@ -20,6 +20,37 @@ const PostListing = () => {
           </button>
         </div>
       </header>
+      <div className="mt-[65px] grid grid-cols-12 gap-4 px-4 py-8 md:mt-[83px] lg:px-10">
+        {/* Profile */}
+        <aside className="hidden text-white md:col-span-4 md:block lg:col-span-3">
+          <div className="border p-4">
+            <img
+              className="mb-3 flex aspect-square h-16 w-16 flex-shrink-0 rounded-full object-cover"
+              src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="avatar"
+            />
+            <h2>Aurora Starlight</h2>
+            <p className="text-sm">
+              <a
+                href="mailto:starryaurora@gmail.com"
+                className="hover:text-[#ae7aff]"
+              >
+                starryaurora@gmail.com
+              </a>
+            </p>
+            <hr className="my-2 h-[1px] w-full" />
+            <p className="mb-4">
+              Night owl | Moon enthusiast | Wanderlust 🌕🌙🌎
+            </p>
+            <button className="inline-flex w-max items-center bg-[#ae7aff] px-4 py-2 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
+              View Profile
+            </button>
+          </div>
+        </aside>
+        <section className="col-span-12 md:col-span-8 lg:col-span-6"></section>
+        {/* Trending Topics */}
+        <aside className="hidden text-white lg:col-span-3 lg:block"></aside>
+      </div>
     </div>
   );
 };
