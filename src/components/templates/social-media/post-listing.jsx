@@ -73,6 +73,90 @@ const posts = [
       url: "https://www.aurorastarry.com/",
     },
   },
+  {
+    id: 5,
+    authorImage:
+      "https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    authorName: "Nova Sparks",
+    createdOn: "1 day ago",
+    text: "💡 Tech Poll: Which emerging technology excites you the most?",
+    images: [],
+    likeCountClasses: "after:content-['202'] focus:after:content-['203']",
+    commentCount: 63,
+    poll: [
+      {
+        name: "Artificial Intelligence",
+      },
+      {
+        name: "Virtual Reality",
+      },
+      {
+        name: "Quantum Computing",
+      },
+      {
+        name: "5G Connectivity",
+      },
+    ],
+  },
+  {
+    id: 6,
+    authorImage:
+      "https://images.pexels.com/photos/569314/pexels-photo-569314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    authorName: "Zen Garden",
+    createdOn: "7 days ago",
+    text: "🧘‍♂️ Mindfulness Poll: Which mindfulness practice resonates with you the most?",
+    images: [],
+    likeCountClasses: "after:content-['97'] focus:after:content-['98']",
+    commentCount: 13,
+    poll: [
+      {
+        name: "Meditation",
+        votePercentage: 30,
+      },
+      {
+        name: "Yoga",
+        selected: true,
+        votePercentage: 33,
+      },
+      {
+        name: "Deep Breathing",
+        votePercentage: 27,
+      },
+      {
+        name: "Tai Chi",
+        votePercentage: 20,
+      },
+    ],
+  },
+  {
+    id: 7,
+    authorImage:
+      "https://images.pexels.com/photos/1739942/pexels-photo-1739942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    authorName: "Pixel Painter",
+    createdOn: "1 months ago",
+    text: "🎨 Art Poll: What's your preferred art medium for creating masterpieces?",
+    images: [],
+    likeCountClasses: "after:content-['99'] focus:after:content-['100']",
+    commentCount: 13,
+    poll: [
+      {
+        name: "Acrylic Paint",
+        votePercentage: 20,
+      },
+      {
+        name: "Watercolor",
+        votePercentage: 19,
+      },
+      {
+        name: "Digital Art",
+        votePercentage: 18,
+      },
+      {
+        name: "Charcoal Sketching",
+        votePercentage: 43,
+      },
+    ],
+  },
 ];
 
 const PostListing = () => {
@@ -204,6 +288,36 @@ const PostListing = () => {
                       </div>
                     </a>
                   )}
+                  {/* Polls */}
+                  {post.poll &&
+                    post.poll.map((option) => (
+                      <button
+                        key={option?.name}
+                        className={`relative z-[1] mb-4 inline-flex w-full items-center gap-x-4 border p-4 before:absolute before:inset-y-0 before:left-0 before:z-[-1] last:mb-0 before:w-[${
+                          option?.votePercentage || 0
+                        }%] ${
+                          option?.votePercentage && option?.votePercentage >= 0
+                            ? ""
+                            : "hover:bg-[#ae7aff] hover:text-black focus:border-[#ae7aff] focus:bg-[#ae7aff] focus:text-black"
+                        }
+
+              ${
+                option?.selected
+                  ? "before:bg-[#ae7aff]"
+                  : "before:bg-gray-400/10"
+              }
+              
+              `}
+                        disabled={Boolean(option?.votePercentage)}
+                      >
+                        {option?.name}{" "}
+                        {option?.votePercentage && (
+                          <span className="ml-auto shrink-0 text-sm">
+                            {option.votePercentage}%
+                          </span>
+                        )}
+                      </button>
+                    ))}
                   {/* Post Actions Buttons */}
                   <div className="flex gap-x-4">
                     {/* Like Button */}
