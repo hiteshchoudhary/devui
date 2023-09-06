@@ -4,6 +4,7 @@ import {
   EllipsisVerticalIcon,
   FaceSmileIcon,
   HeartIcon,
+  LinkIcon,
   MagnifyingGlassIcon,
   PlusIcon,
 } from "@heroicons/react/24/outline";
@@ -53,6 +54,24 @@ const posts = [
     ],
     likeCountClasses: "after:content-['802'] focus:after:content-['803']",
     commentCount: 99,
+  },
+  {
+    id: 4,
+    authorImage:
+      "https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    authorName: "Aurora Starlight",
+    createdOn: "17 hours ago",
+    text: "Embracing the lunar magic tonight. The full moon is my muse. 🌕🌌 #MoonlightDreams",
+    images: [],
+    likeCountClasses: "after:content-['420'] focus:after:content-['421']",
+    commentCount: 20,
+    link: {
+      image:
+        "https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title: "Aurora Starlight",
+      caption: "Digital artist | Creative mind | Color magician 🎨🖌️🖼️",
+      url: "https://www.aurorastarry.com/",
+    },
   },
 ];
 
@@ -161,6 +180,29 @@ const PostListing = () => {
                         />
                       ))}
                     </div>
+                  )}
+                  {/* Link Preview */}
+                  {post.link && (
+                    <a href={post.link.url} target="_blank">
+                      <div className="group mb-4 border opacity-95 hover:opacity-100">
+                        <div className="max-h-52 overflow-hidden">
+                          <img
+                            src={post.link.image}
+                            alt={post.link.title}
+                            className="object-cover"
+                          />
+                        </div>
+                        {/* Link Content */}
+                        <div className="p-4">
+                          <h3 className="mb-2 font-bold">{post.link.title}</h3>
+                          <p className="mb-3 text-sm">{post.link.caption}</p>
+                          <span className="inline-flex items-center gap-x-2 text-sm text-[#ae7aff] no-underline group-hover:underline">
+                            <LinkIcon className="h-4 w-4" />
+                            {post.link.url}
+                          </span>
+                        </div>
+                      </div>
+                    </a>
                   )}
                   {/* Post Actions Buttons */}
                   <div className="flex gap-x-4">
