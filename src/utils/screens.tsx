@@ -5,6 +5,8 @@ import TodosList from "@/components/templates/todo/todos";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
 import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
+import CreateGroupChat from "@/components/templates/chat/create-normal-chat";
+import CreateOneOnOneChat from "@/components/templates/chat/create-normal-chat";
 
 export const applications = [
   {
@@ -63,6 +65,16 @@ export const applications = [
         id: "chat-screen",
         name: "Chat screen",
         component: <ChatScreen />,
+      },
+      {
+        id: "create-normal-chat",
+        name: "Create one on one chat",
+        component: <CreateOneOnOneChat />,
+      },
+      {
+        id: "create-group-chat",
+        name: "Create a group chat",
+        component: <CreateGroupChat />,
       },
     ],
   },
