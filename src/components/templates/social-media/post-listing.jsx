@@ -1,6 +1,11 @@
 import React from "react";
-import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { PlusCircleIcon } from "@heroicons/react/24/solid";
+import {
+  BellIcon,
+  FaceSmileIcon,
+  MagnifyingGlassIcon,
+  PlusIcon,
+} from "@heroicons/react/24/outline";
+import { PaperAirplaneIcon, PlusCircleIcon } from "@heroicons/react/24/solid";
 
 const PostListing = () => {
   return (
@@ -47,7 +52,29 @@ const PostListing = () => {
             </button>
           </div>
         </aside>
-        <section className="col-span-12 md:col-span-8 lg:col-span-6"></section>
+        <section className="col-span-12 md:col-span-8 lg:col-span-6">
+          {/* Create Post Form */}
+          <div className="mb-6 flex w-full items-center justify-start gap-4 border-[1px] border-white px-4 py-2 shadow-[5px_5px_0px_0px_#4f4e4e]">
+            <img
+              className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+              src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="avatar"
+            />
+            <input
+              placeholder="Type to add something"
+              className="w-full bg-transparent p-2 text-white !outline-none placeholder:text-gray-500 md:p-4"
+            />
+            <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
+              <FaceSmileIcon className="h-6 w-6 text-white" />
+            </button>
+            <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
+              <PlusIcon className="h-6 w-6 text-white" />
+            </button>
+            <button className="flex h-10 w-10 flex-shrink-0  items-center justify-center bg-[#ae7aff] p-1">
+              <PaperAirplaneIcon className="h-6 w-6 text-black" />
+            </button>
+          </div>
+        </section>
         {/* Trending Topics */}
         <aside className="hidden text-white lg:col-span-3 lg:block"></aside>
       </div>
