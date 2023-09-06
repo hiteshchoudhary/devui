@@ -76,7 +76,22 @@ const PostListing = () => {
           </div>
         </section>
         {/* Trending Topics */}
-        <aside className="hidden text-white lg:col-span-3 lg:block"></aside>
+        <aside className="hidden text-white lg:col-span-3 lg:block">
+          <div className="border p-4">
+            <h2 className="mb-4 font-bold"># Trending Hashtags</h2>
+            <ul className="list-disc pl-4">
+              {["javascript", "typescript", "java", "python", "golang"].map(
+                (hashtag) => (
+                  <li key={hashtag}>
+                    <a href="#" className="hover:text-[#ae7aff]">
+                      #{hashtag}
+                    </a>
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
+        </aside>
       </div>
     </div>
   );
