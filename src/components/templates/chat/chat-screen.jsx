@@ -253,6 +253,7 @@ const chatMessagesDummyData = [
 ];
 
 const dummyAttachments = [
+  "https://images.pexels.com/photos/18094275/pexels-photo-18094275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 ];
@@ -260,7 +261,7 @@ const dummyAttachments = [
 const ChatScreen = () => {
   return (
     <div className="bg-[#121212]">
-      <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
+      <header className="fixed top-0 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
         <h1 className="text-xl font-extrabold md:text-3xl">Inbox</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
@@ -285,8 +286,9 @@ const ChatScreen = () => {
         <button
           className="peer fixed h-full w-full md:hidden"
           aria-label="mobile-chatlist-toggler"
+          aria-details="Remove when using in your project. Following button is only to toggle chatlist sidebar"
         ></button>
-        <div className="fixed right-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-300 ease-in-out peer-focus:right-0 md:static md:block md:w-[30%] md:translate-x-0 md:border-r-[1px]">
+        <div className="fixed right-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-300 ease-in-out peer-focus:right-0 md:static md:static md:block md:w-[30%] md:border-r-[1px]">
           <div className="flex w-full items-center justify-start gap-2 border-b-[1px] border-white p-4">
             <input
               placeholder="Search chat..."
@@ -419,7 +421,7 @@ const ChatScreen = () => {
                       {message?.hasAttachments ? (
                         <div
                           className={classNames(
-                            "flex items-center justify-start gap-1 md:gap-2",
+                            "grid w-full grid-cols-2 items-start justify-start gap-1 md:max-w-[90%] md:gap-2",
                             message.isOwnMessage ? "ml-auto" : "",
                           )}
                         >
@@ -427,7 +429,7 @@ const ChatScreen = () => {
                             return (
                               <img
                                 key={i}
-                                className="flex aspect-video w-28 flex-shrink-0 object-cover md:w-44"
+                                className="flex aspect-video w-full flex-shrink-0 object-cover"
                                 src={img}
                                 alt="avatar"
                               />
