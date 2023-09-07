@@ -6,6 +6,7 @@ import EmptyTodos from "@/components/templates/todo/empty-todos";
 import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
 import PostListing from "@/components/templates/social-media/post-listing";
+import PostDetail from "@/components/templates/social-media/post-detail";
 
 export const applications = [
   {
@@ -45,7 +46,7 @@ export const applications = [
       {
         id: "todos",
         name: "Todos page",
-        component: <ChatScreen />,
+        component: <TodosList />,
       },
     ],
   },
@@ -77,6 +78,11 @@ export const applications = [
         id: "post-listing",
         name: "Post Listing",
         component: <PostListing />,
+      },
+      {
+        id: "post-detail",
+        name: "Post Detail",
+        component: <PostDetail />,
       },
     ],
   },
