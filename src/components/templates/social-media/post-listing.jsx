@@ -177,7 +177,7 @@ const PostListing = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[65px] grid grid-cols-12 gap-4 px-4 py-8 md:mt-[83px] lg:px-10">
+      <div className="mt-[65px] grid grid-cols-12 gap-4 py-8 sm:px-4 md:mt-[83px] lg:px-10">
         {/* Profile */}
         <aside className="hidden text-white md:col-span-4 md:block lg:col-span-3">
           <div className="border p-4">
@@ -206,9 +206,9 @@ const PostListing = () => {
         </aside>
         <section className="col-span-12 md:col-span-8 lg:col-span-6">
           {/* Create Post Form */}
-          <div className="mb-6 flex w-full items-center justify-start gap-4 border-[1px] border-white px-4 py-2 shadow-[5px_5px_0px_0px_#4f4e4e]">
+          <div className="mb-6 flex w-full items-center justify-start border-b border-t border-white px-4 py-2 sm:border-l sm:border-r sm:shadow-[5px_5px_0px_0px_#4f4e4e]">
             <img
-              className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+              className="flex aspect-square h-10 w-10 shrink-0 rounded-full object-cover"
               src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="avatar"
             />
@@ -216,22 +216,27 @@ const PostListing = () => {
               placeholder="Type to add something"
               className="w-full bg-transparent p-2 text-white !outline-none placeholder:text-gray-500 md:p-4"
             />
-            <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
-              <FaceSmileIcon className="h-6 w-6 text-white" />
-            </button>
-            <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
-              <PlusIcon className="h-6 w-6 text-white" />
-            </button>
-            <button className="flex h-10 w-10 flex-shrink-0  items-center justify-center bg-[#ae7aff] p-1">
-              <PaperAirplaneIcon className="h-6 w-6 text-black" />
-            </button>
+            <div className="flex gap-x-1 sm:gap-x-2">
+              <button className="flex shrink-0 items-center justify-center p-1">
+                <FaceSmileIcon className="w-6 text-white" />
+              </button>
+              <button className="flex shrink-0 items-center justify-center p-1">
+                <PlusIcon className="w-6 text-white" />
+              </button>
+              <button className="flex shrink-0 items-center justify-center bg-[#ae7aff] p-1">
+                <PaperAirplaneIcon className="w-6 text-black" />
+              </button>
+            </div>
           </div>
           {/* Post Lists */}
           {posts.map((post) => (
-            <div key={post.id} className="relative mb-4 w-full last:mb-0">
-              <div className="flex border p-4 text-white">
+            <div
+              key={post.id}
+              className="relative mb-2 w-full last:mb-0 sm:mb-4"
+            >
+              <div className="flex border-b border-t border-white p-4 text-white sm:border-l sm:border-r">
                 {/* Author Profile */}
-                <div className="h-12 w-12 shrink-0">
+                <div className="h-10 w-10 shrink-0 sm:h-12 sm:w-12">
                   <img
                     src={post.authorImage}
                     alt={post.authorName}
@@ -242,19 +247,23 @@ const PostListing = () => {
                 <div className="pl-4 pt-1">
                   {/* Post Metadata */}
                   <div className="mb-2 flex items-center gap-x-2">
-                    <h2 className="font-bold">{post.authorName}</h2>
-                    <span className="inline-block text-sm text-gray-400">
-                      {post.createdOn}
-                    </span>
-                    <button className="ml-auto hover:text-[#ae7aff]">
+                    <div className="w-full">
+                      <h2 className="inline-block font-bold">
+                        {post.authorName}
+                      </h2>
+                      <span className="ml-2 inline-block text-sm text-gray-400">
+                        {post.createdOn}
+                      </span>
+                    </div>
+                    <button className="ml-auto shrink-0 hover:text-[#ae7aff]">
                       <EllipsisVerticalIcon className="h-5 w-5" />
                     </button>
                   </div>
                   {/* Post Text */}
-                  <p className="mb-4">{post.text}</p>
+                  <p className="mb-4 text-sm sm:text-base">{post.text}</p>
                   {/* Post Images */}
                   {post.images.length > 0 && (
-                    <div className="mb-4 grid grid-cols-2 gap-4">
+                    <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                       {post.images.map((image, i) => (
                         <img
                           key={image}
@@ -280,8 +289,8 @@ const PostListing = () => {
                         <div className="p-4">
                           <h3 className="mb-2 font-bold">{post.link.title}</h3>
                           <p className="mb-3 text-sm">{post.link.caption}</p>
-                          <span className="inline-flex items-center gap-x-2 text-sm text-[#ae7aff] no-underline group-hover:underline">
-                            <LinkIcon className="h-4 w-4" />
+                          <span className="inline-flex items-center gap-x-2 break-all text-sm text-[#ae7aff] no-underline group-hover:underline">
+                            <LinkIcon className="h-4 w-4 shrink-0" />
                             {post.link.url}
                           </span>
                         </div>
