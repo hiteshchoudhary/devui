@@ -263,7 +263,7 @@ const PostListing = () => {
                   <p className="mb-4 text-sm sm:text-base">{post.text}</p>
                   {/* Post Images */}
                   {post.images.length > 0 && (
-                    <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div className="mb-4 grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-4">
                       {post.images.map((image, i) => (
                         <img
                           key={image}
