@@ -331,9 +331,9 @@ const PostListing = () => {
                   <div className="flex gap-x-4">
                     {/* Like Button */}
                     <button
-                      className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-likeCount)] hover:text-[#ae7aff] focus:text-[#ae7aff] focus:after:content-[attr(data-likeCountInc)]`}
-                      data-likeCount={post.likeCount}
-                      data-likeCountInc={post.likeCount + 1}
+                      className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] hover:text-[#ae7aff] focus:text-[#ae7aff] focus:after:content-[attr(data-like-count-inc)]`}
+                      data-like-count={post.likeCount}
+                      data-like-count-inc={post.likeCount + 1}
                     >
                       <HeartIcon className="h-5 w-5 group-focus:fill-[#ae7aff]" />
                       {/* <span>{post.likeCount}</span> */}
