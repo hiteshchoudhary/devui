@@ -18,21 +18,40 @@ const IFrame = ({ children, className = "" }: IFrameProps) => {
   }, []);
 
   useEffect(() => {
-    if (iframeDoc) {
-      const stylesheet = document.querySelector<HTMLLinkElement>(
-        "link[rel=stylesheet]",
-      );
+    const stylesheet = document.querySelector<HTMLLinkElement>(
+      "link[rel=stylesheet]",
+    );
 
-      if (stylesheet) {
-        const link = iframeDoc.createElement("link");
-        link.rel = "stylesheet";
-        link.href = stylesheet.href;
+    if (iframeDoc && stylesheet) {
+      const link = iframeDoc.createElement("link");
+      link.rel = "stylesheet";
+      link.href = stylesheet.href;
 
-        link.onload = () => {
-          setLoadBody(true);
-        };
+      link.onload = () => {
+        setLoadBody(true);
+      };
 
-        iframeDoc.head.appendChild(link);
+      iframeDoc.head.appendChild(link);
+
+      // MutationObserver for parent css to update css only in development mode
+      if (process.env.NODE_ENV === "development") {
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.type === "childList") {
+              mutation.addedNodes.forEach((node: any) => {
+                if (node.nodeName === "LINK" && node.rel === "stylesheet") {
+                  link.href = node.href;
+                }
+              });
+            }
+          });
+        });
+
+        observer.observe(document.querySelector("head") as HTMLHeadElement, {
+          childList: true,
+        });
+
+        return () => observer.disconnect();
       }
     }
   }, [iframeDoc]);
