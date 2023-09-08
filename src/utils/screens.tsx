@@ -7,7 +7,7 @@ import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
 import PostListing from "@/components/templates/social-media/post-listing";
 import PostDetail from "@/components/templates/social-media/post-detail";
-import Profile from "@/components/templates/social-media/profile";
+import MyProfile from "@/components/templates/social-media/my-profile";
 
 export const applications = [
   {
@@ -86,9 +86,9 @@ export const applications = [
         component: <PostDetail />,
       },
       {
-        id: "profile",
-        name: "Profile",
-        component: <Profile />,
+        id: "my-profile",
+        name: "My Profile",
+        component: <MyProfile />,
       },
     ],
   },
