@@ -7,6 +7,7 @@ import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
 import CreateGroupChat from "@/components/templates/chat/create-group-chat";
 import CreateOneOnOneChat from "@/components/templates/chat/create-normal-chat";
+import GroupChatInfo from "@/components/templates/chat/group-information";
 
 export const applications = [
   {
@@ -75,6 +76,11 @@ export const applications = [
         id: "create-group-chat",
         name: "Create a group chat",
         component: <CreateGroupChat />,
+      },
+      {
+        id: "group-chat-info",
+        name: "Group chat information",
+        component: <GroupChatInfo />,
       },
     ],
   },
