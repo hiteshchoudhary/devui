@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BellIcon,
-  LinkIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
+import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { PlusCircleIcon } from "@heroicons/react/24/solid";
 
 const Profile = () => {
@@ -24,49 +20,48 @@ const Profile = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[65px] grid grid-cols-12 gap-4 py-8 sm:px-4 md:mt-[83px] lg:px-10">
+      <div className="mt-[65px] grid grid-cols-12 gap-4 pb-8 sm:px-4 sm:pt-8 md:mt-[83px] lg:px-10">
         {/* Empty */}
-        <aside className="hidden text-white md:col-span-4 md:block lg:col-span-3"></aside>
-
-        <section className="col-span-12 text-white md:col-span-8 lg:col-span-6">
+        <aside className="col-span-12 text-white md:col-span-5 lg:col-span-4 xl:col-span-3">
           {/* Profile Card */}
-          <div className="border p-4">
+          <div className="border-b border-white p-4 sm:border">
             <img
               className="mb-3 flex aspect-square h-16 w-16 rounded-full border-2 border-[#ae7aff] object-cover"
               src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="avatar"
             />
-            <div className="flex justify-between gap-x-4">
-              <div className="w-full">
-                <h2>Aurora Starlight</h2>
-                <p className="text-sm">
-                  <a
-                    href="mailto:starryaurora@gmail.com"
-                    className="hover:text-[#ae7aff]"
-                  >
-                    starryaurora@gmail.com
-                  </a>
-                </p>
-              </div>
-              <div className="shrink-0">
-                <button className="inline-flex w-max items-center bg-[#ae7aff] px-4 py-2 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
-                  Edit Profile
-                </button>
-              </div>
-            </div>
-            <hr className="my-2 h-[1px] w-full" />
-            <p className="mb-2">
+
+            <h2 className="mb-1 font-bold">Aurora Starlight</h2>
+            <p className="text-sm">
               Night owl | Moon enthusiast | Wanderlust 🌕🌙🌎
             </p>
-            <p className="mb-4">
-              <a href="https://www.aurorastarry.com/" target="_blank">
-                <span className="inline-flex items-center gap-x-2 break-all text-sm text-[#ae7aff] hover:underline">
-                  <LinkIcon className="h-4 w-4 shrink-0" />
-                  https://www.aurorastarry.com/
-                </span>
+
+            <hr className="my-4 h-[1px] w-full" />
+            <div className="mb-4">
+              <h3 className="mb-1 font-bold">Short Bio</h3>
+              <p className="text-sm">
+                Immersed in the enchanting world of the night, captivated by the
+                moon&apos;s allure, and constantly seeking new adventures around
+                the globe. 🌕🌙🌎
+              </p>
+            </div>
+            <div className="mb-4 text-sm">
+              <h3 className="mb-1 font-bold">Public link</h3>
+              <a
+                href="mailto:starryaurora@gmail.com"
+                className="block text-[#ae7aff] hover:underline"
+              >
+                starryaurora@gmail.com
               </a>
-            </p>
-            <p className="flex gap-x-4">
+              <a
+                href="https://www.aurorastarry.com/"
+                target="_blank"
+                className="block break-all text-[#ae7aff] hover:underline"
+              >
+                https://www.aurorastarry.com/
+              </a>
+            </div>
+            <p className="mb-4 flex gap-x-4">
               <span className="inline-block">
                 <span className="font-bold">13.5k&nbsp;</span>
                 <span className="text-sm text-gray-400">Followers</span>
@@ -76,8 +71,13 @@ const Profile = () => {
                 <span className="text-sm text-gray-400">Following</span>
               </span>
             </p>
+            <button className="inline-flex w-max items-center bg-[#ae7aff] px-4 py-2 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
+              Edit Profile
+            </button>
           </div>
-        </section>
+        </aside>
+
+        <section className="col-span-12 text-white md:col-span-7 lg:col-span-5 xl:col-span-6"></section>
         {/* Trending Topics */}
         <aside className="hidden text-white lg:col-span-3 lg:block">
           <div className="border p-4">
