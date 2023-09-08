@@ -5,7 +5,7 @@ import TodosList from "@/components/templates/todo/todos";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
 import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
-import CreateGroupChat from "@/components/templates/chat/create-normal-chat";
+import CreateGroupChat from "@/components/templates/chat/create-group-chat";
 import CreateOneOnOneChat from "@/components/templates/chat/create-normal-chat";
 
 export const applications = [
