@@ -96,7 +96,7 @@ const ChangePassword = () => {
             </ul>
           </div>
           {/* Change Password Form */}
-          <div className="my-8 flex w-full flex-col items-start justify-start gap-2">
+          <div className="my-4 flex w-full flex-col items-start justify-start gap-2">
             <label className="text-xs text-slate-200">Old password</label>
             <input
               placeholder="Enter old password"
