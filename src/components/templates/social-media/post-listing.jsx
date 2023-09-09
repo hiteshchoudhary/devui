@@ -188,12 +188,9 @@ const PostListing = () => {
             />
             <h2>Aurora Starlight</h2>
             <p className="text-sm">
-              <a
-                href="mailto:starryaurora@gmail.com"
-                className="hover:text-[#ae7aff]"
-              >
+              <button className="hover:text-[#ae7aff]">
                 starryaurora@gmail.com
-              </a>
+              </button>
             </p>
             <hr className="my-2 h-[1px] w-full" />
             <p className="mb-4">
@@ -276,26 +273,24 @@ const PostListing = () => {
                   )}
                   {/* Link Preview */}
                   {post.link && (
-                    <a href={post.link.url} target="_blank">
-                      <div className="group mb-4 border opacity-95 hover:opacity-100">
-                        <div className="max-h-52 overflow-hidden">
-                          <img
-                            src={post.link.image}
-                            alt={post.link.title}
-                            className="object-cover"
-                          />
-                        </div>
-                        {/* Link Content */}
-                        <div className="p-4">
-                          <h3 className="mb-2 font-bold">{post.link.title}</h3>
-                          <p className="mb-3 text-sm">{post.link.caption}</p>
-                          <span className="inline-flex items-center gap-x-2 break-all text-sm text-[#ae7aff] no-underline group-hover:underline">
-                            <LinkIcon className="h-4 w-4 shrink-0" />
-                            {post.link.url}
-                          </span>
-                        </div>
+                    <div className="group mb-4 border opacity-95 hover:opacity-100">
+                      <div className="max-h-52 overflow-hidden">
+                        <img
+                          src={post.link.image}
+                          alt={post.link.title}
+                          className="object-cover"
+                        />
                       </div>
-                    </a>
+                      {/* Link Content */}
+                      <div className="p-4">
+                        <h3 className="mb-2 font-bold">{post.link.title}</h3>
+                        <p className="mb-3 text-sm">{post.link.caption}</p>
+                        <span className="inline-flex items-center gap-x-2 break-all text-sm text-[#ae7aff] no-underline group-hover:underline">
+                          <LinkIcon className="h-4 w-4 shrink-0" />
+                          {post.link.url}
+                        </span>
+                      </div>
+                    </div>
                   )}
                   {/* Polls */}
                   {post.poll &&
@@ -361,9 +356,7 @@ const PostListing = () => {
               {["javascript", "typescript", "java", "python", "golang"].map(
                 (hashtag) => (
                   <li key={hashtag}>
-                    <a href="#" className="hover:text-[#ae7aff]">
-                      #{hashtag}
-                    </a>
+                    <button className="hover:text-[#ae7aff]">#{hashtag}</button>
                   </li>
                 ),
               )}

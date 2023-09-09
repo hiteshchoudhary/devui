@@ -201,19 +201,12 @@ const Profile = () => {
             </div>
             <div className="mb-4 text-sm">
               <h3 className="mb-1 font-bold">Public link</h3>
-              <a
-                href="mailto:starryaurora@gmail.com"
-                className="block text-[#ae7aff] hover:underline"
-              >
+              <button className="block text-[#ae7aff] hover:underline">
                 starryaurora@gmail.com
-              </a>
-              <a
-                href="https://www.aurorastarry.com/"
-                target="_blank"
-                className="block break-all text-[#ae7aff] hover:underline"
-              >
+              </button>
+              <button className="block break-all text-[#ae7aff] hover:underline">
                 https://www.aurorastarry.com/
-              </a>
+              </button>
             </div>
             <p className="mb-4 flex gap-x-4">
               <span className="inline-block">
@@ -234,17 +227,14 @@ const Profile = () => {
         <section className="col-span-12 text-white md:col-span-7 lg:col-span-5 xl:col-span-6">
           <ul className="mb-4 block w-full px-4 sm:px-0">
             <li className="mr-2 inline-block">
-              <a href="#" className="inline-block bg-[#2c2c2c] px-6 py-1.5">
+              <button className="inline-block bg-[#2c2c2c] px-6 py-1.5">
                 Posts
-              </a>
+              </button>
             </li>
             <li className="mr-2 inline-block">
-              <a
-                href="#"
-                className="inline-block px-6 py-1.5 hover:bg-[#2c2c2c]"
-              >
+              <button className="inline-block px-6 py-1.5 hover:bg-[#2c2c2c]">
                 Change password
-              </a>
+              </button>
             </li>
           </ul>
           {/* Post Lists */}
@@ -295,26 +285,24 @@ const Profile = () => {
                   )}
                   {/* Link Preview */}
                   {post.link && (
-                    <a href={post.link.url} target="_blank">
-                      <div className="group mb-4 border opacity-95 hover:opacity-100">
-                        <div className="max-h-52 overflow-hidden">
-                          <img
-                            src={post.link.image}
-                            alt={post.link.title}
-                            className="object-cover"
-                          />
-                        </div>
-                        {/* Link Content */}
-                        <div className="p-4">
-                          <h3 className="mb-2 font-bold">{post.link.title}</h3>
-                          <p className="mb-3 text-sm">{post.link.caption}</p>
-                          <span className="inline-flex items-center gap-x-2 break-all text-sm text-[#ae7aff] no-underline group-hover:underline">
-                            <LinkIcon className="h-4 w-4 shrink-0" />
-                            {post.link.url}
-                          </span>
-                        </div>
+                    <div className="group mb-4 cursor-pointer border opacity-95 hover:opacity-100">
+                      <div className="max-h-52 overflow-hidden">
+                        <img
+                          src={post.link.image}
+                          alt={post.link.title}
+                          className="object-cover"
+                        />
                       </div>
-                    </a>
+                      {/* Link Content */}
+                      <div className="p-4">
+                        <h3 className="mb-2 font-bold">{post.link.title}</h3>
+                        <p className="mb-3 text-sm">{post.link.caption}</p>
+                        <span className="inline-flex items-center gap-x-2 break-all text-sm text-[#ae7aff] no-underline group-hover:underline">
+                          <LinkIcon className="h-4 w-4 shrink-0" />
+                          {post.link.url}
+                        </span>
+                      </div>
+                    </div>
                   )}
                   {/* Polls */}
                   {post.poll &&
@@ -380,9 +368,7 @@ const Profile = () => {
               {["javascript", "typescript", "java", "python", "golang"].map(
                 (hashtag) => (
                   <li key={hashtag}>
-                    <a href="#" className="hover:text-[#ae7aff]">
-                      #{hashtag}
-                    </a>
+                    <button className="hover:text-[#ae7aff]">#{hashtag}</button>
                   </li>
                 ),
               )}
