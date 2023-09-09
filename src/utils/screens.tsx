@@ -5,9 +5,10 @@ import TodosList from "@/components/templates/todo/todos";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
 import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
-import PostListing from "@/components/templates/social-media/post-listing";
-import PostDetail from "@/components/templates/social-media/post-detail";
-import MyProfile from "@/components/templates/social-media/my-profile";
+import SocialMediaPostListing from "@/components/templates/social-media/post-listing";
+import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
+import SocialMediaMyProfile from "@/components/templates/social-media/my-profile";
+import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
 
 export const applications = [
   {
@@ -78,17 +79,22 @@ export const applications = [
       {
         id: "post-listing",
         name: "Post Listing",
-        component: <PostListing />,
+        component: <SocialMediaPostListing />,
       },
       {
         id: "post-detail",
         name: "Post Detail",
-        component: <PostDetail />,
+        component: <SocialMediaPostDetail />,
       },
       {
         id: "my-profile",
         name: "My Profile",
-        component: <MyProfile />,
+        component: <SocialMediaMyProfile />,
+      },
+      {
+        id: "change-password",
+        name: "Change Password",
+        component: <SocialMediaChangePassword />,
       },
     ],
   },
