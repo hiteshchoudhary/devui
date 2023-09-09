@@ -5,6 +5,13 @@ import TodosList from "@/components/templates/todo/todos";
 import EmptyTodos from "@/components/templates/todo/empty-todos";
 import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
+import SocialMediaPostListing from "@/components/templates/social-media/post-listing";
+import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
+import SocialMediaUserProfile from "@/components/templates/social-media/user-profile";
+import SocialMediaMyProfile from "@/components/templates/social-media/my-profile";
+import SocialMediaEditProfile from "@/components/templates/social-media/edit-profile";
+import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
+import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
 
 export const applications = [
   {
@@ -44,7 +51,7 @@ export const applications = [
       {
         id: "todos",
         name: "Todos page",
-        component: <ChatScreen />,
+        component: <TodosList />,
       },
     ],
   },
@@ -63,6 +70,49 @@ export const applications = [
         id: "chat-screen",
         name: "Chat screen",
         component: <ChatScreen />,
+      },
+    ],
+  },
+  {
+    name: "Social Media App",
+    id: "social-media",
+    subtitle: "Social Media",
+    description: "All-in-one social media solution for posts and profiles.",
+    pages: [
+      {
+        id: "post-listing",
+        name: "Post Listing",
+        component: <SocialMediaPostListing />,
+      },
+      {
+        id: "post-detail",
+        name: "Post Detail",
+        component: <SocialMediaPostDetail />,
+      },
+      {
+        id: "user-profile",
+        name: "User Profile",
+        component: <SocialMediaUserProfile />,
+      },
+      {
+        id: "my-profile",
+        name: "My Profile",
+        component: <SocialMediaMyProfile />,
+      },
+      {
+        id: "edit-profile",
+        name: "Edit profile",
+        component: <SocialMediaEditProfile />,
+      },
+      {
+        id: "change-password",
+        name: "Change Password",
+        component: <SocialMediaChangePassword />,
+      },
+      {
+        id: "bookmarked-posts",
+        name: "Bookmarked Posts",
+        component: <SocialMediaBookmarkedPosts />,
       },
     ],
   },
