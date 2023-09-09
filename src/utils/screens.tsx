@@ -8,6 +8,13 @@ import ChatScreen from "@/components/templates/chat/chat-screen";
 import CreateGroupChat from "@/components/templates/chat/create-group-chat";
 import CreateOneOnOneChat from "@/components/templates/chat/create-normal-chat";
 import GroupChatInfo from "@/components/templates/chat/group-information";
+import SocialMediaPostListing from "@/components/templates/social-media/post-listing";
+import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
+import SocialMediaUserProfile from "@/components/templates/social-media/user-profile";
+import SocialMediaMyProfile from "@/components/templates/social-media/my-profile";
+import SocialMediaEditProfile from "@/components/templates/social-media/edit-profile";
+import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
+import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
 
 export const applications = [
   {
@@ -81,6 +88,49 @@ export const applications = [
         id: "group-chat-info",
         name: "Group chat information",
         component: <GroupChatInfo />,
+      },
+    ],
+  },
+  {
+    name: "Social Media App",
+    id: "social-media",
+    subtitle: "Social Media",
+    description: "All-in-one social media solution for posts and profiles.",
+    pages: [
+      {
+        id: "post-listing",
+        name: "Post Listing",
+        component: <SocialMediaPostListing />,
+      },
+      {
+        id: "post-detail",
+        name: "Post Detail",
+        component: <SocialMediaPostDetail />,
+      },
+      {
+        id: "user-profile",
+        name: "User Profile",
+        component: <SocialMediaUserProfile />,
+      },
+      {
+        id: "my-profile",
+        name: "My Profile",
+        component: <SocialMediaMyProfile />,
+      },
+      {
+        id: "edit-profile",
+        name: "Edit profile",
+        component: <SocialMediaEditProfile />,
+      },
+      {
+        id: "change-password",
+        name: "Change Password",
+        component: <SocialMediaChangePassword />,
+      },
+      {
+        id: "bookmarked-posts",
+        name: "Bookmarked Posts",
+        component: <SocialMediaBookmarkedPosts />,
       },
     ],
   },

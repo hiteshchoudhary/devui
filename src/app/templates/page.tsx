@@ -30,7 +30,7 @@ const Templates = () => {
                   <Button EndIcon={ChevronDoubleRightIcon}>View pages</Button>
                 </Link>
               </div>
-              <div className="lg:relative lg:mr-auto lg:flex lg:min-w-0 lg:overflow-x-auto no-scrollbar">
+              <div className="no-scrollbar lg:relative lg:mr-auto lg:flex lg:min-w-0 lg:overflow-x-auto">
                 <div className="sticky left-0 z-10 hidden w-8 flex-none bg-gradient-to-r from-white lg:block"></div>
                 <div className="lg:relative lg:flex lg:flex-none lg:items-start lg:pr-8">
                   <Image
@@ -45,14 +45,14 @@ const Templates = () => {
                     alt="This is a preview image"
                     width="560"
                     height="380"
-                    className="w-full rounded-xl bg-slate-100 lg:w-[19.1666666rem] lg:flex-none lg:ml-8 hidden lg:block"
+                    className="hidden w-full rounded-xl bg-slate-100 lg:ml-8 lg:block lg:w-[19.1666666rem] lg:flex-none"
                   />
                   <Image
                     src="https://via.placeholder.com/560x380.png"
                     alt="This is a preview image"
                     width="560"
                     height="380"
-                    className="w-full rounded-xl bg-slate-100 lg:w-[19.1666666rem] lg:flex-none lg:ml-8 hidden lg:block"
+                    className="hidden w-full rounded-xl bg-slate-100 lg:ml-8 lg:block lg:w-[19.1666666rem] lg:flex-none"
                   />
                 </div>
               </div>
