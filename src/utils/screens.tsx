@@ -9,6 +9,7 @@ import SocialMediaPostListing from "@/components/templates/social-media/post-lis
 import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
 import SocialMediaMyProfile from "@/components/templates/social-media/my-profile";
 import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
+import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
 
 export const applications = [
   {
@@ -95,6 +96,11 @@ export const applications = [
         id: "change-password",
         name: "Change Password",
         component: <SocialMediaChangePassword />,
+      },
+      {
+        id: "bookmarked-posts",
+        name: "Bookmarked Posts",
+        component: <SocialMediaBookmarkedPosts />,
       },
     ],
   },
