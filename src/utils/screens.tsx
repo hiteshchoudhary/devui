@@ -21,7 +21,9 @@ export const applications = [
     name: "Authentication app",
     id: "authentication",
     subtitle: "User Authentication",
-    description: "Screens for user registration, login, and password recovery",
+    cover: "/auth.png",
+    description:
+      "Explore authentication screens for a seamless and secure login and registration UI designs. Access the HTML templates by clicking below.",
     pages: [
       {
         id: "register",
@@ -40,29 +42,14 @@ export const applications = [
       },
     ],
   },
-  {
-    name: "Todo app",
-    id: "todo",
-    subtitle: "Task Management",
-    description: "Screens for managing your tasks and to-dos",
-    pages: [
-      {
-        id: "empty-todos",
-        name: "Empty Todos Page",
-        component: <EmptyTodos />,
-      },
-      {
-        id: "todos",
-        name: "Todos Page",
-        component: <TodosList />,
-      },
-    ],
-  },
+
   {
     name: "Chat app",
     id: "chat",
     subtitle: "Real-time Chat",
-    description: "Screens for real-time chat conversations",
+    cover: "/chat.png",
+    description:
+      "Discover HTML templates for our chat application screens. Explore sleek, intuitive and responsive designs for seamless communication experiences.",
     pages: [
       {
         id: "empty-chats",
@@ -95,7 +82,9 @@ export const applications = [
     name: "Social Media App",
     id: "social-media",
     subtitle: "Social Media",
-    description: "All-in-one social media solution for posts and profiles.",
+    cover: "/social-media.png",
+    description:
+      "Discover HTML templates for social media application screens. Dive into our UI designs to create engaging, responsive and user-friendly social platforms.",
     pages: [
       {
         id: "post-listing",
@@ -131,6 +120,26 @@ export const applications = [
         id: "bookmarked-posts",
         name: "Bookmarked Posts",
         component: <SocialMediaBookmarkedPosts />,
+      },
+    ],
+  },
+  {
+    name: "Todo app",
+    id: "todo",
+    subtitle: "Task Management",
+    cover: "/todo.png",
+    description:
+      "Explore UI designs for Todo app, a user-friendly task management application. Streamline your productivity by accessing the HTML templates.",
+    pages: [
+      {
+        id: "empty-todos",
+        name: "Empty Todos Page",
+        component: <EmptyTodos />,
+      },
+      {
+        id: "todos",
+        name: "Todos Page",
+        component: <TodosList />,
       },
     ],
   },

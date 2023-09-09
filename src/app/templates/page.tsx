@@ -2,65 +2,55 @@
 
 import Button from "@/components/common/Button";
 import { applications } from "@/utils/screens";
-import { ChevronDoubleRightIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import {
+  ChevronDoubleRightIcon,
+  RectangleGroupIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const Templates = () => {
   return (
-    <>
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {applications.map((application, i) => {
         return (
-          <section key={i} className="py-10">
-            <div className="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:flex lg:gap-0">
-              <div className="sm:pt-2 md:pr-6 lg:relative lg:ml-auto lg:w-[19.5rem] lg:flex-none lg:pl-8 lg:pr-0">
-                <div className="flex items-center gap-2">
-                  <h2 className="text-base font-semibold text-slate-900">
-                    {application.name}
-                  </h2>
-                </div>
-                <p className="text-sm capitalize leading-6 text-slate-600">
+          <main key={i} className="px-4 py-6">
+            <div className="mx-auto grid max-w-4xl grid-cols-1">
+              <div className="relative col-start-1 row-start-1 flex flex-col-reverse bg-gradient-to-t from-black/100 via-black/0 p-3">
+                <h1 className="mt-1 text-lg font-semibold text-white">
+                  {application.name}
+                </h1>
+                <p className="text-sm font-medium leading-4 text-white">
                   {application.subtitle}
                 </p>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  {application.description}
-                </p>
-                <div className="mt-4 h-px w-6 bg-slate-300"></div>
+              </div>
+              <div className="col-start-1 col-end-3 row-start-1 grid items-end justify-end gap-4">
+                <img
+                  src={application.cover}
+                  alt=""
+                  className="w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <dl className="row-start-2 mt-2 inline-flex items-center text-sm font-medium text-gray-700">
+                <dd className="inline-flex items-center gap-1">
+                  <RectangleGroupIcon className="-mt-0.5 h-5 w-5" />
+                  {application.pages?.length || 0} Screens
+                </dd>
+              </dl>
+
+              <div className="col-start-1 row-start-3 mt-2 self-center">
                 <Link href={`/templates/${application.id}`}>
-                  <Button EndIcon={ChevronDoubleRightIcon}>View pages</Button>
+                  <Button EndIcon={ChevronDoubleRightIcon}>View Screens</Button>
                 </Link>
               </div>
-              <div className="no-scrollbar lg:relative lg:mr-auto lg:flex lg:min-w-0 lg:overflow-x-auto">
-                <div className="sticky left-0 z-10 hidden w-8 flex-none bg-gradient-to-r from-white lg:block"></div>
-                <div className="lg:relative lg:flex lg:flex-none lg:items-start lg:pr-8">
-                  <Image
-                    src="https://via.placeholder.com/560x380.png"
-                    alt="This is a preview image"
-                    width="560"
-                    height="380"
-                    className="w-full rounded-xl bg-slate-100 lg:w-[19.1666666rem] lg:flex-none"
-                  />
-                  <Image
-                    src="https://via.placeholder.com/560x380.png"
-                    alt="This is a preview image"
-                    width="560"
-                    height="380"
-                    className="hidden w-full rounded-xl bg-slate-100 lg:ml-8 lg:block lg:w-[19.1666666rem] lg:flex-none"
-                  />
-                  <Image
-                    src="https://via.placeholder.com/560x380.png"
-                    alt="This is a preview image"
-                    width="560"
-                    height="380"
-                    className="hidden w-full rounded-xl bg-slate-100 lg:ml-8 lg:block lg:w-[19.1666666rem] lg:flex-none"
-                  />
-                </div>
-              </div>
+              <p className="col-start-1 mt-4 text-sm leading-6">
+                {application.description}
+              </p>
             </div>
-          </section>
+          </main>
         );
       })}
-    </>
+    </div>
   );
 };
 
