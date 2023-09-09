@@ -9,7 +9,7 @@ import SocialMediaPostListing from "@/components/templates/social-media/post-lis
 import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
 import SocialMediaUserProfile from "@/components/templates/social-media/user-profile";
 import SocialMediaMyProfile from "@/components/templates/social-media/my-profile";
-import SocialMediaUpdateProfile from "@/components/templates/social-media/update-profile";
+import SocialMediaEditProfile from "@/components/templates/social-media/edit-profile";
 import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
 import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
 
@@ -100,9 +100,9 @@ export const applications = [
         component: <SocialMediaMyProfile />,
       },
       {
-        id: "update-profile",
-        name: "Update Profile",
-        component: <SocialMediaUpdateProfile />,
+        id: "edit-profile",
+        name: "Edit profile",
+        component: <SocialMediaEditProfile />,
       },
       {
         id: "change-password",

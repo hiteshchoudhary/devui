@@ -80,7 +80,7 @@ const ChangePassword = () => {
               </li>
               <li className="mr-2 inline-block shrink-0">
                 <button className="inline-block px-6 py-1.5 hover:bg-[#2c2c2c]">
-                  Update profile
+                  Edit profile
                 </button>
               </li>
               <li className="mr-2 inline-block shrink-0">

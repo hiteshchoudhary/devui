@@ -1,8 +1,9 @@
 import React from "react";
 import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { PlusCircleIcon } from "@heroicons/react/24/solid";
+import { PencilIcon } from "@heroicons/react/20/solid";
 
-const UpdateProfile = () => {
+const EditProfile = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
       <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
@@ -80,7 +81,7 @@ const UpdateProfile = () => {
               </li>
               <li className="mr-2 inline-block shrink-0">
                 <button className="inline-block bg-[#2c2c2c] px-6 py-1.5">
-                  Update profile
+                  Edit profile
                 </button>
               </li>
               <li className="mr-2 inline-block shrink-0">
@@ -95,8 +96,24 @@ const UpdateProfile = () => {
               </li>
             </ul>
           </div>
-          {/* Update Profile Form */}
+          {/* Edit profile Form */}
           <div className="mb-4 mt-8 flex flex-wrap gap-y-4">
+            <div className="flex w-full items-center justify-center">
+              <input id="avatar-input-1" hidden type="file" />
+              <label
+                htmlFor="avatar-input-1"
+                className="relative flex aspect-square h-24 w-24 cursor-pointer items-center justify-center overflow-visible rounded-full border-4 border-[#ae7aff] p-1"
+              >
+                <img
+                  alt="avatar-inp"
+                  src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  className="h-full w-full rounded-full object-cover"
+                />
+                <span className="absolute bottom-0 right-0 flex aspect-square h-5 w-5 items-center justify-center rounded-full bg-[#ae7aff] p-1">
+                  <PencilIcon className="h-3 w-3 text-black" />
+                </span>
+              </label>
+            </div>
             <div className="flex w-full flex-col items-start justify-start gap-2 xl:w-1/2 xl:pr-2">
               <label className="text-xs text-slate-200">First name</label>
               <input
@@ -165,7 +182,7 @@ const UpdateProfile = () => {
             </div>
           </div>
           <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
-            Update Profile
+            Edit profile
           </button>
         </section>
         {/* Trending Topics */}
@@ -188,4 +205,4 @@ const UpdateProfile = () => {
   );
 };
 
-export default UpdateProfile;
+export default EditProfile;
