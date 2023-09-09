@@ -7,6 +7,7 @@ import EmptyChats from "@/components/templates/chat/empty-chats";
 import ChatScreen from "@/components/templates/chat/chat-screen";
 import SocialMediaPostListing from "@/components/templates/social-media/post-listing";
 import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
+import SocialMediaUserProfile from "@/components/templates/social-media/user-profile";
 import SocialMediaMyProfile from "@/components/templates/social-media/my-profile";
 import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
 import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
@@ -86,6 +87,11 @@ export const applications = [
         id: "post-detail",
         name: "Post Detail",
         component: <SocialMediaPostDetail />,
+      },
+      {
+        id: "user-profile",
+        name: "User Profile",
+        component: <SocialMediaUserProfile />,
       },
       {
         id: "my-profile",
