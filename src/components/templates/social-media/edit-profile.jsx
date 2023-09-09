@@ -97,7 +97,7 @@ const EditProfile = () => {
             </ul>
           </div>
           {/* Edit profile Form */}
-          <div className="mb-4 mt-8 flex flex-wrap gap-y-4">
+          <div className="mb-4 mt-8 flex flex-wrap gap-y-4 p-4 md:p-0">
             <div className="flex w-full items-center justify-center">
               <input id="avatar-input-1" hidden type="file" />
               <label
@@ -180,10 +180,10 @@ const EditProfile = () => {
                 type="url"
               />
             </div>
+            <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
+              Edit profile
+            </button>
           </div>
-          <button className="w-full bg-[#ae7aff] p-3 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e]">
-            Edit profile
-          </button>
         </section>
         {/* Trending Topics */}
         <aside className="hidden text-white lg:col-span-3 lg:block">
