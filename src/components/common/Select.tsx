@@ -30,7 +30,7 @@ const Select: React.FC<SelectProps> = ({ label, options, value, setValue }) => {
       <div className="relative mt-2">
         <Combobox.Button className="w-full">
           <Combobox.Input
-            className="peer rounded-md block w-full border border-slate-300 bg-transparent px-6 py-4 text-base/6 text-slate-950 ring-4 ring-transparent transition focus:border-slate-950 focus:outline-none focus:ring-slate-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+            className="peer block w-full rounded-md border border-slate-300 bg-transparent px-6 py-4 text-base/6 text-slate-950 ring-4 ring-transparent transition focus:border-slate-950 focus:outline-none focus:ring-slate-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
             onChange={(event) => setQuery(event.target.value)}
             displayValue={(option: any) => option?.name}
           />
@@ -50,7 +50,7 @@ const Select: React.FC<SelectProps> = ({ label, options, value, setValue }) => {
               className={({ active }) =>
                 classNames(
                   "relative cursor-default select-none py-2 pl-8 pr-4",
-                  active ? "bg-slate-600 text-white" : "text-gray-900"
+                  active ? "bg-slate-600 text-white" : "text-gray-900",
                 )
               }
             >
@@ -58,8 +58,8 @@ const Select: React.FC<SelectProps> = ({ label, options, value, setValue }) => {
                 <>
                   <span
                     className={classNames(
-                      "block truncate",
-                      option.id === value?.id ? "font-semibold" : ""
+                      "block truncate capitalize",
+                      option.id === value?.id ? "font-semibold" : "",
                     )}
                   >
                     {option.name}
@@ -69,7 +69,7 @@ const Select: React.FC<SelectProps> = ({ label, options, value, setValue }) => {
                     <span
                       className={classNames(
                         "absolute inset-y-0 left-0 flex items-center pl-1.5",
-                        active ? "text-white" : "text-slate-600"
+                        active ? "text-white" : "text-slate-600",
                       )}
                     >
                       <CheckIcon className="h-5 w-5" aria-hidden="true" />

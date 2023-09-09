@@ -25,17 +25,17 @@ export const applications = [
     pages: [
       {
         id: "register",
-        name: "Register page",
+        name: "Register Page",
         component: <Register />,
       },
       {
         id: "login",
-        name: "Login page",
+        name: "Login Page",
         component: <Login />,
       },
       {
         id: "forgot-password",
-        name: "Forgot Password page",
+        name: "Forgot Password Page",
         component: <ForgotPassword />,
       },
     ],
@@ -48,12 +48,12 @@ export const applications = [
     pages: [
       {
         id: "empty-todos",
-        name: "Empty todos page",
+        name: "Empty Todos Page",
         component: <EmptyTodos />,
       },
       {
         id: "todos",
-        name: "Todos page",
+        name: "Todos Page",
         component: <TodosList />,
       },
     ],
@@ -66,27 +66,27 @@ export const applications = [
     pages: [
       {
         id: "empty-chats",
-        name: "Empty chats",
+        name: "Empty Chats",
         component: <EmptyChats />,
       },
       {
         id: "chat-screen",
-        name: "Chat screen",
+        name: "Chat Screen",
         component: <ChatScreen />,
       },
       {
         id: "create-normal-chat",
-        name: "Create one on one chat",
+        name: "Create Personal Chat",
         component: <CreateOneOnOneChat />,
       },
       {
         id: "create-group-chat",
-        name: "Create a group chat",
+        name: "Create Group Chat",
         component: <CreateGroupChat />,
       },
       {
         id: "group-chat-info",
-        name: "Group chat information",
+        name: "About Group Chat",
         component: <GroupChatInfo />,
       },
     ],
@@ -119,7 +119,7 @@ export const applications = [
       },
       {
         id: "edit-profile",
-        name: "Edit profile",
+        name: "Edit Profile",
         component: <SocialMediaEditProfile />,
       },
       {

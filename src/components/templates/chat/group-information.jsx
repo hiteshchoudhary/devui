@@ -19,37 +19,37 @@ const participants = [
     fullName: "John Doe",
     email: "john.doe@example.com",
     avatar:
-      "https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/18094275/pexels-photo-18094275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     fullName: "Jane Smith",
     email: "jane.smith@example.com",
     avatar:
-      "https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/13847652/pexels-photo-13847652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     fullName: "Alice Johnson",
     email: "alice.johnson@example.com",
     avatar:
-      "https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/13847596/pexels-photo-13847596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     fullName: "Bob Wilson",
     email: "bob.wilson@example.com",
     avatar:
-      "https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/7775636/pexels-photo-7775636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     fullName: "Eva Brown",
     email: "eva.brown@example.com",
     avatar:
-      "https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/18107025/pexels-photo-18107025/free-photo-of-man-reading-newspaper.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     fullName: "David Lee",
     email: "david.lee@example.com",
     avatar:
-      "https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/7775640/pexels-photo-7775640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
@@ -92,19 +92,19 @@ const GroupChatInfo = () => {
           <div className="flex flex-col items-center justify-start gap-4 text-center">
             <div className="flex w-14 flex-shrink-0 items-center justify-center md:w-24">
               <img
-                className="w-h-14 flex h-14 flex-shrink-0 rounded-full outline outline-8 outline-[#121212] md:h-24 md:w-24"
+                className="flex h-14 w-14 flex-shrink-0 rounded-full object-cover outline outline-8 outline-[#121212] md:h-24 md:w-24"
                 alt="avatar"
-                src="https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={participants[0]?.avatar}
               />
               <img
-                className="w-h-14 -ml-10 flex h-14 flex-shrink-0 rounded-full outline outline-8 outline-[#121212] md:h-24 md:w-24"
+                className="-ml-10 flex h-14 w-14 flex-shrink-0 rounded-full object-cover outline outline-8 outline-[#121212] md:h-24 md:w-24"
                 alt="avatar"
-                src="https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={participants[1]?.avatar}
               />
               <img
-                className="w-h-14 -ml-10 flex h-14 flex-shrink-0 rounded-full outline outline-8 outline-[#121212] md:h-24 md:w-24"
+                className="-ml-10 flex h-14 w-14 flex-shrink-0 rounded-full object-cover outline outline-8 outline-[#121212] md:h-24 md:w-24"
                 alt="avatar"
-                src="https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src={participants[2]?.avatar}
               />
               <p className="ml-2 text-sm text-white md:text-base">+4</p>
             </div>
@@ -125,7 +125,7 @@ const GroupChatInfo = () => {
                   key={i}
                 >
                   <img
-                    className="flex h-10 w-10 flex-shrink-0 rounded-full md:h-14 md:w-14"
+                    className="flex h-10 w-10 flex-shrink-0 rounded-full object-cover md:h-14 md:w-14"
                     src={user.avatar}
                     alt="avatar"
                   />
