@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BellIcon,
+  BookmarkIcon,
   EllipsisVerticalIcon,
   HeartIcon,
   LinkIcon,
@@ -23,6 +24,8 @@ const posts = [
     images: [],
     likeCount: 46,
     commentCount: 13,
+    bookmarked: false,
+    liked: true,
   },
   {
     id: 2,
@@ -36,6 +39,8 @@ const posts = [
     ],
     likeCount: 102,
     commentCount: 18,
+    bookmarked: true,
+    liked: false,
   },
   {
     id: 3,
@@ -51,6 +56,8 @@ const posts = [
     ],
     likeCount: 802,
     commentCount: 99,
+    bookmarked: true,
+    liked: true,
   },
   {
     id: 4,
@@ -62,6 +69,8 @@ const posts = [
     images: [],
     likeCount: 420,
     commentCount: 20,
+    bookmarked: false,
+    liked: false,
     link: {
       image:
         "https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -80,6 +89,8 @@ const posts = [
     images: [],
     likeCount: 207,
     commentCount: 63,
+    bookmarked: false,
+    liked: false,
     poll: [
       {
         name: "Artificial Intelligence",
@@ -105,6 +116,8 @@ const posts = [
     images: [],
     likeCount: 97,
     commentCount: 13,
+    liked: true,
+    bookmarked: false,
     poll: [
       {
         name: "Meditation",
@@ -135,6 +148,8 @@ const posts = [
     images: [],
     likeCount: 99,
     commentCount: 13,
+    bookmarked: true,
+    liked: false,
     poll: [
       {
         name: "Acrylic Paint",
@@ -178,7 +193,7 @@ const Profile = () => {
         {/* Empty */}
         <aside className="col-span-12 text-white md:col-span-5 lg:col-span-4 xl:col-span-3">
           {/* Profile Card */}
-          <div className="border-b border-white p-4 sm:border">
+          <div className="sticky top-[100px] border-b border-white p-4 sm:border">
             <img
               className="mb-3 flex aspect-square h-16 w-16 rounded-full border-2 border-[#ae7aff] object-cover"
               src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -225,18 +240,30 @@ const Profile = () => {
         </aside>
 
         <section className="col-span-12 text-white md:col-span-7 lg:col-span-5 xl:col-span-6">
-          <ul className="mb-4 block w-full px-4 sm:px-0">
-            <li className="mr-2 inline-block">
-              <button className="inline-block bg-[#2c2c2c] px-6 py-1.5">
-                Posts
-              </button>
-            </li>
-            <li className="mr-2 inline-block">
-              <button className="inline-block px-6 py-1.5 hover:bg-[#2c2c2c]">
-                Change password
-              </button>
-            </li>
-          </ul>
+          <div className="sticky top-[82px] z-10 mt-[1px] bg-[#121212] pb-4 before:absolute before:inset-x-0 before:bottom-full before:h-[17px] before:bg-[#121212] md:top-[100px] md:mt-0">
+            <ul className="no-scrollbar flex w-full overflow-x-auto px-4 sm:px-0">
+              <li className="mr-2 inline-block shrink-0">
+                <button className="inline-block bg-[#2c2c2c] px-6 py-1.5">
+                  Posts
+                </button>
+              </li>
+              <li className="mr-2 inline-block shrink-0">
+                <button className="inline-block px-6 py-1.5 hover:bg-[#2c2c2c]">
+                  Update profile
+                </button>
+              </li>
+              <li className="mr-2 inline-block shrink-0">
+                <button className="inline-block px-6 py-1.5 hover:bg-[#2c2c2c]">
+                  Change password
+                </button>
+              </li>
+              <li className="mr-2 inline-block shrink-0">
+                <button className="inline-block px-6 py-1.5 hover:bg-[#2c2c2c]">
+                  Saved
+                </button>
+              </li>
+            </ul>
+          </div>
           {/* Post Lists */}
           {posts.map((post) => (
             <div
@@ -285,7 +312,7 @@ const Profile = () => {
                   )}
                   {/* Link Preview */}
                   {post.link && (
-                    <div className="group mb-4 cursor-pointer border opacity-95 hover:opacity-100">
+                    <div className="group mb-4 border opacity-95 hover:opacity-100">
                       <div className="max-h-52 overflow-hidden">
                         <img
                           src={post.link.image}
@@ -309,22 +336,22 @@ const Profile = () => {
                     post.poll.map((option) => (
                       <button
                         key={option?.name}
-                        className={`relative z-[1] mb-4 inline-flex w-full items-center gap-x-4 border p-4 before:absolute before:inset-y-0 before:left-0 before:z-[-1] last:mb-0 before:w-[${
-                          option?.votePercentage || 0
-                        }%] ${
+                        className={`relative z-[1] mb-4 inline-flex w-full items-center gap-x-4 border p-4 before:absolute before:inset-y-0 before:left-0 before:z-[-1] before:w-[var(--data-vote-percentage)] last:mb-0 ${
                           option?.votePercentage && option?.votePercentage >= 0
                             ? ""
                             : "hover:bg-[#ae7aff] hover:text-black focus:border-[#ae7aff] focus:bg-[#ae7aff] focus:text-black"
+                        } ${
+                          option?.selected
+                            ? "before:bg-[#ae7aff]"
+                            : "before:bg-gray-400/10"
                         }
-
-              ${
-                option?.selected
-                  ? "before:bg-[#ae7aff]"
-                  : "before:bg-gray-400/10"
-              }
-              
               `}
                         disabled={Boolean(option?.votePercentage)}
+                        style={{
+                          "--data-vote-percentage": `${
+                            option?.votePercentage || 0
+                          }%`,
+                        }}
                       >
                         {option?.name}{" "}
                         {option?.votePercentage && (
@@ -338,22 +365,50 @@ const Profile = () => {
                   <div className="flex gap-x-4">
                     {/* Like Button */}
                     <button
-                      className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] hover:text-[#ae7aff] focus:text-[#ae7aff] focus:after:content-[attr(data-like-count-inc)]`}
+                      className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] focus:after:content-[attr(data-like-count-alt)] ${
+                        post.liked
+                          ? "text-[#ae7aff] focus:text-inherit"
+                          : "hover:text-[#ae7aff] focus:text-[#ae7aff]"
+                      }`}
                       data-like-count={post.likeCount}
-                      data-like-count-inc={post.likeCount + 1}
+                      data-like-count-alt={
+                        post.liked ? post.likeCount - 1 : post.likeCount + 1
+                      }
                     >
-                      <HeartIcon className="h-5 w-5 group-focus:fill-[#ae7aff]" />
-                      {/* <span>{post.likeCount}</span> */}
+                      <HeartIcon
+                        className={`h-5 w-5 ${
+                          post.liked
+                            ? "fill-[#ae7aff] group-focus:fill-none"
+                            : "group-focus:fill-[#ae7aff]"
+                        }`}
+                      />
                     </button>
                     {/* Comment Button */}
                     <button className="inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
                       <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
                       <span>{post.commentCount}</span>
                     </button>
-                    {/* Like Button */}
-                    <button className="ml-auto inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                      <ShareIcon className="h-5 w-5" />
-                    </button>
+                    {/* Share and Bookmarked Button */}
+                    <div className="ml-auto">
+                      <button className="mr-2 inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
+                        <ShareIcon className="h-5 w-5" />
+                      </button>
+                      <button
+                        className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] ${
+                          post.bookmarked
+                            ? "focus:text-white"
+                            : "focus:text-[#ae7aff]"
+                        }`}
+                      >
+                        <BookmarkIcon
+                          className={`h-5 w-5 ${
+                            post.bookmarked
+                              ? "fill-[#ae7aff] text-[#ae7aff] group-focus:fill-none group-focus:text-inherit"
+                              : "group-focus:fill-[#ae7aff]"
+                          }`}
+                        />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -362,7 +417,7 @@ const Profile = () => {
         </section>
         {/* Trending Topics */}
         <aside className="hidden text-white lg:col-span-3 lg:block">
-          <div className="border p-4">
+          <div className="sticky top-[100px] border p-4">
             <h2 className="mb-4 font-bold"># Trending Hashtags</h2>
             <ul className="list-disc pl-4">
               {["javascript", "typescript", "java", "python", "golang"].map(

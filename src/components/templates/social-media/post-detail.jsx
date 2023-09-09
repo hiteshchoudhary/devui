@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BellIcon,
+  BookmarkIcon,
   EllipsisVerticalIcon,
   FaceSmileIcon,
   HeartIcon,
@@ -29,6 +30,8 @@ const post = {
   ],
   likeCount: 802,
   commentCount: 99,
+  liked: true,
+  bookmarked: true,
   comments: [
     {
       id: 1,
@@ -42,6 +45,8 @@ const post = {
       ],
       likeCount: 420,
       commentCount: 20,
+      liked: false,
+      bookmarked: true,
       comments: [
         {
           id: 1,
@@ -53,6 +58,8 @@ const post = {
           images: [],
           likeCount: 10,
           commentCount: 2,
+          liked: true,
+          bookmarked: false,
           comments: [],
         },
       ],
@@ -68,6 +75,8 @@ const post = {
         "https://images.pexels.com/photos/1114619/pexels-photo-1114619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       ],
       likeCount: 45,
+      liked: false,
+      bookmarked: false,
       commentCount: 0,
       comments: [],
     },
@@ -81,6 +90,8 @@ const post = {
       images: [
         "https://images.pexels.com/photos/998714/pexels-photo-998714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       ],
+      liked: false,
+      bookmarked: false,
       likeCount: 60,
       commentCount: 2,
       comments: [
@@ -94,6 +105,8 @@ const post = {
           images: [],
           likeCount: 2,
           commentCount: 1,
+          liked: true,
+          bookmarked: true,
           comments: [],
         },
         {
@@ -104,7 +117,9 @@ const post = {
           createdOn: "2 minutes ago",
           text: "Your dedication to solar energy is inspiring, Solar Flare! Are there any upcoming projects we can look forward to?",
           images: [],
-          likeCount: 0,
+          liked: true,
+          bookmarked: true,
+          likeCount: 1,
           commentCount: 0,
           comments: [],
         },
@@ -121,6 +136,8 @@ const post = {
       likeCount: 9,
       commentCount: 1,
       comments: [],
+      liked: false,
+      bookmarked: false,
     },
   ],
 };
@@ -146,7 +163,7 @@ const PostDetail = () => {
       <div className="mt-[65px] grid grid-cols-12 gap-4 py-8 sm:px-4 md:mt-[83px] lg:px-10">
         {/* Profile */}
         <aside className="hidden text-white md:col-span-4 md:block lg:col-span-3">
-          <div className="border p-4">
+          <div className="sticky top-[100px] border p-4">
             <img
               className="mb-3 flex aspect-square h-16 w-16 flex-shrink-0 rounded-full object-cover"
               src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -232,22 +249,50 @@ const PostDetail = () => {
               <div className="flex gap-x-4">
                 {/* Like Button */}
                 <button
-                  className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] hover:text-[#ae7aff] focus:text-[#ae7aff] focus:after:content-[attr(data-like-count-inc)]`}
+                  className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] focus:after:content-[attr(data-like-count-alt)] ${
+                    post.liked
+                      ? "text-[#ae7aff] focus:text-inherit"
+                      : "hover:text-[#ae7aff] focus:text-[#ae7aff]"
+                  }`}
                   data-like-count={post.likeCount}
-                  data-like-count-inc={post.likeCount + 1}
+                  data-like-count-alt={
+                    post.liked ? post.likeCount - 1 : post.likeCount + 1
+                  }
                 >
-                  <HeartIcon className="h-5 w-5 group-focus:fill-[#ae7aff]" />
-                  {/* <span>{post.likeCount}</span> */}
+                  <HeartIcon
+                    className={`h-5 w-5 ${
+                      post.liked
+                        ? "fill-[#ae7aff] group-focus:fill-none"
+                        : "group-focus:fill-[#ae7aff]"
+                    }`}
+                  />
                 </button>
                 {/* Comment Button */}
                 <button className="inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
                   <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
                   <span>{post.commentCount}</span>
                 </button>
-                {/* Like Button */}
-                <button className="ml-auto inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                  <ShareIcon className="h-5 w-5" />
-                </button>
+                {/* Share and bookmarked Button */}
+                <div className="ml-auto">
+                  <button className="mr-2 inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
+                    <ShareIcon className="h-5 w-5" />
+                  </button>
+                  <button
+                    className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] ${
+                      post.bookmarked
+                        ? "focus:text-white"
+                        : "focus:text-[#ae7aff]"
+                    }`}
+                  >
+                    <BookmarkIcon
+                      className={`h-5 w-5 ${
+                        post.bookmarked
+                          ? "fill-[#ae7aff] text-[#ae7aff] group-focus:fill-none group-focus:text-inherit"
+                          : "group-focus:fill-[#ae7aff]"
+                      }`}
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -334,22 +379,52 @@ const PostDetail = () => {
                   <div className="flex gap-x-4">
                     {/* Like Button */}
                     <button
-                      className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] hover:text-[#ae7aff] focus:text-[#ae7aff] focus:after:content-[attr(data-like-count-inc)]`}
+                      className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] focus:after:content-[attr(data-like-count-alt)] ${
+                        comment.liked
+                          ? "text-[#ae7aff] focus:text-inherit"
+                          : "hover:text-[#ae7aff] focus:text-[#ae7aff]"
+                      }`}
                       data-like-count={comment.likeCount}
-                      data-like-count-inc={comment.likeCount + 1}
+                      data-like-count-alt={
+                        comment.liked
+                          ? comment.likeCount - 1
+                          : comment.likeCount + 1
+                      }
                     >
-                      <HeartIcon className="h-5 w-5 group-focus:fill-[#ae7aff]" />
-                      {/* <span>{post.likeCount}</span> */}
+                      <HeartIcon
+                        className={`h-5 w-5 ${
+                          comment.liked
+                            ? "fill-[#ae7aff] group-focus:fill-none"
+                            : "group-focus:fill-[#ae7aff]"
+                        }`}
+                      />
                     </button>
                     {/* Comment Button */}
                     <button className="inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
                       <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
                       <span>{comment.commentCount}</span>
                     </button>
-                    {/* Like Button */}
-                    <button className="ml-auto inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                      <ShareIcon className="h-5 w-5" />
-                    </button>
+                    {/* Share and Bookmarked Button */}
+                    <div className="ml-auto">
+                      <button className="mr-2 inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
+                        <ShareIcon className="h-5 w-5" />
+                      </button>
+                      <button
+                        className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] ${
+                          comment.bookmarked
+                            ? "focus:text-white"
+                            : "focus:text-[#ae7aff]"
+                        }`}
+                      >
+                        <BookmarkIcon
+                          className={`h-5 w-5 ${
+                            comment.bookmarked
+                              ? "fill-[#ae7aff] text-[#ae7aff] group-focus:fill-none group-focus:text-inherit"
+                              : "group-focus:fill-[#ae7aff]"
+                          }`}
+                        />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -399,22 +474,52 @@ const PostDetail = () => {
                     <div className="flex gap-x-4">
                       {/* Like Button */}
                       <button
-                        className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] hover:text-[#ae7aff] focus:text-[#ae7aff] focus:after:content-[attr(data-like-count-inc)]`}
+                        className={`group inline-flex items-center gap-x-1 outline-none after:content-[attr(data-like-count)] focus:after:content-[attr(data-like-count-alt)] ${
+                          comment.liked
+                            ? "text-[#ae7aff] focus:text-inherit"
+                            : "hover:text-[#ae7aff] focus:text-[#ae7aff]"
+                        }`}
                         data-like-count={comment.likeCount}
-                        data-like-count-inc={comment.likeCount + 1}
+                        data-like-count-alt={
+                          comment.liked
+                            ? comment.likeCount - 1
+                            : comment.likeCount + 1
+                        }
                       >
-                        <HeartIcon className="h-5 w-5 group-focus:fill-[#ae7aff]" />
-                        {/* <span>{post.likeCount}</span> */}
+                        <HeartIcon
+                          className={`h-5 w-5 ${
+                            comment.liked
+                              ? "fill-[#ae7aff] group-focus:fill-none"
+                              : "group-focus:fill-[#ae7aff]"
+                          }`}
+                        />
                       </button>
                       {/* Comment Button */}
                       <button className="inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
                         <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
                         <span>{comment.commentCount}</span>
                       </button>
-                      {/* Like Button */}
-                      <button className="ml-auto inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                        <ShareIcon className="h-5 w-5" />
-                      </button>
+                      {/* Share and Bookmarked Button */}
+                      <div className="ml-auto">
+                        <button className="mr-2 inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
+                          <ShareIcon className="h-5 w-5" />
+                        </button>
+                        <button
+                          className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] ${
+                            comment.bookmarked
+                              ? "focus:text-white"
+                              : "focus:text-[#ae7aff]"
+                          }`}
+                        >
+                          <BookmarkIcon
+                            className={`h-5 w-5 ${
+                              comment.bookmarked
+                                ? "fill-[#ae7aff] text-[#ae7aff] group-focus:fill-none group-focus:text-inherit"
+                                : "group-focus:fill-[#ae7aff]"
+                            }`}
+                          />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -424,7 +529,7 @@ const PostDetail = () => {
         </section>
         {/* Trending Topics */}
         <aside className="hidden text-white lg:col-span-3 lg:block">
-          <div className="border p-4">
+          <div className="sticky top-[100px] border p-4">
             <h2 className="mb-4 font-bold"># Trending Hashtags</h2>
             <ul className="list-disc pl-4">
               {["javascript", "typescript", "java", "python", "golang"].map(
