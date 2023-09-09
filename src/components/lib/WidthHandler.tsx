@@ -1,7 +1,7 @@
 import React, { RefObject, useEffect, useRef } from "react";
 
 export const DEFAULT_WIDTHS = {
-  minWidth: 320,
+  minWidth: 360,
 };
 
 interface Props {

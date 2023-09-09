@@ -1,6 +1,7 @@
 import React from "react";
 import { PaperAirplaneIcon, PlusCircleIcon } from "@heroicons/react/20/solid";
 import {
+  Bars3BottomLeftIcon,
   BellIcon,
   EllipsisVerticalIcon,
   FaceSmileIcon,
@@ -121,24 +122,6 @@ const chatListDummyData = [
 const chatMessagesDummyData = [
   {
     fullName: "Dan Abramov",
-    message: "Hey there, how's it going? I hope you're having a great day!",
-    time: "Just now",
-    isOwnMessage: true,
-    hasAttachments: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message:
-      "Hi! I'm doing well, thanks. Just working on some coding projects. How about you?",
-    time: "2 minutes ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
     message:
       "I'm good too, just catching up on some reading and enjoying the weather outside.",
     time: "5 minutes ago",
@@ -180,31 +163,7 @@ const chatMessagesDummyData = [
     avatar:
       "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
-  {
-    fullName: "Jane Smith",
-    message:
-      "I'll have to add it to my reading list. By the way, have you seen the latest episode of that new TV series?",
-    time: "30 minutes ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Not yet, but I plan to watch it tonight. No spoilers, please!",
-    time: "35 minutes ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Haha, don't worry, no spoilers from me. Enjoy the show!",
-    time: "40 minutes ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
+
   {
     fullName: "Dan Abramov",
     message:
@@ -231,144 +190,6 @@ const chatMessagesDummyData = [
     isOwnMessage: true,
     avatar:
       "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Sure thing! Have a productive day!",
-    time: "1 hour ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Thanks! You too!",
-    time: "2 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Goodbye!",
-    time: "3 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Goodbye, take care!",
-    time: "4 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "See you!",
-    time: "5 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Hello again! How's your day been so far?",
-    time: "6 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "It's been pretty good, thanks for asking! How about yours?",
-    time: "7 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message:
-      "My day has been busy but productive. I'm looking forward to the evening.",
-    time: "8 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "That's great to hear! Any exciting plans for the evening?",
-    time: "9 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Not sure yet, but I might go out for dinner with some friends.",
-    time: "10 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "That sounds like a fun plan! Enjoy your evening!",
-    time: "11 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Thanks! I hope you have a wonderful evening too.",
-    time: "12 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Indeed, have a great one!",
-    time: "13 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "I'm counting down the hours until the weekend!",
-    time: "14 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Me too! Do you have any exciting weekend plans?",
-    time: "15 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Not yet, but I'm open to suggestions!",
-    time: "16 hours ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message:
-      "Well, there's a new restaurant that just opened downtown. We could check it out!",
-    time: "17 hours ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     fullName: "Dan Abramov",
@@ -418,47 +239,7 @@ const chatMessagesDummyData = [
     avatar:
       "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
-  {
-    fullName: "Dan Abramov",
-    message: "You too!",
-    time: "1 day ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Hello again! How's everything going?",
-    time: "2 days ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message:
-      "I'm doing well, thanks! Just staying busy with work and other projects.",
-    time: "3 days ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "That's great to hear! Staying productive is always a good thing.",
-    time: "4 days ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Absolutely! It helps keep me motivated.",
-    time: "5 days ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
+
   {
     fullName: "Jane Smith",
     message: "That's the spirit! Keep up the good work.",
@@ -469,41 +250,10 @@ const chatMessagesDummyData = [
     avatar:
       "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
-  {
-    fullName: "Dan Abramov",
-    message: "Goodbye for now!",
-    time: "1 week ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "See you later!",
-    time: "2 weeks ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Dan Abramov",
-    message: "Hello again! How's everything going?",
-    time: "3 weeks ago",
-    isOwnMessage: true,
-    avatar:
-      "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    fullName: "Jane Smith",
-    message: "Hey there! Things are going well on my end. How about you?",
-    time: "1 month ago",
-    isOwnMessage: false,
-    avatar:
-      "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
 ];
 
 const dummyAttachments = [
+  "https://images.pexels.com/photos/18094275/pexels-photo-18094275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 ];
@@ -532,39 +282,46 @@ const ChatScreen = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[83px] flex h-[calc(100vh-83px)] w-full items-center justify-center overflow-hidden p-0">
-        <div className="h-full w-[30%] border-r-[1px] border-white">
+      <div className="mt-[77px] flex h-[calc(100vh-77px)] w-full items-center justify-center overflow-hidden p-0 md:mt-[83px] md:h-[calc(100vh-83px)]">
+        <button
+          className="peer fixed h-full w-full md:hidden"
+          aria-label="mobile-chatlist-toggler"
+          aria-details="Remove when using in your project. Following button is only to toggle chatlist sidebar"
+        ></button>
+        <div className="fixed right-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-300 ease-in-out peer-focus:right-0 md:static md:block md:w-[30%] md:border-r-[1px]">
           <div className="flex w-full items-center justify-start gap-2 border-b-[1px] border-white p-4">
             <input
               placeholder="Search chat..."
               className="w-full bg-transparent px-2 text-white !outline-none placeholder:text-gray-500 md:px-4"
             />
-            <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+            <button className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:h-10 md:w-10">
               <MagnifyingGlassIcon className="h-5 w-5 text-white" />
             </button>
-            <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+            <button className="hidden h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:inline-flex">
               <FunnelIcon className="h-5 w-5 text-white" />
             </button>
           </div>
-          <ul className="flex h-[calc(100%-73px)] w-full flex-col items-start justify-start divide-y-[1px] divide-white overflow-y-auto">
+          <ul className="flex h-[calc(100%-140px)] w-full flex-col items-start justify-start divide-y-[1px] divide-white overflow-y-auto md:h-[calc(100%-73px)]">
             {chatListDummyData.map((item, i) => {
               return (
                 <li
-                  className="w-full cursor-pointer p-6 hover:bg-[#232323]"
+                  className="w-full cursor-pointer p-4 hover:bg-[#232323] md:p-6"
                   key={i}
                 >
-                  <div className="flex w-full items-start justify-start gap-4">
+                  <div className="flex w-full items-start justify-start gap-3 md:gap-4">
                     <img
                       className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
                       src={item.avatar}
                       alt="avatar"
                     />
                     <div className="flex w-full flex-col items-start justify-start gap-1 truncate text-ellipsis">
-                      <div className="flex w-full items-center justify-between text-xs">
+                      <div className="flex w-full items-center justify-between text-[10px] md:text-xs">
                         <p className="text-gray-400">{item.fullName}</p>
                         <p className="text-gray-400">{item.dateTime}</p>
                       </div>
-                      <p className="text-sm text-white">{item.lastMessage}</p>
+                      <p className="text-xs text-white md:text-sm">
+                        {item.lastMessage}
+                      </p>
                     </div>
                   </div>
                 </li>
@@ -572,9 +329,12 @@ const ChatScreen = () => {
             })}
           </ul>
         </div>
-        <div className="h-full w-[70%]">
+        <div className="h-full w-full md:w-[70%]">
           <div className="flex w-full items-center justify-between gap-2 border-b-[1px] border-white p-4">
             <div className="flex w-full items-center justify-start gap-3">
+              <button className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:hidden md:h-10 md:w-10">
+                <Bars3BottomLeftIcon className="h-5 w-5 text-white" />
+              </button>
               <img
                 className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
                 src="https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -583,23 +343,23 @@ const ChatScreen = () => {
               <p className="font-semibold text-white">Jane smith</p>
             </div>
             <div className="flex items-center justify-end gap-4">
-              <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+              <button className="hidden h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:inline-flex">
                 <ShareIcon className="h-5 w-5 text-white" />
               </button>
-              <button className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center border-[1px] border-white p-1">
+              <button className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center border-[1px] border-white p-1 md:h-10 md:w-10">
                 <EllipsisVerticalIcon className="h-5 w-5 text-white" />
               </button>
             </div>
           </div>
-          <div className="relative h-[calc(100vh-158px)] w-full p-4">
-            <div className="flex h-[calc(100%-90px)] w-full flex-col-reverse gap-8 overflow-y-auto">
+          <div className="relative h-[calc(100vh-150px)] w-full p-0 md:h-[calc(100vh-158px)] md:p-4">
+            <div className="flex h-[calc(100%-53px)] w-full flex-col-reverse gap-8 overflow-y-auto px-2 py-4 md:h-[calc(100%-90px)] md:p-0">
               <div
                 className={
-                  "flex min-w-[150px] max-w-[70%] items-start justify-start gap-2 text-white"
+                  "flex min-w-[150px] max-w-[80%] items-start justify-start gap-2 text-white md:max-w-[70%]"
                 }
               >
                 <img
-                  className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+                  className="flex aspect-square h-7 w-7 flex-shrink-0 rounded-full object-cover md:h-10 md:w-10"
                   src={
                     "https://images.pexels.com/photos/18107024/pexels-photo-18107024/free-photo-of-an-old-city-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   }
@@ -624,7 +384,7 @@ const ChatScreen = () => {
                 return (
                   <div
                     className={classNames(
-                      "flex min-w-[150px] max-w-[70%] items-start justify-start gap-2 text-white",
+                      "flex min-w-[150px] max-w-[80%] items-start justify-start gap-2 text-white md:max-w-[70%]",
                       message.isOwnMessage
                         ? "ml-auto flex-row-reverse"
                         : "mr-0",
@@ -632,17 +392,17 @@ const ChatScreen = () => {
                     key={i}
                   >
                     <img
-                      className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+                      className="flex aspect-square h-7 w-7 flex-shrink-0 rounded-full object-cover md:h-10 md:w-10"
                       src={message.avatar}
                       alt="avatar"
                     />
                     <div
                       className={classNames(
-                        "flex w-full flex-col gap-2",
+                        "flex w-full flex-col gap-1 md:gap-2",
                         message.isOwnMessage ? "items-end justify-end" : "",
                       )}
                     >
-                      <p className="text-xs">
+                      <p className="text-[10px] md:text-xs">
                         {message.fullName}
                         <span className="ml-2 text-gray-400">
                           {message.time}
@@ -650,7 +410,7 @@ const ChatScreen = () => {
                       </p>
                       <div
                         className={classNames(
-                          "relative w-fit p-3 text-sm after:absolute after:top-0 after:border-t-[15px] after:border-t-[#121212]",
+                          "relative w-fit p-2 text-xs after:absolute after:top-0 after:border-t-[15px] after:border-t-[#121212] md:p-3 md:text-sm",
                           message.isOwnMessage
                             ? "bg-[#ae7aff] after:right-0 after:border-l-[15px] after:border-l-transparent"
                             : "bg-[#343434] after:left-0 after:border-r-[15px] after:border-r-transparent",
@@ -661,7 +421,7 @@ const ChatScreen = () => {
                       {message?.hasAttachments ? (
                         <div
                           className={classNames(
-                            "flex items-center justify-start gap-2",
+                            "grid w-full grid-cols-2 items-start justify-start gap-1 md:max-w-[90%] md:gap-2",
                             message.isOwnMessage ? "ml-auto" : "",
                           )}
                         >
@@ -669,7 +429,7 @@ const ChatScreen = () => {
                             return (
                               <img
                                 key={i}
-                                className="flex aspect-video w-44 flex-shrink-0 object-cover"
+                                className="flex aspect-video w-full flex-shrink-0 object-cover"
                                 src={img}
                                 alt="avatar"
                               />
@@ -682,23 +442,23 @@ const ChatScreen = () => {
                 );
               })}
             </div>
-            <div className="sticky top-full flex w-full items-center justify-start gap-4 border-[1px] border-white px-4 py-2 shadow-[5px_5px_0px_0px_#4f4e4e]">
+            <div className="sticky top-full flex w-full items-center justify-start gap-1 border-t-[1px] border-white px-4 py-2 md:gap-4 md:border-[1px] md:shadow-[5px_5px_0px_0px_#4f4e4e]">
               <img
-                className="flex aspect-square h-10 w-10 flex-shrink-0 rounded-full object-cover"
+                className="hidden aspect-square h-5 w-5 flex-shrink-0 rounded-full object-cover md:flex md:h-10 md:w-10"
                 src="https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-bench-city-man-people.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="avatar"
               />
               <input
                 placeholder="Message..."
-                className="w-full bg-transparent p-2 text-white !outline-none placeholder:text-gray-500 md:p-4"
+                className="w-full bg-transparent p-2 text-sm text-white !outline-none placeholder:text-gray-500 md:p-4 md:text-base"
               />
-              <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
+              <button className="hidden h-5 w-5 flex-shrink-0 items-center justify-center p-1 md:flex md:h-10 md:w-10">
                 <FaceSmileIcon className="h-6 w-6 text-white" />
               </button>
-              <button className="flex h-10 w-10  flex-shrink-0 items-center justify-center p-1">
+              <button className="flex h-7 w-7 flex-shrink-0 items-center  justify-center p-1 md:h-10 md:w-10">
                 <PaperClipIcon className="h-6 w-6 text-white" />
               </button>
-              <button className="flex h-10 w-10 flex-shrink-0  items-center justify-center bg-[#ae7aff] p-1">
+              <button className="flex h-7 w-7 flex-shrink-0 items-center justify-center  bg-[#ae7aff] p-1 md:h-10 md:w-10">
                 <PaperAirplaneIcon className="h-6 w-6 text-black" />
               </button>
             </div>
