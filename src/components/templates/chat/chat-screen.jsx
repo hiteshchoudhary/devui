@@ -288,7 +288,7 @@ const ChatScreen = () => {
           aria-label="mobile-chatlist-toggler"
           aria-details="Remove when using in your project. Following button is only to toggle chatlist sidebar"
         ></button>
-        <div className="fixed right-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-300 ease-in-out peer-focus:right-0 md:static md:static md:block md:w-[30%] md:border-r-[1px]">
+        <div className="fixed right-full top-[77px] z-10 h-full w-full border-white bg-[#121212] transition-all duration-300 ease-in-out peer-focus:right-0 md:static md:block md:w-[30%] md:border-r-[1px]">
           <div className="flex w-full items-center justify-start gap-2 border-b-[1px] border-white p-4">
             <input
               placeholder="Search chat..."
