@@ -1,17 +1,6 @@
 import React from "react";
-import {
-  BellIcon,
-  BookmarkIcon,
-  EllipsisVerticalIcon,
-  HeartIcon,
-  LinkIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
-import {
-  ChatBubbleOvalLeftEllipsisIcon,
-  PlusCircleIcon,
-  ShareIcon,
-} from "@heroicons/react/24/solid";
+import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { PlusCircleIcon } from "@heroicons/react/24/solid";
 
 const ChangePassword = () => {
   return (
