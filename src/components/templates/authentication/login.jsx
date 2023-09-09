@@ -3,7 +3,7 @@ import React from "react";
 const Login = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
-      <header className="fixed top-0 z-10 mx-auto w-full max-w-[85rem] bg-[#121212] p-6 text-white lg:px-10">
+      <header className="fixed top-0 z-10 mx-auto w-full max-w-full bg-[#121212] p-6 text-white lg:px-10">
         <h1>DevUI</h1>
       </header>
       <div className="mx-auto flex w-full items-stretch justify-between gap-10">

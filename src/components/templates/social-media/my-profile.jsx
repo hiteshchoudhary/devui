@@ -174,7 +174,7 @@ const posts = [
 const Profile = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
-      <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
+      <header className="fixed top-0 z-10 mx-auto flex w-full max-w-full items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
         <h1 className="text-xl font-extrabold md:text-3xl">My Profile</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
@@ -189,7 +189,7 @@ const Profile = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[65px] grid grid-cols-12 gap-4 pb-8 sm:px-4 sm:pt-8 md:mt-[83px] lg:px-10">
+      <div className="mt-[65px] grid grid-cols-12 gap-4 pb-8 pt-0 sm:px-4 sm:pt-8 sm:pt-8 md:mt-[83px] lg:px-10">
         {/* Empty */}
         <aside className="col-span-12 text-white md:col-span-5 lg:col-span-4 xl:col-span-3">
           {/* Profile Card */}

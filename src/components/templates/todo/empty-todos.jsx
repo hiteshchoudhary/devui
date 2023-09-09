@@ -5,7 +5,7 @@ import { InboxIcon } from "@heroicons/react/24/outline";
 const EmptyTodos = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
-      <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
+      <header className="fixed top-0 z-10 mx-auto flex w-full max-w-full items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
         <h1 className="text-xl font-extrabold md:text-3xl">All todos</h1>
         <button className="inline-flex w-max items-center justify-center border-[1px] border-white p-3 text-center font-bold text-white">
           <PlusCircleIcon className="mr-2 h-5 w-5" /> Create new

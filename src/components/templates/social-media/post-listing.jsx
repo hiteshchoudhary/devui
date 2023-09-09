@@ -177,7 +177,7 @@ const posts = [
 const PostListing = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
-      <header className="fixed top-0 z-10 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
+      <header className="fixed top-0 z-10 mx-auto flex w-full max-w-full items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
         <h1 className="text-xl font-extrabold md:text-3xl">All Posts</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
@@ -192,7 +192,7 @@ const PostListing = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[65px] grid grid-cols-12 gap-4 py-8 sm:px-4 md:mt-[83px] lg:px-10">
+      <div className="mt-[65px] grid grid-cols-12 gap-4 pb-8 pt-0 sm:px-4 sm:pt-8 md:mt-[83px] lg:px-10">
         {/* Profile */}
         <aside className="hidden text-white md:col-span-4 md:block lg:col-span-3">
           <div className="sticky top-[100px] border p-4">
@@ -218,7 +218,7 @@ const PostListing = () => {
         </aside>
         <section className="col-span-12 md:col-span-8 lg:col-span-6">
           {/* Create Post Form */}
-          <div className="mb-6 flex w-full items-center justify-start border-b border-t border-white px-4 py-2 sm:border-l sm:border-r sm:shadow-[5px_5px_0px_0px_#4f4e4e]">
+          <div className="mb-2 flex w-full items-center justify-start border-b border-t border-white px-4 py-2 sm:mb-6 sm:border-l sm:border-r sm:shadow-[5px_5px_0px_0px_#4f4e4e]">
             <img
               className="flex aspect-square h-10 w-10 shrink-0 rounded-full object-cover"
               src="https://images.pexels.com/photos/7775642/pexels-photo-7775642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

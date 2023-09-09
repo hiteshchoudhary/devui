@@ -14,6 +14,7 @@ import {
   PaperAirplaneIcon,
   PlusCircleIcon,
   ShareIcon,
+  ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/solid";
 
 const post = {
@@ -47,7 +48,7 @@ const post = {
       commentCount: 20,
       liked: false,
       bookmarked: true,
-      comments: [
+      replies: [
         {
           id: 1,
           authorImage:
@@ -60,7 +61,7 @@ const post = {
           commentCount: 2,
           liked: true,
           bookmarked: false,
-          comments: [],
+          replies: [],
         },
       ],
     },
@@ -78,7 +79,7 @@ const post = {
       liked: false,
       bookmarked: false,
       commentCount: 0,
-      comments: [],
+      replies: [],
     },
     {
       id: 3,
@@ -94,7 +95,7 @@ const post = {
       bookmarked: false,
       likeCount: 60,
       commentCount: 2,
-      comments: [
+      replies: [
         {
           id: 1,
           authorImage:
@@ -107,7 +108,7 @@ const post = {
           commentCount: 1,
           liked: true,
           bookmarked: true,
-          comments: [],
+          replies: [],
         },
         {
           id: 2,
@@ -121,7 +122,7 @@ const post = {
           bookmarked: true,
           likeCount: 1,
           commentCount: 0,
-          comments: [],
+          replies: [],
         },
       ],
     },
@@ -135,7 +136,7 @@ const post = {
       images: [],
       likeCount: 9,
       commentCount: 1,
-      comments: [],
+      replies: [],
       liked: false,
       bookmarked: false,
     },
@@ -145,7 +146,7 @@ const post = {
 const PostDetail = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
-      <header className="fixed top-0 z-50 mx-auto flex w-full max-w-[85rem] items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
+      <header className="fixed top-0 z-50 mx-auto flex w-full max-w-full items-center justify-between border-b-[1px] border-b-slate-300 bg-[#121212] p-4 text-white lg:px-10">
         <h1 className="text-xl font-extrabold md:text-3xl">View Post</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <span className="relative">
@@ -160,7 +161,7 @@ const PostDetail = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[65px] grid grid-cols-12 gap-4 py-8 sm:px-4 md:mt-[83px] lg:px-10">
+      <div className="mt-[65px] grid grid-cols-12 gap-4 pb-8 pt-0 sm:px-4 sm:pt-8 md:mt-[83px] lg:px-10">
         {/* Profile */}
         <aside className="hidden text-white md:col-span-4 md:block lg:col-span-3">
           <div className="sticky top-[100px] border p-4">
@@ -331,7 +332,7 @@ const PostDetail = () => {
                 {/* Author Profile */}
                 <div
                   className={`relative shrink-0 before:absolute before:left-1/2 before:top-[30px] before:z-[5] before:h-full before:w-[1px] ${
-                    comment.comments.length > 0
+                    comment.replies.length > 0
                       ? "before:bg-white"
                       : "before:bg-transparent"
                   }`}
@@ -401,35 +402,14 @@ const PostDetail = () => {
                     </button>
                     {/* Comment Button */}
                     <button className="inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                      <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
+                      <ChatBubbleLeftRightIcon className="h-5 w-5" />
                       <span>{comment.commentCount}</span>
                     </button>
-                    {/* Share and Bookmarked Button */}
-                    <div className="ml-auto">
-                      <button className="mr-2 inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                        <ShareIcon className="h-5 w-5" />
-                      </button>
-                      <button
-                        className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] ${
-                          comment.bookmarked
-                            ? "focus:text-white"
-                            : "focus:text-[#ae7aff]"
-                        }`}
-                      >
-                        <BookmarkIcon
-                          className={`h-5 w-5 ${
-                            comment.bookmarked
-                              ? "fill-[#ae7aff] text-[#ae7aff] group-focus:fill-none group-focus:text-inherit"
-                              : "group-focus:fill-[#ae7aff]"
-                          }`}
-                        />
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
               {/* Nested Comments */}
-              {comment.comments.map((comment) => (
+              {comment.replies.map((comment) => (
                 <div key={comment.id} className="flex p-4 text-white">
                   {/* Author Profile */}
                   <div className="h-10 w-10 shrink-0 sm:h-12 sm:w-12">
@@ -494,32 +474,6 @@ const PostDetail = () => {
                           }`}
                         />
                       </button>
-                      {/* Comment Button */}
-                      <button className="inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                        <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
-                        <span>{comment.commentCount}</span>
-                      </button>
-                      {/* Share and Bookmarked Button */}
-                      <div className="ml-auto">
-                        <button className="mr-2 inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff]">
-                          <ShareIcon className="h-5 w-5" />
-                        </button>
-                        <button
-                          className={`group inline-flex items-center gap-x-1 outline-none hover:text-[#ae7aff] ${
-                            comment.bookmarked
-                              ? "focus:text-white"
-                              : "focus:text-[#ae7aff]"
-                          }`}
-                        >
-                          <BookmarkIcon
-                            className={`h-5 w-5 ${
-                              comment.bookmarked
-                                ? "fill-[#ae7aff] text-[#ae7aff] group-focus:fill-none group-focus:text-inherit"
-                                : "group-focus:fill-[#ae7aff]"
-                            }`}
-                          />
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </div>
