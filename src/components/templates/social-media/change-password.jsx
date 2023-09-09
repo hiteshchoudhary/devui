@@ -20,7 +20,7 @@ const ChangePassword = () => {
           </button>
         </div>
       </header>
-      <div className="mt-[65px] grid grid-cols-12 gap-4 pb-8 pt-0 sm:px-4 sm:pt-8 sm:pt-8 md:mt-[83px] lg:px-10">
+      <div className="mt-[65px] grid grid-cols-12 gap-4 pb-8 pt-0 sm:px-4 sm:pt-8 md:mt-[83px] lg:px-10">
         {/* Empty */}
         <aside className="col-span-12 text-white md:col-span-5 lg:col-span-4 xl:col-span-3">
           {/* Profile Card */}
