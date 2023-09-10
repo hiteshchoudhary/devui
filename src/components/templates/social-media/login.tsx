@@ -14,7 +14,7 @@ const SocialLogin = () => {
           <div className="w-full text-center">
             <h1 className="mb-3 text-5xl font-extrabold text-white">Login</h1>
             <p className="text-xs text-slate-400">
-              Before we post, please create your account
+              Login to access your account
             </p>
           </div>
           <div className="my-14 flex w-full flex-col items-start justify-start gap-4">
