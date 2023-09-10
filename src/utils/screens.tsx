@@ -15,6 +15,8 @@ import SocialMediaMyProfile from "@/components/templates/social-media/my-profile
 import SocialMediaEditProfile from "@/components/templates/social-media/edit-profile";
 import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
 import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
+import SocialRegister from "@/components/templates/social-media/register";
+import SocialLogin from "@/components/templates/social-media/login";
 
 export const applications = [
   {
@@ -120,6 +122,16 @@ export const applications = [
         id: "bookmarked-posts",
         name: "Bookmarked Posts",
         component: <SocialMediaBookmarkedPosts />,
+      },
+      {
+        id: "social-register",
+        name: "Social Register",
+        component: <SocialRegister />,
+      },
+      {
+        id: "social-login",
+        name: "Social Login",
+        component: <SocialLogin />,
       },
     ],
   },
