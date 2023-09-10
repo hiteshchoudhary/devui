@@ -5,7 +5,7 @@ const SocialLogin = () => {
         <h1 className="text-xl font-extrabold md:text-3xl">Login</h1>
         <div className="flex w-max flex-shrink-0 items-center justify-end gap-6">
           <button className="hidden w-max items-center justify-center border-[1px] border-white p-3 text-center font-bold text-white md:inline-flex">
-            Login
+            Register
           </button>
         </div>
       </header>
