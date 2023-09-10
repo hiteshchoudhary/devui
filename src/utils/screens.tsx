@@ -8,6 +8,8 @@ import ChatScreen from "@/components/templates/chat/chat-screen";
 import CreateGroupChat from "@/components/templates/chat/create-group-chat";
 import CreateOneOnOneChat from "@/components/templates/chat/create-normal-chat";
 import GroupChatInfo from "@/components/templates/chat/group-information";
+import ChatRegister from "@/components/templates/chat/register";
+import ChatLogin from "@/components/templates/chat/login";
 import SocialMediaPostListing from "@/components/templates/social-media/post-listing";
 import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
 import SocialMediaUserProfile from "@/components/templates/social-media/user-profile";
@@ -15,6 +17,8 @@ import SocialMediaMyProfile from "@/components/templates/social-media/my-profile
 import SocialMediaEditProfile from "@/components/templates/social-media/edit-profile";
 import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
 import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
+import SocialRegister from "@/components/templates/social-media/register";
+import SocialLogin from "@/components/templates/social-media/login";
 
 export const applications = [
   {
@@ -76,6 +80,16 @@ export const applications = [
         name: "About Group Chat",
         component: <GroupChatInfo />,
       },
+      {
+        id: "chat-register",
+        name: "Chat Register",
+        component: <ChatRegister />,
+      },
+      {
+        id: "chat-login",
+        name: "Chat Login",
+        component: <ChatLogin />,
+      },
     ],
   },
   {
@@ -120,6 +134,16 @@ export const applications = [
         id: "bookmarked-posts",
         name: "Bookmarked Posts",
         component: <SocialMediaBookmarkedPosts />,
+      },
+      {
+        id: "social-register",
+        name: "Social Register",
+        component: <SocialRegister />,
+      },
+      {
+        id: "social-login",
+        name: "Social Login",
+        component: <SocialLogin />,
       },
     ],
   },
