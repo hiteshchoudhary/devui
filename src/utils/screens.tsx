@@ -8,6 +8,8 @@ import ChatScreen from "@/components/templates/chat/chat-screen";
 import CreateGroupChat from "@/components/templates/chat/create-group-chat";
 import CreateOneOnOneChat from "@/components/templates/chat/create-normal-chat";
 import GroupChatInfo from "@/components/templates/chat/group-information";
+import ChatRegister from "@/components/templates/chat/register";
+import ChatLogin from "@/components/templates/chat/login";
 import SocialMediaPostListing from "@/components/templates/social-media/post-listing";
 import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
 import SocialMediaUserProfile from "@/components/templates/social-media/user-profile";
@@ -77,6 +79,16 @@ export const applications = [
         id: "group-chat-info",
         name: "About Group Chat",
         component: <GroupChatInfo />,
+      },
+      {
+        id: "chat-register",
+        name: "Chat Register",
+        component: <ChatRegister />,
+      },
+      {
+        id: "chat-login",
+        name: "Chat Login",
+        component: <ChatLogin />,
       },
     ],
   },
