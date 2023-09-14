@@ -21,7 +21,7 @@ const PreviewCard = ({ children, className }: PreviewCardProps) => {
     <div
       ref={editorRef}
       className={classNames(
-        "relative mx-auto mt-4 min-h-[865px] overflow-visible rounded-md border",
+        "relative mx-auto min-h-[865px] overflow-visible rounded-md border-2 border-gray-700",
         className || "",
       )}
       style={{
@@ -35,16 +35,18 @@ const PreviewCard = ({ children, className }: PreviewCardProps) => {
         }}
         maxWidth={maxWidth || 1440}
       />
-      {/* // ! Reason to use iframe instead on any normal div is to avoid interference of devui parent project's styling and classes with the example's styling an classes
-     // ! using iframe will isolate the examples from devui's parent application code. */}
+      {/* 
+          // ! Reason to use iframe instead on any normal div is to avoid interference of devui parent project's styling and classes with the example's styling an classes
+          // ! using iframe will isolate the examples from devui's parent application code. 
+     */}
       <div
         className={classNames(
-          "iframe-overlay absolute inset-0 z-20 mx-auto hidden h-full min-h-[865px] w-full overflow-auto rounded-md border",
+          "iframe-overlay absolute inset-0 z-20 mx-auto hidden h-full min-h-[865px] w-full overflow-auto rounded-md",
         )}
       ></div>
       <iframe
         className={classNames(
-          "z-10 mx-auto min-h-[865px] w-full overflow-auto rounded-md border",
+          "z-10 mx-auto min-h-[865px] w-full overflow-auto rounded-md",
         )}
         srcDoc={`
       <script src="https://cdn.tailwindcss.com"></script>
