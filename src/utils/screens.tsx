@@ -19,6 +19,7 @@ import SocialMediaChangePassword from "@/components/templates/social-media/chang
 import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
 import SocialRegister from "@/components/templates/social-media/register";
 import SocialLogin from "@/components/templates/social-media/login";
+import YoutubeEmptyHome from "@/components/templates/youtube/empty-home";
 
 export const applications = [
   {
@@ -164,6 +165,21 @@ export const applications = [
         id: "todos",
         name: "Todos Page",
         component: <TodosList />,
+      },
+    ],
+  },
+  {
+    name: "Youtube app",
+    id: "youtube",
+    subtitle: "Youtube Clone",
+    cover: "/todo.png",
+    description:
+      "Explore UI designs for Todo app, a user-friendly task management application. Streamline your productivity by accessing the HTML templates.",
+    pages: [
+      {
+        id: "home",
+        name: "Home Page",
+        component: <YoutubeEmptyHome />,
       },
     ],
   },
