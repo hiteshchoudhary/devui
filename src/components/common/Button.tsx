@@ -10,7 +10,7 @@ const Button: React.FC<
   return (
     <button
       type="button"
-      className="inline-flex items-center gap-x-1.5 rounded-md bg-slate-900 px-3 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 active:bg-slate-950 disabled:bg-slate-500"
+      className="inline-flex items-center gap-x-1.5 rounded-md bg-white px-3 py-2.5 text-sm font-semibold text-gray-950 shadow-sm hover:bg-gray-200 active:bg-gray-300 disabled:bg-slate-500"
       {...props}
     >
       {StartIcon ? (

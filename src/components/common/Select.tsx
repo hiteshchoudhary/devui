@@ -24,13 +24,13 @@ const Select: React.FC<SelectProps> = ({ label, options, value, setValue }) => {
 
   return (
     <Combobox as="div" value={value} onChange={setValue}>
-      <Combobox.Label className="block text-sm font-medium leading-6 text-gray-900">
+      <Combobox.Label className="block text-sm font-medium leading-6">
         {label}
       </Combobox.Label>
       <div className="relative mt-2">
         <Combobox.Button className="w-full">
           <Combobox.Input
-            className="peer block w-full rounded-md border border-slate-300 bg-transparent px-6 py-4 text-base/6 text-slate-950 ring-4 ring-transparent transition focus:border-slate-950 focus:outline-none focus:ring-slate-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+            className="peer block w-full rounded-md border border-gray-700 bg-transparent px-6 py-4 text-base/6 text-white ring-4 ring-transparent transition focus:border-white focus:outline-none focus:ring-white/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
             onChange={(event) => setQuery(event.target.value)}
             displayValue={(option: any) => option?.name}
           />
@@ -42,15 +42,15 @@ const Select: React.FC<SelectProps> = ({ label, options, value, setValue }) => {
           />
         </Combobox.Button>
 
-        <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+        <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-gray-900 py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
           {filteredOptions.map((option) => (
             <Combobox.Option
               key={option.id}
               value={option}
               className={({ active }) =>
                 classNames(
-                  "relative cursor-default select-none py-2 pl-8 pr-4",
-                  active ? "bg-slate-600 text-white" : "text-gray-900",
+                  "relative cursor-default select-none py-2 pl-8 pr-4 text-white",
+                  active ? "bg-slate-600" : "",
                 )
               }
             >
@@ -69,7 +69,7 @@ const Select: React.FC<SelectProps> = ({ label, options, value, setValue }) => {
                     <span
                       className={classNames(
                         "absolute inset-y-0 left-0 flex items-center pl-1.5",
-                        active ? "text-white" : "text-slate-600",
+                        active ? "text-white" : "text-gray-200",
                       )}
                     >
                       <CheckIcon className="h-5 w-5" aria-hidden="true" />
