@@ -271,7 +271,7 @@ const EmptyHome = () => {
             <span className="block h-[2px] w-2/3 bg-white group-hover:bg-[#ae7aff]"></span>
             <span className="block h-[2px] w-full bg-white group-hover:bg-[#ae7aff]"></span>
           </button>
-          <div className="fixed inset-y-0 right-0 w-full max-w-xs shrink-0 translate-x-full overflow-auto border-l border-white bg-[#121212] duration-200 hover:translate-x-0 peer-focus:translate-x-0 sm:static sm:ml-4 sm:w-auto sm:translate-x-0 sm:border-none">
+          <div className="fixed inset-y-0 right-0 w-full max-w-xs shrink-0 translate-x-full border-l border-white bg-[#121212] duration-200 hover:translate-x-0 peer-focus:translate-x-0 sm:static sm:ml-4 sm:w-auto sm:translate-x-0 sm:border-none">
             <div className="relative flex w-full items-center justify-between border-b border-white px-4 py-2 sm:hidden">
               <span className="inline-block w-12">{logo}</span>
               <button className="inline-block w-8">
@@ -304,7 +304,7 @@ const EmptyHome = () => {
           </div>
         </nav>
       </header>
-      <div className="flex h-[calc(100%-82px)]">
+      <div className="flex h-[calc(100%-66px)] sm:h-[calc(100%-82px)]">
         <aside className="group sticky top-0 hidden h-full w-[70px] shrink-0 flex-wrap content-between gap-y-4 overflow-y-auto border-r border-white px-2 py-6 hover:w-1/3 sm:flex lg:w-1/4 lg:hover:w-1/4">
           {navItems.map((items, i) => (
             <ul key={i} className="flex w-full flex-wrap gap-y-2">
@@ -323,7 +323,7 @@ const EmptyHome = () => {
             </ul>
           ))}
         </aside>
-        <section className="flex w-full items-center justify-center lg:w-3/4">
+        <section className="flex w-full items-center justify-center overflow-auto lg:w-3/4">
           <div className="w-full max-w-sm text-center">
             <p className="mb-3 w-full">
               <span className="inline-flex rounded-full bg-[#E4D3FF] p-2 text-[#AE7AFF]">
@@ -337,7 +337,7 @@ const EmptyHome = () => {
             </p>
           </div>
         </section>
-        <aside className="fixed inset-x-0 bottom-0 w-full shrink-0 border-t border-white sm:hidden">
+        <aside className="fixed inset-x-0 bottom-0 w-full shrink-0 border-t border-white bg-[#121212] sm:hidden">
           <ul className="flex justify-around overflow-x-auto py-2">
             {bottomBarItems.map((item) => (
               <li key={item.name} className="shrink-0">
