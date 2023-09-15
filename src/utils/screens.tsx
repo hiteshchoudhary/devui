@@ -20,6 +20,7 @@ import SocialMediaBookmarkedPosts from "@/components/templates/social-media/book
 import SocialRegister from "@/components/templates/social-media/register";
 import SocialLogin from "@/components/templates/social-media/login";
 import YoutubeEmptyHome from "@/components/templates/youtube/empty-home";
+import YoutubeHomeVideoList from "@/components/templates/youtube/home-video-list";
 
 export const applications = [
   {
@@ -177,9 +178,14 @@ export const applications = [
       "Explore UI designs for Todo app, a user-friendly task management application. Streamline your productivity by accessing the HTML templates.",
     pages: [
       {
-        id: "home",
-        name: "Home Page",
+        id: "empty-home",
+        name: "Empty Home Page",
         component: <YoutubeEmptyHome />,
+      },
+      {
+        id: "home-video-list",
+        name: "Home Video List",
+        component: <YoutubeHomeVideoList />,
       },
     ],
   },
