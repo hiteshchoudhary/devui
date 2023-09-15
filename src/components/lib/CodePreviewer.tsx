@@ -77,7 +77,7 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
           </button>
         </div>
       </div>
-      <div className="mt-4 w-full rounded-lg">
+      <div className="mt-4 w-full">
         {previewMode ? (
           <PreviewCard>{children}</PreviewCard>
         ) : (

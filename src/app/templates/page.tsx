@@ -23,7 +23,7 @@ const Templates = () => {
                   {application.subtitle}
                 </p>
               </div>
-              <div className="border-gray-7h00 col-start-1 col-end-3 row-start-1 grid items-end justify-end gap-4 border">
+              <div className="col-start-1 col-end-3 row-start-1 grid items-end justify-end gap-4 border border-gray-700">
                 <img
                   src={application.cover}
                   alt=""
