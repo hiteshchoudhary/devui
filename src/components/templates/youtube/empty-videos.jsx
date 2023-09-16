@@ -8,7 +8,7 @@ import {
 import React from "react";
 import { bottomTotalItems, navItems, logo } from ".";
 
-const EmptyHome = () => {
+const EmptyVideos = () => {
   return (
     <div className="h-screen overflow-y-auto bg-[#121212] text-white">
       <header className="sticky inset-x-0 top-0 z-50 w-full border-b border-white bg-[#121212] px-4">
@@ -108,4 +108,4 @@ const EmptyHome = () => {
   );
 };
 
-export default EmptyHome;
+export default EmptyVideos;

@@ -19,8 +19,8 @@ import SocialMediaChangePassword from "@/components/templates/social-media/chang
 import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
 import SocialRegister from "@/components/templates/social-media/register";
 import SocialLogin from "@/components/templates/social-media/login";
-import YoutubeEmptyHome from "@/components/templates/youtube/empty-home";
-import YoutubeHomeVideoList from "@/components/templates/youtube/home-video-list";
+import YoutubeEmptyVideos from "@/components/templates/youtube/empty-videos";
+import YoutubeVideoCards from "@/components/templates/youtube/video-cards";
 
 export const applications = [
   {
@@ -170,22 +170,22 @@ export const applications = [
     ],
   },
   {
-    name: "Youtube app",
+    name: "Youtube App",
     id: "youtube",
-    subtitle: "Youtube Clone",
-    cover: "/todo.png",
+    subtitle: "Video Sharing Platform",
+    cover: "/youtube.png",
     description:
-      "Explore UI designs for Todo app, a user-friendly task management application. Streamline your productivity by accessing the HTML templates.",
+      "Explore UI designs for a Youtube clone, a user-friendly video sharing platform. Enhance your viewing experience with these accessible HTML templates.",
     pages: [
       {
-        id: "empty-home",
-        name: "Empty Home Page",
-        component: <YoutubeEmptyHome />,
+        id: "empty-videos",
+        name: "Empty Video Page",
+        component: <YoutubeEmptyVideos />,
       },
       {
-        id: "home-video-list",
-        name: "Home Video List",
-        component: <YoutubeHomeVideoList />,
+        id: "video-card",
+        name: "Video Cards Page",
+        component: <YoutubeVideoCards />,
       },
     ],
   },
