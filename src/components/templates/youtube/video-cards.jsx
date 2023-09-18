@@ -61,7 +61,7 @@ const VideoCards = () => {
         </nav>
       </header>
       <div className="flex min-h-[calc(100vh-66px)] sm:min-h-[calc(100vh-82px)]">
-        <aside className="group fixed inset-x-0 bottom-0 z-40 w-full shrink-0 border-t border-white bg-[#121212] px-2 py-2 sm:sticky sm:max-w-[70px] sm:border-r sm:border-t-0 sm:py-6 sm:hover:max-w-[250px] lg:max-w-[250px]">
+        <aside className="group fixed inset-x-0 bottom-0 z-40 w-full shrink-0 border-t border-white bg-[#121212] px-2 py-2 sm:absolute sm:inset-y-0 sm:max-w-[70px] sm:border-r sm:border-t-0 sm:py-6 sm:hover:max-w-[250px] lg:sticky lg:max-w-[250px]">
           <ul className="flex justify-around gap-y-2 sm:sticky sm:top-[106px] sm:min-h-[calc(100vh-130px)] sm:flex-col">
             {navItems.map((item, i, arr) => (
               <li
@@ -83,7 +83,7 @@ const VideoCards = () => {
             ))}
           </ul>
         </aside>
-        <section className="w-full pb-[70px] sm:pb-0">
+        <section className="w-full pb-[70px] sm:ml-[70px] sm:pb-0 lg:ml-0">
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4 p-4">
             {videos.map((video) => (
               <div key={video.id} className="w-full">
