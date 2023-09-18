@@ -760,3 +760,48 @@ export const videos = [
     },
   },
 ];
+
+export const videoDetails = {
+  id: "1",
+  videoFile:
+    "https://res.cloudinary.com/demo/video/upload/docs/walking_talking.webm",
+  thumbnail:
+    "https://images.pexels.com/photos/1115808/pexels-photo-1115808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  title: "Advanced React Patterns",
+  description:
+    "Explore advanced patterns and techniques for building scalable and maintainable React applications. Explore advanced patterns and techniques for building scalable and maintainable React applications. Explore advanced patterns and techniques for building scalable and maintainable React applications.",
+  duration: "30:25",
+  views: "30,164",
+  likeCount: 3050,
+  dislikeCount: 20,
+  commentCount: 573,
+  isPublished: true,
+  createdAt: "18 hours ago",
+  updatedAt: new Date(),
+  liked: false,
+  disliked: false,
+  owner: {
+    id: "25",
+    username: "reactpatterns",
+    fullName: "React Patterns",
+    avatar:
+      "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    followers: "757K",
+  },
+  comments: [
+    {
+      id: "1",
+      video: "1",
+      content:
+        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
+      createdAt: "1 hour ago",
+      owner: {
+        id: "25",
+        username: "reactpatterns",
+        fullName: "React Patterns",
+        avatar:
+          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+    },
+  ],
+};

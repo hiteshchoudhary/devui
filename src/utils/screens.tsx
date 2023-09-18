@@ -22,6 +22,7 @@ import SocialLogin from "@/components/templates/social-media/login";
 import YoutubeEmptyVideos from "@/components/templates/youtube/empty-videos";
 import YoutubeVideoCards from "@/components/templates/youtube/video-cards";
 import YoutubeVideoList from "@/components/templates/youtube/video-list";
+import YoutubeVideoDetail from "@/components/templates/youtube/video-detail";
 
 export const applications = [
   {
@@ -192,6 +193,11 @@ export const applications = [
         id: "video-list",
         name: "Video Listing Page (List View)",
         component: <YoutubeVideoList />,
+      },
+      {
+        id: "video-detail",
+        name: "Video Detail Page",
+        component: <YoutubeVideoDetail />,
       },
     ],
   },
