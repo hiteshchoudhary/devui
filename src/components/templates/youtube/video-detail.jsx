@@ -296,7 +296,7 @@ const VideoList = () => {
                 ))}
               </div>
             </div>
-            <div className="col-span-12 flex w-full shrink-0 flex-col gap-3 lg:w-[300px] xl:w-[400px]">
+            <div className="col-span-12 flex w-full shrink-0 flex-col gap-3 lg:w-[350px] xl:w-[400px]">
               {videos.map((video) => (
                 <div
                   key={video.id}
