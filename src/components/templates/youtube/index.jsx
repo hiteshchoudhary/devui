@@ -770,7 +770,7 @@ export const videoDetails = {
     "https://images.pexels.com/photos/1115808/pexels-photo-1115808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   title: "Advanced React Patterns",
   description:
-    "Explore advanced patterns and techniques for building scalable and maintainable React applications. Explore advanced patterns and techniques for building scalable and maintainable React applications. Explore advanced patterns and techniques for building scalable and maintainable React applications.",
+    '🚀 Dive into the world of React with our latest tutorial series: "Advanced React Patterns"! 🛠️ Whether you\'re a seasoned developer or just starting out, this series is designed to elevate your React skills to the next level.',
   duration: "30:25",
   views: "30,164",
   likeCount: 3050,
@@ -794,112 +794,112 @@ export const videoDetails = {
       id: "1",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
-      createdAt: "1 hour ago",
+        "This series is exactly what I've been looking for! Excited to dive into these advanced React patterns. Thanks for putting this together!",
+      createdAt: "17 hour ago",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "sarahjv",
+        fullName: "Sarah Johnson",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-woman-reading-book-on-a-bench.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
     {
       id: "2",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
-      createdAt: "1 hour ago",
+        "Render props have always been a bit tricky for me. Can't wait to see how this series breaks it down. Thanks for sharing!",
+      createdAt: "5 minutes ago",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "mikerod",
+        fullName: "Michael Rodriguez",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/18107025/pexels-photo-18107025/free-photo-of-man-reading-newspaper.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
     {
       id: "3",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
+        "Higher-order components have been a mystery to me for far too long. Looking forward to demystifying them with this series. Thanks!",
       createdAt: "1 hour ago",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "emilyt",
+        fullName: "Emily Turner",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
     {
       id: "4",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
-      createdAt: "1 hour ago",
+        "Compound components are a game-changer for UI development. Can't wait to learn more about them. Great work on this series!",
+      createdAt: "3 hour ago",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "davidc",
+        fullName: "David Chen",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/18094275/pexels-photo-18094275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
     {
       id: "5",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
-      createdAt: "1 hour ago",
+        "Controlled vs. uncontrolled components - finally! This topic has always confused me. Thanks for breaking it down!",
+      createdAt: "12 hour ago",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "alex_p",
+        fullName: "Alex Parker",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/13847596/pexels-photo-13847596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
     {
       id: "6",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
-      createdAt: "1 hour ago",
+        "This series is a goldmine for React developers! Compound components are something I've been eager to master. Thanks for this!",
+      createdAt: "5 hour ago",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "jessicalee",
+        fullName: "Jessica Lee",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/7775637/pexels-photo-7775637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
     {
       id: "7",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
-      createdAt: "1 hour ago",
+        "This is exactly what I needed to take my React skills to the next level. Looking forward to diving into the render props section!",
+      createdAt: "Just now",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "ryanjax",
+        fullName: "Ryan Jackson",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/3532545/pexels-photo-3532545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
     {
       id: "8",
       video: "1",
       content:
-        "Explore advanced patterns and techniques for building scalable and maintainable React applications.",
-      createdAt: "1 hour ago",
+        "This series looks amazing! I'm especially excited to learn more about controlled vs. uncontrolled components. Thanks for sharing!",
+      createdAt: "1 minutes ago",
       owner: {
         id: "25",
-        username: "reactpatterns",
-        fullName: "React Patterns",
+        username: "lauraw",
+        fullName: "Laura Williams",
         avatar:
-          "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     },
   ],
