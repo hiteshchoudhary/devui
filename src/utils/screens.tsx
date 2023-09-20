@@ -25,6 +25,7 @@ import YoutubeVideoList from "@/components/templates/youtube/video-list";
 import YoutubeVideoDetail from "@/components/templates/youtube/video-detail";
 import YoutubeChannelEmptyVideo from "@/components/templates/youtube/channel-empty-video";
 import YoutubeChannelVideoList from "@/components/templates/youtube/channel-video-list";
+import YoutubeChannelPlaylist from "@/components/templates/youtube/channel-playlist";
 
 export const applications = [
   {
@@ -210,6 +211,11 @@ export const applications = [
         id: "channel-video-list",
         name: "Channel Video List Page",
         component: <YoutubeChannelVideoList />,
+      },
+      {
+        id: "channel-playlist",
+        name: "Channel Playlist Page",
+        component: <YoutubeChannelPlaylist />,
       },
     ],
   },

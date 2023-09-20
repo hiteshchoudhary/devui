@@ -904,3 +904,91 @@ export const videoDetails = {
     },
   ],
 };
+
+export const playlistList = [
+  {
+    id: "1",
+    videos: videos,
+    name: "React Mastery",
+    views: "100K",
+    description:
+      "Master the art of building dynamic user interfaces with React.",
+    createdAt: "2 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "2",
+    videos: [videos[3], videos[4], videos[5]],
+    name: "JavaScript Fundamentals",
+    views: "120K",
+    description:
+      "Learn the core concepts and fundamentals of JavaScript programming language.",
+    createdAt: "3 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "3",
+    videos: [videos[6], videos[7], videos[8]],
+    name: "TypeScript Essentials",
+    views: "90K",
+    description:
+      "Dive into TypeScript for enhanced type safety and scalable JavaScript applications.",
+    createdAt: "4 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "4",
+    videos: [videos[9], videos[10], videos[11]],
+    name: "React State Management",
+    views: "80K",
+    description:
+      "Explore various state management techniques in React applications.",
+    createdAt: "5 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "5",
+    videos: [videos[12], videos[13], videos[14]],
+    name: "Advanced JavaScript Techniques",
+    views: "110K",
+    description:
+      "Delve into advanced JavaScript concepts and techniques for professional-level programming.",
+    createdAt: "6 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+];
