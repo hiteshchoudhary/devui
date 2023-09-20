@@ -24,6 +24,7 @@ import YoutubeVideoCards from "@/components/templates/youtube/video-cards";
 import YoutubeVideoList from "@/components/templates/youtube/video-list";
 import YoutubeVideoDetail from "@/components/templates/youtube/video-detail";
 import YoutubeProfileVideoList from "@/components/templates/youtube/profile-video-list";
+import YoutubeProfileEmptyVideo from "@/components/templates/youtube/profile-empty-video";
 
 export const applications = [
   {
@@ -204,6 +205,11 @@ export const applications = [
         id: "profile-video-list",
         name: "Profile Video List Page",
         component: <YoutubeProfileVideoList />,
+      },
+      {
+        id: "profile-empty-video",
+        name: "Profile Empty Video Page",
+        component: <YoutubeProfileEmptyVideo />,
       },
     ],
   },
