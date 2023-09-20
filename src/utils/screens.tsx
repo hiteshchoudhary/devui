@@ -27,6 +27,7 @@ import YoutubeChannelEmptyVideo from "@/components/templates/youtube/channel-emp
 import YoutubeChannelVideoList from "@/components/templates/youtube/channel-video-list";
 import YoutubeChannelEmptyPlaylist from "@/components/templates/youtube/channel-empty-playlist";
 import YoutubeChannelPlaylist from "@/components/templates/youtube/channel-playlist";
+import YoutubeChannelEmptyTweet from "@/components/templates/youtube/channel-empty-tweet";
 
 export const applications = [
   {
@@ -222,6 +223,11 @@ export const applications = [
         id: "channel-playlist",
         name: "Channel Playlist Page",
         component: <YoutubeChannelPlaylist />,
+      },
+      {
+        id: "channel-empty-tweet",
+        name: "Channel Empty Tweet Page",
+        component: <YoutubeChannelEmptyTweet />,
       },
     ],
   },
