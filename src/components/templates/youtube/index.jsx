@@ -143,7 +143,7 @@ export const navItems = [
     ),
   },
   {
-    name: "Collection",
+    name: "Collections",
     mobileView: true,
     icon: (
       <svg
@@ -787,7 +787,7 @@ export const videoDetails = {
     fullName: "React Patterns",
     avatar:
       "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    followers: "757K",
+    subscribers: "757K",
   },
   comments: [
     {

@@ -3,12 +3,13 @@ import { classNames } from "@/utils";
 import React from "react";
 import {
   MagnifyingGlassIcon,
+  PlayIcon,
   UserPlusIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { bottomTotalItems, navItems, logo, videos } from ".";
+import { bottomTotalItems, navItems, logo } from ".";
 
-const ProfileVideoList = () => {
+const ProfileEmptyVideo = () => {
   return (
     <div className="h-screen overflow-y-auto bg-[#121212] text-white">
       <header className="sticky inset-x-0 top-0 z-50 w-full border-b border-white bg-[#121212] px-4">
@@ -110,19 +111,19 @@ const ProfileVideoList = () => {
                 <h1 className="font-bolg text-xl">React Patterns</h1>
                 <p className="text-sm text-gray-400">@reactpatterns</p>
                 <p className="text-sm text-gray-400">
-                  600k Followers&nbsp;&middot;&nbsp;220 Following
+                  600k Subscribers&nbsp;&middot;&nbsp;220 Subscribed
                 </p>
               </div>
 
               <div className="inline-block">
-                <div className="inline-flex min-w-[130px] justify-end">
+                <div className="inline-flex min-w-[145px] justify-end">
                   <button className="group/btn mr-1 flex w-full items-center gap-x-2 bg-[#ae7aff] px-3 py-2 text-center font-bold text-black shadow-[5px_5px_0px_0px_#4f4e4e] transition-all duration-150 ease-in-out active:translate-x-[5px] active:translate-y-[5px] active:shadow-[0px_0px_0px_0px_#4f4e4e] sm:w-auto">
                     <span className="inline-block w-5">
                       <UserPlusIcon strokeWidth={2} />
                     </span>
-                    <span className="group-focus/btn:hidden">Follow</span>
+                    <span className="group-focus/btn:hidden">Subscribe</span>
                     <span className="hidden group-focus/btn:block">
-                      Unfollow
+                      Subscribed
                     </span>
                   </button>
                 </div>
@@ -147,31 +148,23 @@ const ProfileVideoList = () => {
               </li>
               <li className="w-full">
                 <button className="w-full border-b-2 border-transparent px-3 py-1.5 text-gray-400">
-                  Followings
+                  Subscribed
                 </button>
               </li>
             </ul>
-            <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4 pt-2">
-              {videos.map((video) => (
-                <div key={video.id} className="w-full">
-                  <div className="relative mb-2 w-full pt-[56%]">
-                    <div className="absolute inset-0">
-                      <img
-                        src={video.thumbnail}
-                        alt={video.title}
-                        className="h-full w-full"
-                      />
-                    </div>
-                    <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">
-                      {video.duration}
-                    </span>
-                  </div>
-                  <h6 className="mb-1 font-semibold">{video.title}</h6>
-                  <p className="flex text-sm text-gray-200">
-                    {video.views}&nbsp;Views &middot; {video.createdAt}
-                  </p>
-                </div>
-              ))}
+            <div className="flex justify-center p-4">
+              <div className="w-full max-w-sm text-center">
+                <p className="mb-3 w-full">
+                  <span className="inline-flex rounded-full bg-[#E4D3FF] p-2 text-[#AE7AFF]">
+                    <PlayIcon className="w-6" />
+                  </span>
+                </p>
+                <h5 className="mb-2 font-semibold">No videos uploaded</h5>
+                <p>
+                  This page has yet to upload a video. Search another page in
+                  order to find more videos.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -180,4 +173,4 @@ const ProfileVideoList = () => {
   );
 };
 
-export default ProfileVideoList;
+export default ProfileEmptyVideo;

@@ -172,6 +172,7 @@ const VideoList = () => {
                           </h3>
                           <ul className="mb-4">
                             {[
+                              "Collections",
                               "JavaScript Basics",
                               "C++ Tuts",
                               "Feel Good Music",
@@ -231,7 +232,7 @@ const VideoList = () => {
                         {videoDetails.owner.fullName}
                       </p>
                       <p className="text-sm text-gray-400">
-                        {videoDetails.owner.followers} Followrs
+                        {videoDetails.owner.subscribers} Subscribers
                       </p>
                     </div>
                   </div>
@@ -240,9 +241,9 @@ const VideoList = () => {
                       <span className="inline-block w-5">
                         <UserPlusIcon strokeWidth={2} />
                       </span>
-                      <span className="group-focus/btn:hidden">Follow</span>
+                      <span className="group-focus/btn:hidden">Subscribe</span>
                       <span className="hidden group-focus/btn:block">
-                        Unfollow
+                        Subscribed
                       </span>
                     </button>
                   </div>
