@@ -242,7 +242,7 @@ const VideoList = () => {
                       </span>
                       <span className="group-focus/btn:hidden">Follow</span>
                       <span className="hidden group-focus/btn:block">
-                        Unollow
+                        Unfollow
                       </span>
                     </button>
                   </div>
