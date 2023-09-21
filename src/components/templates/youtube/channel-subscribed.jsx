@@ -4,7 +4,6 @@ import React from "react";
 import {
   MagnifyingGlassIcon,
   UserPlusIcon,
-  UsersIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 import { bottomTotalItems, navItems, logo, channels } from ".";
@@ -153,6 +152,16 @@ const ChannelSubscribed = () => {
               </li>
             </ul>
             <div className="flex flex-col gap-y-4 py-4">
+              <div className="relative mb-2 rounded-lg bg-white py-2 pl-8 pr-3 text-black">
+                <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">
+                  <MagnifyingGlassIcon className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <input
+                  className="w-full bg-transparent outline-none"
+                  placeholder="Search"
+                />
+              </div>
+
               {channels.map((channel, i) => (
                 <div
                   className="flex w-full justify-between"
