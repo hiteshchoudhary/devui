@@ -27,6 +27,7 @@ import YoutubeChannelEmptyVideo from "@/components/templates/youtube/channel-emp
 import YoutubeChannelVideoList from "@/components/templates/youtube/channel-video-list";
 import YoutubeChannelEmptyPlaylist from "@/components/templates/youtube/channel-empty-playlist";
 import YoutubeChannelPlaylist from "@/components/templates/youtube/channel-playlist";
+import YoutubeChannelPlaylistVideos from "@/components/templates/youtube/channel-playlist-videos";
 import YoutubeChannelEmptyTweet from "@/components/templates/youtube/channel-empty-tweet";
 import YoutubeChannelEmptySubscribed from "@/components/templates/youtube/channel-empty-subscribed";
 
@@ -224,6 +225,11 @@ export const applications = [
         id: "channel-playlist",
         name: "Channel Playlist Page",
         component: <YoutubeChannelPlaylist />,
+      },
+      {
+        id: "channel-paylist-videos",
+        name: "Channel Playlist Videos Page",
+        component: <YoutubeChannelPlaylistVideos />,
       },
       {
         id: "channel-empty-tweet",
