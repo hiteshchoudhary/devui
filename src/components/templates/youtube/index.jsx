@@ -1186,3 +1186,9 @@ export const tweets = [
     },
   },
 ];
+
+export const channels = videos.map((video, i) => ({
+  ...video.owner,
+  subscribers: 20 * (i + 1) + "K",
+  isSubscribed: i % 2 == 0,
+}));
