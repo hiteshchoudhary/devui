@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { bottomTotalItems, navItems, logo, playlistList } from ".";
 
-const ProfilePlaylist = () => {
+const ChannelPlaylist = () => {
   return (
     <div className="h-screen overflow-y-auto bg-[#121212] text-white">
       <header className="sticky inset-x-0 top-0 z-50 w-full border-b border-white bg-[#121212] px-4">
@@ -101,7 +101,7 @@ const ProfilePlaylist = () => {
               <span className="relative -mt-12 inline-block h-28 w-28 shrink-0 overflow-hidden rounded-full border-2">
                 <img
                   src="https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt="Profile"
+                  alt="Channel"
                   className="h-full w-full"
                 />
               </span>
@@ -196,4 +196,4 @@ const ProfilePlaylist = () => {
   );
 };
 
-export default ProfilePlaylist;
+export default ChannelPlaylist;

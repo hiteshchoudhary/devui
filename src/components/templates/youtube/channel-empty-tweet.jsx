@@ -102,7 +102,7 @@ const ChannelEmptyTweet = () => {
               <span className="relative -mt-12 inline-block h-28 w-28 shrink-0 overflow-hidden rounded-full border-2">
                 <img
                   src="https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  alt="Profile"
+                  alt="Channel"
                   className="h-full w-full"
                 />
               </span>
