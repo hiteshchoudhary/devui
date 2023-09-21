@@ -1003,3 +1003,186 @@ export const playlistList = [
     },
   },
 ];
+
+export const tweets = [
+  {
+    id: "1",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: true,
+    disliked: false,
+    content:
+      "Exploring the latest features in JavaScript ES11! The language keeps evolving. 💡 #JavaScript #ES11",
+    createdAt: "5 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "2",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: false,
+    disliked: false,
+    content:
+      "Embracing the benefits of TypeScript for stronger, more reliable code. 🚀 #TypeScript #Programming",
+    createdAt: "6 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "3",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: false,
+    disliked: false,
+    content:
+      "Styling made easy with Tailwind CSS! Rapidly build beautiful, responsive interfaces. 🎨 #TailwindCSS #WebDev",
+    createdAt: "7 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "4",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: true,
+    disliked: false,
+    content:
+      "Building dynamic user interfaces with React! The go-to library for modern web development. 🚀 #React #WebDev",
+    createdAt: "8 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "5",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: false,
+    disliked: true,
+    content:
+      "Next.js makes server-side rendering a breeze! Boost your React app's performance with ease. 🚀 #Nextjs #React",
+    createdAt: "9 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "6",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: true,
+    disliked: false,
+    content:
+      "Dive into advanced JavaScript concepts like closures and prototypes. Level up your coding skills! 🔍 #AdvancedJS #CodingTips",
+    createdAt: "10 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "7",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: true,
+    disliked: false,
+    content:
+      "Mastering TypeScript: From basics to advanced concepts. Boost your development workflow with strong typing! 🚀 #TypeScript #Development",
+    createdAt: "11 hours ago",
+    owner: {
+      id: "26",
+      username: "tscripter",
+      fullName: "TS Scripter",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "420K",
+    },
+  },
+  {
+    id: "8",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: true,
+    disliked: false,
+    content:
+      "Simplify your CSS workflow with Tailwind CSS. Effortless styling for modern web development! 🎨 #TailwindCSS #WebDev",
+    createdAt: "12 hours ago",
+    owner: {
+      id: "27",
+      username: "tailwiz",
+      fullName: "Tailwind Wizard",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "600K",
+    },
+  },
+  {
+    id: "9",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: true,
+    disliked: false,
+    content:
+      "Building dynamic UIs with React - A comprehensive guide for developers. Get started with React today! 🚀 #React #WebDevelopment",
+    createdAt: "13 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+  {
+    id: "10",
+    likeCount: 425,
+    dislikeCount: 87,
+    liked: true,
+    disliked: false,
+    content:
+      "Optimize server-side rendering with Next.js. Improve performance and SEO for your React applications! 🚀 #Nextjs #React",
+    createdAt: "14 hours ago",
+    owner: {
+      id: "25",
+      username: "reactpatterns",
+      fullName: "React Patterns",
+      avatar:
+        "https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subscribers: "757K",
+    },
+  },
+];
