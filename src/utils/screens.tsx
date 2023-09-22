@@ -249,6 +249,11 @@ export const applications = [
         name: "Edit Channel Info Page",
         component: <Youtube.EditChannelInfo />,
       },
+      {
+        id: "change-password",
+        name: "Change Password Page",
+        component: <Youtube.ChangePassword />,
+      },
     ],
   },
 ];
