@@ -159,7 +159,7 @@ const EditPersonalInfo = () => {
               <div className="w-full sm:w-1/2 lg:w-1/3">
                 <h5 className="font-semibold">Personal Info</h5>
                 <p className="text-gray-300">
-                  Upload your photo and personal details.
+                  Update your photo and personal details.
                 </p>
               </div>
               <div className="w-full sm:w-1/2 lg:w-2/3">
