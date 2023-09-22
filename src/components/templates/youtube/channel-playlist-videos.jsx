@@ -6,7 +6,7 @@ import {
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 import React from "react";
-import { bottomTotalItems, navItems, logo, playlistList } from ".";
+import { bottomTotalItems, navItems, logo, playlistList } from "./data";
 
 const ChannelPlaylistVideos = () => {
   return (

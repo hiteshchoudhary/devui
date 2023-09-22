@@ -6,7 +6,7 @@ import {
   UserPlusIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { bottomTotalItems, navItems, logo, channels } from ".";
+import { bottomTotalItems, navItems, logo, channels } from "./data";
 
 const ChannelSubscribed = () => {
   return (

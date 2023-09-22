@@ -6,7 +6,7 @@ import {
   UserPlusIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { bottomTotalItems, navItems, logo, videos } from ".";
+import { bottomTotalItems, navItems, logo, videos } from "./data";
 
 const ChannelVideoList = () => {
   return (

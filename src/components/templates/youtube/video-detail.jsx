@@ -10,7 +10,7 @@ import {
   UserPlusIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { bottomTotalItems, navItems, logo, videos, videoDetails } from ".";
+import { bottomTotalItems, navItems, logo, videos, videoDetails } from "./data";
 
 const VideoList = () => {
   return (

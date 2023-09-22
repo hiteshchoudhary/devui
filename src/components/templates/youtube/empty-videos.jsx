@@ -6,7 +6,7 @@ import {
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 import React from "react";
-import { bottomTotalItems, navItems, logo } from ".";
+import { bottomTotalItems, navItems, logo } from "./data";
 
 const EmptyVideos = () => {
   return (
