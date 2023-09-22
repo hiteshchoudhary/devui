@@ -244,6 +244,11 @@ export const applications = [
         name: "Edit Personal Info Page",
         component: <Youtube.EditPersonalInfo />,
       },
+      {
+        id: "edit-channel-info",
+        name: "Edit Channel Info Page",
+        component: <Youtube.EditChannelInfo />,
+      },
     ],
   },
 ];

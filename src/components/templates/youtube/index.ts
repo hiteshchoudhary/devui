@@ -15,6 +15,7 @@ import MyChannelEmptyVideo from "./mychannel-empty-video";
 import MyChannelEmptyTweet from "./mychannel-empty-tweet";
 import MyChannelTweets from "./mychannel-tweets";
 import EditPersonalInfo from "./edit-personal-info";
+import EditChannelInfo from "./edit-channel-info";
 
 const Youtube = {
   EmptyVideos,
@@ -34,6 +35,7 @@ const Youtube = {
   MyChannelEmptyVideo,
   MyChannelTweets,
   EditPersonalInfo,
+  EditChannelInfo,
 };
 
 export default Youtube;
