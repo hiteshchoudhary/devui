@@ -34,6 +34,7 @@ import YoutubeChannelEmptySubscribed from "@/components/templates/youtube/channe
 import YoutubeChannelSubscribed from "@/components/templates/youtube/channel-subscribed";
 import YoutubeMyChannelEmptyVideo from "@/components/templates/youtube/mychannel-empty-video";
 import YoutubeMyChannelEmptyTweet from "@/components/templates/youtube/mychannel-empty-tweet";
+import YoutubeMyChannelTweets from "@/components/templates/youtube/mychannel-tweets";
 
 export const applications = [
   {
@@ -264,6 +265,11 @@ export const applications = [
         id: "mychannel-empty-tweet",
         name: "My Channel Empty Tweet Page",
         component: <YoutubeMyChannelEmptyTweet />,
+      },
+      {
+        id: "mychannel-tweets",
+        name: "My Channel Tweets Page",
+        component: <YoutubeMyChannelTweets />,
       },
     ],
   },
