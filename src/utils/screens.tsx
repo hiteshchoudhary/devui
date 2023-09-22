@@ -239,6 +239,11 @@ export const applications = [
         name: "My Channel Tweets Page",
         component: <Youtube.MyChannelTweets />,
       },
+      {
+        id: "edit-personal-info",
+        name: "Edit Personal Info Page",
+        component: <Youtube.EditPersonalInfo />,
+      },
     ],
   },
 ];
