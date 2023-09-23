@@ -254,6 +254,11 @@ export const applications = [
         name: "Change Password Page",
         component: <Youtube.ChangePassword />,
       },
+      {
+        id: "dashboard",
+        name: "Admin Dashboard Page",
+        component: <Youtube.Dashboard />,
+      },
     ],
   },
 ];

@@ -17,6 +17,7 @@ import MyChannelTweets from "./mychannel-tweets";
 import EditPersonalInfo from "./edit-personal-info";
 import EditChannelInfo from "./edit-channel-info";
 import ChangePassword from "./change-password";
+import Dashboard from "./dashboard";
 
 const Youtube = {
   EmptyVideos,
@@ -38,6 +39,7 @@ const Youtube = {
   EditPersonalInfo,
   EditChannelInfo,
   ChangePassword,
+  Dashboard,
 };
 
 export default Youtube;
