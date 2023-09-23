@@ -19,7 +19,6 @@ const Register = () => {
           placeholder="Enter your email"
           className="mb-4 rounded-lg border bg-transparent px-3 py-2"
         />
-        {/* <div className="block"></div> */}
         <button className="bg-[#ae7aff] px-4 py-3 text-black">
           Sign up with Email
         </button>
