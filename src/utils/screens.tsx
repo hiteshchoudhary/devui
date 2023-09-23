@@ -225,6 +225,11 @@ export const applications = [
         component: <Youtube.ChannelSubscribed />,
       },
       {
+        id: "login",
+        name: "Login Page",
+        component: <Youtube.Login />,
+      },
+      {
         id: "register",
         name: "Register Page",
         component: <Youtube.Register />,
