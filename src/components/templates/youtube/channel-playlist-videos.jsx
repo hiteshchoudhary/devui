@@ -1,14 +1,13 @@
 "use client";
 import { classNames } from "@/utils";
-import {
-  MagnifyingGlassIcon,
-  PlayIcon,
-  XCircleIcon,
-} from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import { bottomTotalItems, navItems, logo, playlistList } from "./data";
 
 const ChannelPlaylistVideos = () => {
+  const playlist = playlistList[0];
+  playlist.videos = playlist.videos.filter((video) => video.isPublished);
+
   return (
     <div className="h-screen overflow-y-auto bg-[#121212] text-white">
       <header className="sticky inset-x-0 top-0 z-50 w-full border-b border-white bg-[#121212] px-4">
@@ -93,8 +92,8 @@ const ChannelPlaylistVideos = () => {
               <div className="relative mb-2 w-full pt-[56%]">
                 <div className="absolute inset-0">
                   <img
-                    src={playlistList[0].videos[0].thumbnail}
-                    alt={playlistList[0].name}
+                    src={playlist.videos[0].thumbnail}
+                    alt={playlist.name}
                     className="h-full w-full"
                   />
                   <div className="absolute inset-x-0 bottom-0">
@@ -103,90 +102,92 @@ const ChannelPlaylistVideos = () => {
                         <p className="flex justify-between">
                           <span className="inline-block">Playlist</span>
                           <span className="inline-block">
-                            {playlistList[0].videos.length} videos
+                            {playlist.videos.length}
+                            &nbsp;videos
                           </span>
                         </p>
                         <p className="text-sm text-gray-200">
-                          {playlistList[0].views} Views&nbsp;&middot;&nbsp;
-                          {playlistList[0].createdAt}
+                          {playlist.views} Views&nbsp;&middot;&nbsp;
+                          {playlist.createdAt}
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <h6 className="mb-1 font-semibold">{playlistList[0].name}</h6>
+              <h6 className="mb-1 font-semibold">{playlist.name}</h6>
               <p className="flex text-sm text-gray-200">
-                {playlistList[0].description}
+                {playlist.description}
               </p>
               <div className="mt-6 flex items-center gap-x-3">
                 <div className="h-16 w-16 shrink-0">
                   <img
-                    src={playlistList[0].owner.avatar}
-                    alt={playlistList[0].owner.fullName}
+                    src={playlist.owner.avatar}
+                    alt={playlist.owner.fullName}
                     className="h-full w-full rounded-full"
                   />
                 </div>
                 <div className="w-full">
-                  <h6 className="font-semibold">
-                    {playlistList[0].owner.fullName}
-                  </h6>
+                  <h6 className="font-semibold">{playlist.owner.fullName}</h6>
                   <p className="text-sm text-gray-300">
-                    {playlistList[0].owner.subscribers} Subscribers
+                    {playlist.owner.subscribers} Subscribers
                   </p>
                 </div>
               </div>
             </div>
             <div className="flex w-full flex-col gap-y-4">
-              {playlistList[0].videos.map((video) => (
-                <div key={video.id} className="border">
-                  <div className="w-full max-w-3xl gap-x-4 sm:flex">
-                    <div className="relative mb-2 w-full sm:mb-0 sm:w-5/12">
-                      <div className="w-full pt-[56%]">
-                        <div className="absolute inset-0">
-                          <img
-                            src={video.thumbnail}
-                            alt={video.title}
-                            className="h-full w-full"
-                          />
+              {playlist.videos.map(
+                (video) =>
+                  video.isPublished && (
+                    <div key={video.id} className="border">
+                      <div className="w-full max-w-3xl gap-x-4 sm:flex">
+                        <div className="relative mb-2 w-full sm:mb-0 sm:w-5/12">
+                          <div className="w-full pt-[56%]">
+                            <div className="absolute inset-0">
+                              <img
+                                src={video.thumbnail}
+                                alt={video.title}
+                                className="h-full w-full"
+                              />
+                            </div>
+                            <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">
+                              {video.duration}
+                            </span>
+                          </div>
                         </div>
-                        <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">
-                          {video.duration}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex gap-x-2 px-2 sm:w-7/12 sm:px-0">
-                      <div className="h-10 w-10 shrink-0 sm:hidden">
-                        <img
-                          src={video.owner.avatar}
-                          alt={video.owner.username}
-                          className="h-full w-full rounded-full"
-                        />
-                      </div>
-                      <div className="w-full">
-                        <h6 className="mb-1 font-semibold sm:max-w-[75%]">
-                          {video.title}
-                        </h6>
-                        <p className="flex text-sm text-gray-200 sm:mt-3">
-                          {video.views}&nbsp;Views &middot; {video.createdAt}
-                        </p>
-                        <div className="flex items-center gap-x-4">
-                          <div className="mt-2 hidden h-10 w-10 shrink-0 sm:block">
+                        <div className="flex gap-x-2 px-2 sm:w-7/12 sm:px-0">
+                          <div className="h-10 w-10 shrink-0 sm:hidden">
                             <img
                               src={video.owner.avatar}
                               alt={video.owner.username}
                               className="h-full w-full rounded-full"
                             />
                           </div>
-                          <p className="text-sm text-gray-200">
-                            {video.owner.fullName}
-                          </p>
+                          <div className="w-full">
+                            <h6 className="mb-1 font-semibold sm:max-w-[75%]">
+                              {video.title}
+                            </h6>
+                            <p className="flex text-sm text-gray-200 sm:mt-3">
+                              {video.views}&nbsp;Views &middot; {video.time}
+                            </p>
+                            <div className="flex items-center gap-x-4">
+                              <div className="mt-2 hidden h-10 w-10 shrink-0 sm:block">
+                                <img
+                                  src={video.owner.avatar}
+                                  alt={video.owner.username}
+                                  className="h-full w-full rounded-full"
+                                />
+                              </div>
+                              <p className="text-sm text-gray-200">
+                                {video.owner.fullName}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  ),
+              )}
             </div>
           </div>
         </section>

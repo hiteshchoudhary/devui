@@ -152,26 +152,28 @@ const ChannelVideoList = () => {
               </li>
             </ul>
             <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4 pt-2">
-              {videos.map((video) => (
-                <div key={video.id} className="w-full">
-                  <div className="relative mb-2 w-full pt-[56%]">
-                    <div className="absolute inset-0">
-                      <img
-                        src={video.thumbnail}
-                        alt={video.title}
-                        className="h-full w-full"
-                      />
+              {videos
+                .filter((video) => video.isPublished)
+                .map((video) => (
+                  <div key={video.id} className="w-full">
+                    <div className="relative mb-2 w-full pt-[56%]">
+                      <div className="absolute inset-0">
+                        <img
+                          src={video.thumbnail}
+                          alt={video.title}
+                          className="h-full w-full"
+                        />
+                      </div>
+                      <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">
+                        {video.duration}
+                      </span>
                     </div>
-                    <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">
-                      {video.duration}
-                    </span>
+                    <h6 className="mb-1 font-semibold">{video.title}</h6>
+                    <p className="flex text-sm text-gray-200">
+                      {video.views}&nbsp;Views &middot; {video.time}
+                    </p>
                   </div>
-                  <h6 className="mb-1 font-semibold">{video.title}</h6>
-                  <p className="flex text-sm text-gray-200">
-                    {video.views}&nbsp;Views &middot; {video.createdAt}
-                  </p>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </section>

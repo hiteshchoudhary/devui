@@ -298,47 +298,49 @@ const VideoList = () => {
               </div>
             </div>
             <div className="col-span-12 flex w-full shrink-0 flex-col gap-3 lg:w-[350px] xl:w-[400px]">
-              {videos.map((video) => (
-                <div
-                  key={video.id}
-                  className="w-full gap-x-2 border pr-2 md:flex"
-                >
-                  <div className="relative mb-2 w-full md:mb-0 md:w-5/12">
-                    <div className="w-full pt-[56%]">
-                      <div className="absolute inset-0">
+              {videos
+                .filter((video) => video.isPublished)
+                .map((video) => (
+                  <div
+                    key={video.id}
+                    className="w-full gap-x-2 border pr-2 md:flex"
+                  >
+                    <div className="relative mb-2 w-full md:mb-0 md:w-5/12">
+                      <div className="w-full pt-[56%]">
+                        <div className="absolute inset-0">
+                          <img
+                            src={video.thumbnail}
+                            alt={video.title}
+                            className="h-full w-full"
+                          />
+                        </div>
+                        <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">
+                          {video.duration}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex gap-x-2 px-2 pb-4 pt-1 md:w-7/12 md:px-0 md:py-0.5">
+                      <div className="h-12 w-12 shrink-0 md:hidden">
                         <img
-                          src={video.thumbnail}
-                          alt={video.title}
-                          className="h-full w-full"
+                          src={videoDetails.owner.avatar}
+                          alt={videoDetails.owner.username}
+                          className="h-full w-full rounded-full"
                         />
                       </div>
-                      <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">
-                        {video.duration}
-                      </span>
+                      <div className="w-full pt-1 md:pt-0">
+                        <h6 className="mb-1 text-sm font-semibold">
+                          {video.title}
+                        </h6>
+                        <p className="mb-0.5 mt-2 text-sm text-gray-200">
+                          {video.owner.fullName}
+                        </p>
+                        <p className="flex text-sm text-gray-200">
+                          {video.views}&nbsp;Views &middot; {video.time}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex gap-x-2 px-2 pb-4 pt-1 md:w-7/12 md:px-0 md:py-0.5">
-                    <div className="h-12 w-12 shrink-0 md:hidden">
-                      <img
-                        src={videoDetails.owner.avatar}
-                        alt={videoDetails.owner.username}
-                        className="h-full w-full rounded-full"
-                      />
-                    </div>
-                    <div className="w-full pt-1 md:pt-0">
-                      <h6 className="mb-1 text-sm font-semibold">
-                        {video.title}
-                      </h6>
-                      <p className="mb-0.5 mt-2 text-sm text-gray-200">
-                        {video.owner.fullName}
-                      </p>
-                      <p className="flex text-sm text-gray-200">
-                        {video.views}&nbsp;Views &middot; {video.createdAt}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </section>

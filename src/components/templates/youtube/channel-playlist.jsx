@@ -154,12 +154,16 @@ const ChannelPlaylist = () => {
             <div className="grid gap-4 pt-2 sm:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))]">
               {playlistList.map(
                 (playlist) =>
-                  playlist.videos.length > 0 && (
+                  playlist.videos.filter((video) => video.isPublished).length >
+                    0 && (
                     <div key={playlist.id} className="w-full">
                       <div className="relative mb-2 w-full pt-[56%]">
                         <div className="absolute inset-0">
                           <img
-                            src={playlist.videos[0].thumbnail}
+                            src={
+                              playlist.videos.find((video) => video.isPublished)
+                                .thumbnail
+                            }
                             alt={playlist.name}
                             className="h-full w-full"
                           />
@@ -169,7 +173,12 @@ const ChannelPlaylist = () => {
                                 <p className="flex justify-between">
                                   <span className="inline-block">Playlist</span>
                                   <span className="inline-block">
-                                    {playlist.videos.length} videos
+                                    {
+                                      playlist.videos.filter(
+                                        (video) => video.isPublished,
+                                      ).length
+                                    }
+                                    &nbsp;videos
                                   </span>
                                 </p>
                                 <p className="text-sm text-gray-200">

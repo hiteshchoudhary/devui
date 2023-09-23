@@ -3,7 +3,6 @@ import { classNames } from "@/utils";
 import React from "react";
 import {
   MagnifyingGlassIcon,
-  PlayIcon,
   UserPlusIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";

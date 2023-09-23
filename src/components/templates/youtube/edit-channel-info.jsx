@@ -4,7 +4,6 @@ import React from "react";
 import {
   ClockIcon,
   CloudArrowUpIcon,
-  EnvelopeIcon,
   ListBulletIcon,
   MagnifyingGlassIcon,
   XCircleIcon,

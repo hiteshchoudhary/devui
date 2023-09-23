@@ -256,8 +256,8 @@ export const videos = [
     duration: "20:45",
     views: "10.3k",
     isPublished: true,
-    createdAt: "44 minutes ago",
-    updatedAt: new Date(),
+    time: "44 minutes ago",
+    createdAt: "2023-09-22T09:54:42.381Z",
     owner: {
       id: "1",
       username: "codemaster",
@@ -265,6 +265,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/3532545/pexels-photo-3532545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 921,
+    dislikeCount: 49,
   },
   {
     id: "2",
@@ -276,9 +278,9 @@ export const videos = [
       "Dive into the world of React hooks and understand how to use useState and useEffect in your components.",
     duration: "15:32",
     views: "8.7k",
-    isPublished: true,
-    createdAt: "1 hour ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "1 hour ago",
+    createdAt: "2023-09-21T09:54:42.381Z",
     owner: {
       id: "2",
       username: "reactninja",
@@ -286,6 +288,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2520,
+    dislikeCount: 279,
   },
   {
     id: "3",
@@ -297,9 +301,9 @@ export const videos = [
       "Learn how to work with asynchronous JavaScript using the async/await syntax for cleaner and more readable code.",
     duration: "25:10",
     views: "12.5k",
-    isPublished: true,
-    createdAt: "2 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "2 hours ago",
+    createdAt: "2023-09-20T09:54:42.381Z",
     owner: {
       id: "3",
       username: "asyncmasters",
@@ -307,6 +311,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/3532549/pexels-photo-3532549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 943,
+    dislikeCount: 244,
   },
   {
     id: "4",
@@ -318,9 +324,9 @@ export const videos = [
       "Create a simple ToDo application using React and manage state with the Context API for global data.",
     duration: "30:22",
     views: "15.4k",
-    isPublished: true,
-    createdAt: "3 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "3 hours ago",
+    createdAt: "2023-09-19T09:54:42.381Z",
     owner: {
       id: "4",
       username: "codecrafters",
@@ -328,6 +334,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/2522659/pexels-photo-2522659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 760,
+    dislikeCount: 302,
   },
   {
     id: "5",
@@ -339,9 +347,9 @@ export const videos = [
       "Explore the power of Tailwind CSS and build a responsive website from scratch.",
     duration: "18:56",
     views: "9.8k",
-    isPublished: true,
-    createdAt: "4 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "4 hours ago",
+    createdAt: "2023-09-18T09:54:42.381Z",
     owner: {
       id: "5",
       username: "tailwindpro",
@@ -349,6 +357,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/2519823/pexels-photo-2519823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2630,
+    dislikeCount: 317,
   },
   {
     id: "6",
@@ -361,8 +371,8 @@ export const videos = [
     duration: "22:18",
     views: "11.k",
     isPublished: true,
-    createdAt: "5 hours ago",
-    updatedAt: new Date(),
+    time: "5 hours ago",
+    createdAt: "2023-09-17T09:54:42.381Z",
     owner: {
       id: "6",
       username: "expresslearner",
@@ -370,6 +380,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/2519812/pexels-photo-2519812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 137,
+    dislikeCount: 107,
   },
   {
     id: "7",
@@ -381,9 +393,9 @@ export const videos = [
       "Learn how to manage global state in your React applications using Redux.",
     duration: "27:50",
     views: "13.8k",
-    isPublished: true,
-    createdAt: "6 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "6 hours ago",
+    createdAt: "2023-09-16T09:54:42.381Z",
     owner: {
       id: "7",
       username: "reduxmaster",
@@ -391,6 +403,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1250,
+    dislikeCount: 386,
   },
   {
     id: "8",
@@ -403,8 +417,8 @@ export const videos = [
     duration: "24:33",
     views: "14.5k",
     isPublished: true,
-    createdAt: "7 hours ago",
-    updatedAt: new Date(),
+    time: "7 hours ago",
+    createdAt: "2023-09-15T09:54:42.381Z",
     owner: {
       id: "8",
       username: "apibuilder",
@@ -412,6 +426,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1739942/pexels-photo-1739942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2773,
+    dislikeCount: 50,
   },
   {
     id: "9",
@@ -424,8 +440,8 @@ export const videos = [
     duration: "19:58",
     views: "10.9k",
     isPublished: true,
-    createdAt: "8 hours ago",
-    updatedAt: new Date(),
+    time: "8 hours ago",
+    createdAt: "2023-09-14T09:54:42.381Z",
     owner: {
       id: "9",
       username: "reactnativedev",
@@ -433,6 +449,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1739856/pexels-photo-1739856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1346,
+    dislikeCount: 353,
   },
   {
     id: "10",
@@ -445,8 +463,8 @@ export const videos = [
     duration: "16:37",
     views: "9.3k",
     isPublished: true,
-    createdAt: "9 hours ago",
-    updatedAt: new Date(),
+    time: "9 hours ago",
+    createdAt: "2023-09-13T09:54:42.381Z",
     owner: {
       id: "10",
       username: "hookmaster",
@@ -454,6 +472,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144257/pexels-photo-1144257.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1578,
+    dislikeCount: 294,
   },
   {
     id: "11",
@@ -465,9 +485,9 @@ export const videos = [
       "Dive deep into CSS layout techniques with Flexbox and Grid for modern and responsive web design.",
     duration: "28:15",
     views: "16.7k",
-    isPublished: true,
-    createdAt: "10 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "10 hours ago",
+    createdAt: "2023-09-12T09:54:42.381Z",
     owner: {
       id: "11",
       username: "csswizard",
@@ -475,6 +495,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144261/pexels-photo-1144261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2506,
+    dislikeCount: 87,
   },
   {
     id: "12",
@@ -486,9 +508,9 @@ export const videos = [
       "Get started with Python, a versatile and powerful programming language for beginners and professionals.",
     duration: "26:50",
     views: "17.8k",
-    isPublished: true,
-    createdAt: "11 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "11 hours ago",
+    createdAt: "2023-09-11T09:54:42.381Z",
     owner: {
       id: "12",
       username: "pythonista",
@@ -496,6 +518,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144268/pexels-photo-1144268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1312,
+    dislikeCount: 399,
   },
   {
     id: "13",
@@ -508,8 +532,8 @@ export const videos = [
     duration: "32:18",
     views: "18.9M",
     isPublished: true,
-    createdAt: "12 hours ago",
-    updatedAt: new Date(),
+    time: "12 hours ago",
+    createdAt: "2023-09-10T09:54:42.381Z",
     owner: {
       id: "13",
       username: "djangomaster",
@@ -517,6 +541,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144269/pexels-photo-1144269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 553,
+    dislikeCount: 219,
   },
   {
     id: "14",
@@ -528,9 +554,9 @@ export const videos = [
       "Explore the inner workings of popular machine learning algorithms and their applications.",
     duration: "34:22",
     views: "19K",
-    isPublished: true,
-    createdAt: "13 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "13 hours ago",
+    createdAt: "2023-09-09T09:54:42.381Z",
     owner: {
       id: "14",
       username: "mlgeek",
@@ -538,6 +564,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144275/pexels-photo-1144275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2061,
+    dislikeCount: 359,
   },
   {
     id: "15",
@@ -550,8 +578,8 @@ export const videos = [
     duration: "29:30",
     views: "20.1k",
     isPublished: true,
-    createdAt: "14 hours ago",
-    updatedAt: new Date(),
+    time: "14 hours ago",
+    createdAt: "2023-09-08T09:54:42.381Z",
     owner: {
       id: "15",
       username: "reactd3",
@@ -559,6 +587,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144277/pexels-photo-1144277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1165,
+    dislikeCount: 10,
   },
   {
     id: "16",
@@ -571,8 +601,8 @@ export const videos = [
     duration: "26:58",
     views: "21.2k",
     isPublished: true,
-    createdAt: "15 hours ago",
-    updatedAt: new Date(),
+    time: "15 hours ago",
+    createdAt: "2023-09-07T09:54:42.381Z",
     owner: {
       id: "16",
       username: "passportpro",
@@ -580,6 +610,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144270/pexels-photo-1144270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1812,
+    dislikeCount: 347,
   },
   {
     id: "17",
@@ -591,9 +623,9 @@ export const videos = [
       "Learn how to build RESTful APIs with Django Rest Framework for building web applications.",
     duration: "30:42",
     views: "22.3k",
-    isPublished: true,
-    createdAt: "16 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "16 hours ago",
+    createdAt: "2023-09-06T09:54:42.381Z",
     owner: {
       id: "17",
       username: "djangorestapi",
@@ -601,6 +633,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144235/pexels-photo-1144235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1698,
+    dislikeCount: 159,
   },
   {
     id: "18",
@@ -612,9 +646,9 @@ export const videos = [
       "Dive deep into JavaScript concepts like closures and prototypes for more advanced programming.",
     duration: "35:28",
     views: "23.4k",
-    isPublished: true,
-    createdAt: "17 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "17 hours ago",
+    createdAt: "2023-09-05T09:54:42.381Z",
     owner: {
       id: "18",
       username: "jsninja",
@@ -622,6 +656,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1144232/pexels-photo-1144232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2393,
+    dislikeCount: 146,
   },
   {
     id: "19",
@@ -634,8 +670,8 @@ export const videos = [
     duration: "32:14",
     views: "24.5k",
     isPublished: true,
-    createdAt: "18 hours ago",
-    updatedAt: new Date(),
+    time: "18 hours ago",
+    createdAt: "2023-09-04T09:54:42.381Z",
     owner: {
       id: "19",
       username: "tableaumaster",
@@ -643,6 +679,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2137,
+    dislikeCount: 280,
   },
   {
     id: "20",
@@ -655,8 +693,8 @@ export const videos = [
     duration: "27:37",
     views: "25.6k",
     isPublished: true,
-    createdAt: "19 hours ago",
-    updatedAt: new Date(),
+    time: "19 hours ago",
+    createdAt: "2023-09-03T09:54:42.381Z",
     owner: {
       id: "20",
       username: "socketioexpert",
@@ -664,6 +702,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2991,
+    dislikeCount: 155,
   },
   {
     id: "21",
@@ -675,9 +715,9 @@ export const videos = [
       "Learn how to build efficient APIs using GraphQL and leverage the power of query language for data retrieval.",
     duration: "29:48",
     views: "26.7k",
-    isPublished: true,
-    createdAt: "20 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "20 hours ago",
+    createdAt: "2023-09-02T09:54:42.381Z",
     owner: {
       id: "21",
       username: "graphqlpro",
@@ -685,6 +725,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1095,
+    dislikeCount: 359,
   },
   {
     id: "22",
@@ -696,9 +738,9 @@ export const videos = [
       "Master full-stack development with the MERN (MongoDB, Express, React, Node.js) stack.",
     duration: "33:15",
     views: "27.8k",
-    isPublished: true,
-    createdAt: "21 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "21 hours ago",
+    createdAt: "2023-09-01T09:54:42.381Z",
     owner: {
       id: "22",
       username: "mernstack",
@@ -706,6 +748,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/1115822/pexels-photo-1115822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 2375,
+    dislikeCount: 152,
   },
   {
     id: "23",
@@ -718,8 +762,8 @@ export const videos = [
     duration: "31:55",
     views: "28.9k",
     isPublished: true,
-    createdAt: "22 hours ago",
-    updatedAt: new Date(),
+    time: "22 hours ago",
+    createdAt: "2023-08-31T09:54:42.381Z",
     owner: {
       id: "23",
       username: "cssanimations",
@@ -727,6 +771,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 904,
+    dislikeCount: 324,
   },
   {
     id: "24",
@@ -738,9 +784,9 @@ export const videos = [
       "Dive into the world of image recognition using machine learning models for object detection.",
     duration: "36:40",
     views: "29M",
-    isPublished: true,
-    createdAt: "23 hours ago",
-    updatedAt: new Date(),
+    isPublished: false,
+    time: "23 hours ago",
+    createdAt: "2023-08-30T09:54:42.381Z",
     owner: {
       id: "24",
       username: "mlimage",
@@ -748,6 +794,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 912,
+    dislikeCount: 97,
   },
   {
     id: "25",
@@ -760,8 +808,8 @@ export const videos = [
     duration: "30:25",
     views: "30.1k",
     isPublished: true,
-    createdAt: "1 day ago",
-    updatedAt: new Date(),
+    time: "1 day ago",
+    createdAt: "2023-08-29T09:54:42.381Z",
     owner: {
       id: "25",
       username: "reactpatterns",
@@ -769,6 +817,8 @@ export const videos = [
       avatar:
         "https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    likeCount: 1391,
+    dislikeCount: 319,
   },
 ];
 

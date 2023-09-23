@@ -8,7 +8,7 @@ import {
   UserPlusIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { bottomTotalItems, navItems, logo, tweets, icons } from "./data";
+import { bottomTotalItems, navItems, logo, tweets } from "./data";
 
 const ChannelTweets = () => {
   return (
