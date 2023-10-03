@@ -84,11 +84,11 @@ const CreateGroupChat = () => {
                   <label className="text-xs text-slate-200">
                     Select a user
                   </label>
-                  <div className="w-full border-[1px] border-white px-4">
+                  <div className="w-full border-[1px] border-white pr-4">
                     <select
                       placeholder="Select a user..."
                       autoComplete="false"
-                      className="w-full bg-[#121212] py-4 text-white placeholder:text-gray-500 focus:outline-none"
+                      className="w-full bg-[#121212] py-4 pl-4 text-white placeholder:text-gray-500 focus:outline-none"
                     >
                       <option value="0">John Doe</option>
                       <option value="1">Jane Doe</option>
