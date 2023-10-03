@@ -40,10 +40,10 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
               <button
                 onClick={() => setPreviewMode(true)}
                 type="button"
-                className="relative inline-flex items-center rounded-l-md bg-white px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+                className="relative inline-flex items-center rounded-l-md bg-gray-800 px-2 py-2 ring-1 ring-inset ring-gray-500 hover:bg-gray-700 focus:z-10"
               >
                 <span className="sr-only">UI preview</span>
-                <span className="flex items-center space-x-2 text-sm font-semibold text-black">
+                <span className="flex items-center space-x-2 text-sm font-semibold text-gray-200">
                   <EyeIcon className="h-4 w-4" />
                   <span>Preview</span>
                 </span>
@@ -51,10 +51,10 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
               <button
                 onClick={() => setPreviewMode(false)}
                 type="button"
-                className="relative -ml-px inline-flex items-center rounded-r-md bg-white px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10"
+                className="relative -ml-px inline-flex items-center rounded-r-md bg-gray-800 px-2 py-2 ring-1 ring-inset ring-gray-500 hover:bg-gray-700 focus:z-10"
               >
                 <span className="sr-only">Code snippet</span>
-                <span className="flex items-center space-x-2 text-sm font-semibold text-black">
+                <span className="flex items-center space-x-2 text-sm font-semibold text-gray-200">
                   <CodeBracketIcon className="h-4 w-4" />
                   <span>Code</span>
                 </span>
@@ -67,7 +67,7 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
               if (codeCopied) return;
               copyToClipboard();
             }}
-            className="cursor-pointer rounded-md p-2 hover:bg-gray-100 active:bg-gray-200"
+            className="cursor-pointer rounded-md p-2 hover:bg-gray-700 active:bg-gray-600"
           >
             {codeCopied ? (
               <CheckCircleIcon className="h-5 w-5 text-green-600" />
@@ -77,7 +77,7 @@ const CodePreviewer: React.FC<CodePreviewerProps> = ({ children, title }) => {
           </button>
         </div>
       </div>
-      <div className="w-full">
+      <div className="mt-4 w-full">
         {previewMode ? (
           <PreviewCard>{children}</PreviewCard>
         ) : (

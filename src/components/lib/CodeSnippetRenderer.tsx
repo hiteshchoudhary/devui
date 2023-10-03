@@ -49,7 +49,7 @@ const CodeSnippetRenderer: React.FC<CodeSnippetRendererProps> = ({
   }, [codeSnippet]);
 
   return (
-    <div className="relative mt-4 min-h-min w-full rounded-md pb-0">
+    <div className="relative min-h-min w-full rounded-md border-2 border-gray-700 pb-0">
       <CodeMirror
         className={"CodeMirror__Main__Editor"}
         theme={themes["githubDark"]}

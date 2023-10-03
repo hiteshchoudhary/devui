@@ -23,7 +23,7 @@ const Templates = () => {
                   {application.subtitle}
                 </p>
               </div>
-              <div className="col-start-1 col-end-3 row-start-1 grid items-end justify-end gap-4">
+              <div className="col-start-1 col-end-3 row-start-1 grid items-end justify-end gap-4 border border-gray-700">
                 <img
                   src={application.cover}
                   alt=""
@@ -31,7 +31,7 @@ const Templates = () => {
                   loading="lazy"
                 />
               </div>
-              <dl className="row-start-2 mt-2 inline-flex items-center text-sm font-medium text-gray-700">
+              <dl className="row-start-2 mt-2 inline-flex items-center text-sm font-medium text-gray-200">
                 <dd className="inline-flex items-center gap-1">
                   <RectangleGroupIcon className="-mt-0.5 h-5 w-5" />
                   {application.pages?.length || 0} Screens
