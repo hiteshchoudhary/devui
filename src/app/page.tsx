@@ -14,10 +14,10 @@ export default function Home() {
         <h1 className="font-heading text-3xl font-bold leading-[1.1] md:text-5xl lg:text-7xl">
           A complete front end solution for learners
         </h1>
-        <p className="max-w-[42rem] leading-normal text-slate-700 sm:text-xl sm:leading-8">
+        <p className="max-w-[42rem] leading-normal text-gray-300 sm:text-xl sm:leading-8">
           DevUI is a comprehensive and easy-to-use open-source UI templates
-          library ( powered by <strong>TailwindCSS</strong>) designed to enhance
-          your productivity as a learner{" "}
+          library &#40; powered by <strong>TailwindCSS</strong>&#41; designed to
+          enhance your productivity as a learner
         </p>
         <div className="mt-2 flex space-x-2">
           <Link href="/templates">

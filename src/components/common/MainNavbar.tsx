@@ -26,11 +26,11 @@ const MainNavbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 bg-white">
+    <header className="border-slate-800e bg-dark sticky top-0 z-40 border-b-2 border-gray-700">
       <div className="mx-auto flex h-20 max-w-[85rem] items-center justify-between p-4 lg:p-6">
         <div className="flex gap-6 md:gap-10">
           <Link href="/" className="hidden items-center space-x-2 md:flex">
-            <CodeBracketSquareIcon className="h-7 w-7 text-slate-900" />
+            <CodeBracketSquareIcon className="h-7 w-7 text-white" />
             <span className="font-heading hidden text-xl font-extrabold sm:inline-block">
               DevUI
             </span>
@@ -55,9 +55,9 @@ const MainNavbar = () => {
             onClick={() => setShowMobileMenu(!showMobileMenu)}
           >
             {showMobileMenu ? (
-              <XMarkIcon className="h-5 w-5 text-slate-900" />
+              <XMarkIcon className="h-5 w-5 text-white" />
             ) : (
-              <Bars3BottomLeftIcon className="h-5 w-5 text-slate-900" />
+              <Bars3BottomLeftIcon className="h-5 w-5 text-white" />
             )}
             <span className="font-heading text-xl font-extrabold sm:inline-block">
               DevUI
