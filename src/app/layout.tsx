@@ -2,7 +2,6 @@ import MainNavbar from "@/components/common/MainNavbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import classNames from "@/utils/classNames";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={classNames(inter.className, "bg-dark text-white")}>
+      <body className={`${inter.className} bg-dark text-white`}>
         <MainNavbar />
         <main className="mx-auto max-w-[85rem] p-4 lg:p-6">{children}</main>
       </body>
