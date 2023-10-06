@@ -245,6 +245,11 @@ export const applications = [
         component: <Youtube.UploadVideo />,
       },
       {
+        id: "uploading-video",
+        name: "Uploading Video Modal Popup",
+        component: <Youtube.UploadingVideo />,
+      },
+      {
         id: "mychannel-empty-tweet",
         name: "My Channel Empty Tweet Page",
         component: <Youtube.MyChannelEmptyTweet />,
