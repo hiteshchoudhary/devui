@@ -274,6 +274,11 @@ export const applications = [
         name: "Admin Dashboard Page",
         component: <Youtube.Dashboard />,
       },
+      {
+        id: "privacy-policy",
+        name: "Privacy Policy Page",
+        component: <Youtube.PrivacyPolicy />,
+      },
     ],
   },
 ];

@@ -242,6 +242,8 @@ export const navItems = [
   },
 ];
 
+export const siteNavItems = ["Home", "Products", "Resources", "Pricing"];
+
 export const bottomTotalItems = 2;
 
 export const videos = [

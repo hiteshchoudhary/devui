@@ -21,6 +21,7 @@ import Dashboard from "./dashboard";
 import Register from "./register";
 import Login from "./login";
 import UploadVideo from "./upload-video";
+import PrivacyPolicy from "./privacy-policy";
 
 const Youtube = {
   EmptyVideos,
@@ -46,6 +47,7 @@ const Youtube = {
   Register,
   Login,
   UploadVideo,
+  PrivacyPolicy,
 };
 
 export default Youtube;
