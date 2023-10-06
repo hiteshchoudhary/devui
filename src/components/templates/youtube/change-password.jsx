@@ -1,11 +1,7 @@
 "use client";
 import { classNames } from "@/utils";
 import React from "react";
-import {
-  CloudArrowUpIcon,
-  MagnifyingGlassIcon,
-  XCircleIcon,
-} from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { bottomTotalItems, navItems, logo } from "./data";
 
 const ChangePassword = () => {
@@ -95,15 +91,6 @@ const ChangePassword = () => {
                 alt="cover-photo"
               />
             </div>
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <input type="file" id="cover-image" className="hidden" />
-              <label
-                htmlFor="cover-image"
-                className="inline-block h-10 w-10 cursor-pointer rounded-lg bg-white/60 p-1 text-[#ae7aff] hover:bg-white"
-              >
-                <CloudArrowUpIcon />
-              </label>
-            </div>
           </div>
           <div className="px-4 pb-4">
             <div className="flex flex-wrap gap-4 pb-4 pt-6">
@@ -113,15 +100,6 @@ const ChangePassword = () => {
                   alt="Channel"
                   className="h-full w-full"
                 />
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <input type="file" id="profile-image" className="hidden" />
-                  <label
-                    htmlFor="profile-image"
-                    className="inline-block h-8 w-8 cursor-pointer rounded-lg bg-white/60 p-1 text-[#ae7aff] hover:bg-white"
-                  >
-                    <CloudArrowUpIcon />
-                  </label>
-                </div>
               </div>
 
               <div className="mr-auto inline-block">
