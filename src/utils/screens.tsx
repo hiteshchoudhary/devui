@@ -279,6 +279,11 @@ export const applications = [
         name: "Privacy Policy Page",
         component: <Youtube.PrivacyPolicy />,
       },
+      {
+        id: "terms-and-conditions",
+        name: "Terms and Conditions Page",
+        component: <Youtube.TermsAndConditions />,
+      },
     ],
   },
 ];

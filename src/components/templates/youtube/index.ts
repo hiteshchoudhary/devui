@@ -22,6 +22,7 @@ import Register from "./register";
 import Login from "./login";
 import UploadVideo from "./upload-video";
 import PrivacyPolicy from "./privacy-policy";
+import TermsAndConditions from "./terms-and-conditions";
 
 const Youtube = {
   EmptyVideos,
@@ -48,6 +49,7 @@ const Youtube = {
   Login,
   UploadVideo,
   PrivacyPolicy,
+  TermsAndConditions,
 };
 
 export default Youtube;
