@@ -20,6 +20,7 @@ import ChangePassword from "./change-password";
 import Dashboard from "./dashboard";
 import Register from "./register";
 import Login from "./login";
+import UploadVideo from "./upload-video";
 
 const Youtube = {
   EmptyVideos,
@@ -44,6 +45,7 @@ const Youtube = {
   Dashboard,
   Register,
   Login,
+  UploadVideo,
 };
 
 export default Youtube;
