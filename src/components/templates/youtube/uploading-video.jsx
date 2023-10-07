@@ -169,7 +169,7 @@ const UploadingVideo = () => {
             </div>
           </div>
           {/* Modal Popup */}
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/50 px-4 pb-[86px] pt-4 sm:px-14 sm:py-8">
+          <div className="absolute inset-x-0 top-0 z-10 flex h-[calc(100vh-66px)] items-center justify-center bg-black/50 px-4 pb-[86px] pt-4 sm:h-[calc(100vh-82px)] sm:px-14 sm:py-8">
             <div className="w-full max-w-lg overflow-auto rounded-lg border border-gray-700 bg-[#121212] p-4">
               <div className="mb-4 flex items-start justify-between">
                 <h2 className="text-xl font-semibold">
