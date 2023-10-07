@@ -1,24 +1,8 @@
-import Register from "@/components/templates/authentication/register";
-import Login from "@/components/templates/authentication/login";
-import ForgotPassword from "@/components/templates/authentication/forgot-password";
-import TodosList from "@/components/templates/todo/todos";
-import EmptyTodos from "@/components/templates/todo/empty-todos";
-import EmptyChats from "@/components/templates/chat/empty-chats";
-import ChatScreen from "@/components/templates/chat/chat-screen";
-import CreateGroupChat from "@/components/templates/chat/create-group-chat";
-import CreateOneOnOneChat from "@/components/templates/chat/create-normal-chat";
-import GroupChatInfo from "@/components/templates/chat/group-information";
-import ChatRegister from "@/components/templates/chat/register";
-import ChatLogin from "@/components/templates/chat/login";
-import SocialMediaPostListing from "@/components/templates/social-media/post-listing";
-import SocialMediaPostDetail from "@/components/templates/social-media/post-detail";
-import SocialMediaUserProfile from "@/components/templates/social-media/user-profile";
-import SocialMediaMyProfile from "@/components/templates/social-media/my-profile";
-import SocialMediaEditProfile from "@/components/templates/social-media/edit-profile";
-import SocialMediaChangePassword from "@/components/templates/social-media/change-password";
-import SocialMediaBookmarkedPosts from "@/components/templates/social-media/bookmark-posts";
-import SocialRegister from "@/components/templates/social-media/register";
-import SocialLogin from "@/components/templates/social-media/login";
+import Authentication from "@/components/templates/authentication";
+import Chat from "@/components/templates/chat";
+import SocialMedia from "@/components/templates/social-media";
+import Todo from "@/components/templates/todo";
+import Youtube from "@/components/templates/youtube";
 
 export const applications = [
   {
@@ -32,17 +16,17 @@ export const applications = [
       {
         id: "register",
         name: "Register Page",
-        component: <Register />,
+        component: <Authentication.Register />,
       },
       {
         id: "login",
         name: "Login Page",
-        component: <Login />,
+        component: <Authentication.Login />,
       },
       {
         id: "forgot-password",
         name: "Forgot Password Page",
-        component: <ForgotPassword />,
+        component: <Authentication.ForgotPassword />,
       },
     ],
   },
@@ -58,37 +42,37 @@ export const applications = [
       {
         id: "empty-chats",
         name: "Empty Chats",
-        component: <EmptyChats />,
+        component: <Chat.EmptyChats />,
       },
       {
         id: "chat-screen",
         name: "Chat Screen",
-        component: <ChatScreen />,
+        component: <Chat.ChatScreen />,
       },
       {
         id: "create-normal-chat",
         name: "Create Personal Chat",
-        component: <CreateOneOnOneChat />,
+        component: <Chat.CreateOneOnOneChat />,
       },
       {
         id: "create-group-chat",
         name: "Create Group Chat",
-        component: <CreateGroupChat />,
+        component: <Chat.CreateGroupChat />,
       },
       {
         id: "group-chat-info",
         name: "About Group Chat",
-        component: <GroupChatInfo />,
+        component: <Chat.GroupInfo />,
       },
       {
         id: "chat-register",
         name: "Chat Register",
-        component: <ChatRegister />,
+        component: <Chat.Register />,
       },
       {
         id: "chat-login",
         name: "Chat Login",
-        component: <ChatLogin />,
+        component: <Chat.Login />,
       },
     ],
   },
@@ -103,47 +87,47 @@ export const applications = [
       {
         id: "post-listing",
         name: "Post Listing",
-        component: <SocialMediaPostListing />,
+        component: <SocialMedia.PostListing />,
       },
       {
         id: "post-detail",
         name: "Post Detail",
-        component: <SocialMediaPostDetail />,
+        component: <SocialMedia.PostDetail />,
       },
       {
         id: "user-profile",
         name: "User Profile",
-        component: <SocialMediaUserProfile />,
+        component: <SocialMedia.UserProfile />,
       },
       {
         id: "my-profile",
         name: "My Profile",
-        component: <SocialMediaMyProfile />,
+        component: <SocialMedia.MyProfile />,
       },
       {
         id: "edit-profile",
         name: "Edit Profile",
-        component: <SocialMediaEditProfile />,
+        component: <SocialMedia.EditProfile />,
       },
       {
         id: "change-password",
         name: "Change Password",
-        component: <SocialMediaChangePassword />,
+        component: <SocialMedia.ChangePassword />,
       },
       {
         id: "bookmarked-posts",
         name: "Bookmarked Posts",
-        component: <SocialMediaBookmarkedPosts />,
+        component: <SocialMedia.BookmarkedPosts />,
       },
       {
         id: "social-register",
         name: "Social Register",
-        component: <SocialRegister />,
+        component: <SocialMedia.Register />,
       },
       {
         id: "social-login",
         name: "Social Login",
-        component: <SocialLogin />,
+        component: <SocialMedia.Login />,
       },
     ],
   },
@@ -158,12 +142,167 @@ export const applications = [
       {
         id: "empty-todos",
         name: "Empty Todos Page",
-        component: <EmptyTodos />,
+        component: <Todo.EmptyTodos />,
       },
       {
         id: "todos",
         name: "Todos Page",
-        component: <TodosList />,
+        component: <Todo.TodosList />,
+      },
+    ],
+  },
+  {
+    name: "Youtube App",
+    id: "youtube",
+    subtitle: "Video Sharing Platform",
+    cover: "/youtube.png",
+    description:
+      "Explore UI designs for a Youtube clone, a user-friendly video sharing platform. Enhance your viewing experience with these accessible HTML templates.",
+    pages: [
+      {
+        id: "empty-videos",
+        name: "Empty Video Page",
+        component: <Youtube.EmptyVideos />,
+      },
+      {
+        id: "video-card",
+        name: "Video Listing Page (Card View)",
+        component: <Youtube.VideoCards />,
+      },
+      {
+        id: "video-list",
+        name: "Video Listing Page (List View)",
+        component: <Youtube.VideoList />,
+      },
+      {
+        id: "video-detail",
+        name: "Video Detail Page",
+        component: <Youtube.VideoDetail />,
+      },
+      {
+        id: "channel-empty-video",
+        name: "Channel Empty Video Page",
+        component: <Youtube.ChannelEmptyVideo />,
+      },
+      {
+        id: "channel-video-list",
+        name: "Channel Video List Page",
+        component: <Youtube.ChannelVideoList />,
+      },
+      {
+        id: "channel-empty-playlist",
+        name: "Channel Empty Playlist Page",
+        component: <Youtube.ChannelEmptyPlaylist />,
+      },
+      {
+        id: "channel-playlist",
+        name: "Channel Playlist Page",
+        component: <Youtube.ChannelPlaylist />,
+      },
+      {
+        id: "channel-paylist-videos",
+        name: "Channel Playlist Videos Page",
+        component: <Youtube.ChannelPlaylistVideos />,
+      },
+      {
+        id: "channel-empty-tweet",
+        name: "Channel Empty Tweet Page",
+        component: <Youtube.ChannelEmptyTweet />,
+      },
+      {
+        id: "channel-tweets",
+        name: "Channel Tweets Page",
+        component: <Youtube.ChannelTweets />,
+      },
+      {
+        id: "channel-empty-subscribed",
+        name: "Channel Empty Subscribed Page",
+        component: <Youtube.ChannelEmptySubscribed />,
+      },
+      {
+        id: "channel-subscribed",
+        name: "Channel Subscribed Page",
+        component: <Youtube.ChannelSubscribed />,
+      },
+      {
+        id: "login",
+        name: "Login Page",
+        component: <Youtube.Login />,
+      },
+      {
+        id: "register",
+        name: "Register Page",
+        component: <Youtube.Register />,
+      },
+      {
+        id: "mychannel-empty-video",
+        name: "My Channel Empty Video Page",
+        component: <Youtube.MyChannelEmptyVideo />,
+      },
+      {
+        id: "upload-video",
+        name: "Upload Video Modal Popup",
+        component: <Youtube.UploadVideo />,
+      },
+      {
+        id: "uploading-video",
+        name: "Uploading Video Modal Popup",
+        component: <Youtube.UploadingVideo />,
+      },
+      {
+        id: "uploaded-video",
+        name: "Uploaded Video Successfully Modal Popup",
+        component: <Youtube.UploadedVideo />,
+      },
+      {
+        id: "mychannel-empty-tweet",
+        name: "My Channel Empty Tweet Page",
+        component: <Youtube.MyChannelEmptyTweet />,
+      },
+      {
+        id: "mychannel-tweets",
+        name: "My Channel Tweets Page",
+        component: <Youtube.MyChannelTweets />,
+      },
+      {
+        id: "edit-personal-info",
+        name: "Edit Personal Info Page",
+        component: <Youtube.EditPersonalInfo />,
+      },
+      {
+        id: "edit-channel-info",
+        name: "Edit Channel Info Page",
+        component: <Youtube.EditChannelInfo />,
+      },
+      {
+        id: "change-password",
+        name: "Change Password Page",
+        component: <Youtube.ChangePassword />,
+      },
+      {
+        id: "dashboard",
+        name: "Admin Dashboard Page",
+        component: <Youtube.Dashboard />,
+      },
+      {
+        id: "edit-video",
+        name: "Edit Video Modal Popup",
+        component: <Youtube.EditVideo />,
+      },
+      {
+        id: "delete-video",
+        name: "Delete Video Modal Popup",
+        component: <Youtube.DeleteVideo />,
+      },
+      {
+        id: "privacy-policy",
+        name: "Privacy Policy Page",
+        component: <Youtube.PrivacyPolicy />,
+      },
+      {
+        id: "terms-and-conditions",
+        name: "Terms and Conditions Page",
+        component: <Youtube.TermsAndConditions />,
       },
     ],
   },
