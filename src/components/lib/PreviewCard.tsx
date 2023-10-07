@@ -1,6 +1,7 @@
-import { classNames, renderHTMLFromJSX } from "@/utils";
+import { classNames } from "@/utils";
 import { useEffect, useRef, useState } from "react";
 import WidthHandler from "./WidthHandler";
+import IFrame from "./IFrame";
 
 interface PreviewCardProps {
   className?: string;
@@ -44,14 +45,13 @@ const PreviewCard = ({ children, className }: PreviewCardProps) => {
           "iframe-overlay absolute inset-0 z-20 mx-auto hidden h-full min-h-[865px] w-full overflow-auto rounded-md",
         )}
       ></div>
-      <iframe
+      <IFrame
         className={classNames(
           "z-10 mx-auto min-h-[865px] w-full overflow-auto rounded-md",
         )}
-        srcDoc={`
-      <script src="https://cdn.tailwindcss.com"></script>
-      ${renderHTMLFromJSX(children)}`}
-      ></iframe>
+      >
+        {children}
+      </IFrame>
     </div>
   );
 };
