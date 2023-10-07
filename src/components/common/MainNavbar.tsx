@@ -26,7 +26,7 @@ const MainNavbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
 
   return (
-    <header className="border-slate-800e bg-dark sticky top-0 z-40 border-b-2 border-gray-700">
+    <header className="border-slate-800e sticky top-0 z-40 border-b-2 border-gray-700 bg-dark">
       <div className="mx-auto flex h-20 max-w-[85rem] items-center justify-between p-4 lg:p-6">
         <div className="flex gap-6 md:gap-10">
           <Link href="/" className="hidden items-center space-x-2 md:flex">
