@@ -285,6 +285,11 @@ export const applications = [
         component: <Youtube.Dashboard />,
       },
       {
+        id: "edit-video",
+        name: "Edit Video Modal Popup",
+        component: <Youtube.EditVideo />,
+      },
+      {
         id: "privacy-policy",
         name: "Privacy Policy Page",
         component: <Youtube.PrivacyPolicy />,
