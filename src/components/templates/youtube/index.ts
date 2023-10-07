@@ -26,6 +26,7 @@ import TermsAndConditions from "./terms-and-conditions";
 import UploadingVideo from "./uploading-video";
 import UploadedVideo from "./uploaded-video";
 import EditVideo from "./edit-video";
+import DeleteVideo from "./delete-video";
 
 const Youtube = {
   EmptyVideos,
@@ -56,6 +57,7 @@ const Youtube = {
   UploadingVideo,
   UploadedVideo,
   EditVideo,
+  DeleteVideo,
 };
 
 export default Youtube;

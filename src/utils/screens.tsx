@@ -290,6 +290,11 @@ export const applications = [
         component: <Youtube.EditVideo />,
       },
       {
+        id: "delete-video",
+        name: "Delete Video Modal Popup",
+        component: <Youtube.DeleteVideo />,
+      },
+      {
         id: "privacy-policy",
         name: "Privacy Policy Page",
         component: <Youtube.PrivacyPolicy />,
